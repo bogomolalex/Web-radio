@@ -1,5 +1,8 @@
 class Program < ActiveRecord::Base
 
+ cattr_reader :per_page
+ @@per_page =5
+
  has_many :news, :class_name=>'New'
 
  accepts_nested_attributes_for :news

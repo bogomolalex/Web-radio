@@ -4,27 +4,30 @@ class NewController < ApplicationController
   
   verify :method=>:post,:only=>'create'
 
+  def index
+   redirect_to :controller=>"menu",:action=>"show"
+  end
+
   def show
     @vnews = New.find(:all)
   end
 
   def edlist
     store_location
-    @vnews=New.paginate(:all,:page=>params[:page]||'1',
+    @vnews=New.paginate(:all,:per_page=>sysparam('per_page'), :page=>params[:page]||'1',
                              :conditions=>[" value_date>=? and status!='ACT'",Date.today-10])
-#    @vnews = @vnews.paginate 
   end
 
   def mkact
     store_location
-    @vnews=New.paginate(:all,:page=>params[:page]||'1',
+    @vnews=New.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
                              :conditions=>[" value_date>=? or status='NEW'",Date.today],
                              :order=>"value_date desc,no desc ")
   end
 
   def arcnew
     store_location
-    @vnews=New.paginate(:all,:page=>params[:page]||'1',
+    @vnews=New.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
                              :conditions=>[" value_date<? and status='ACT'",Date.today],:order=>"value_date desc")
     render :layout=>'marc'   
   end

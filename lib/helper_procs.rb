@@ -22,6 +22,8 @@ module HelperProcs
   def show_table_params(xpar)
    xpar[:fields]||=[{:id=>"id",:proc=>lambda{|item| "Id:"+item}}]
    xpar[:crud]||=false
+   xpar[:rowact]||=nil
+   xpar[:tbstyle]||="BORDER: buttonface solid 1px;width:100%;heigh:100%;"
    xpar[:select_item]||=false
    xpar[:select_item_name]||=lambda{|x| "#{t(:Butt_Select)}"}
     # кнопка по умолчанию submit

@@ -30,7 +30,7 @@ border-radius: 6px 6px 0 0;
 
 
 .spc
-{width:100;
+{width:10px;
  height:24px;
  padding-right: 15px;
   float: left;
@@ -92,14 +92,14 @@ float:left;
 #BORDER: #f0f0f0 solid 1px; 
 text-align:center;
 #z-index:100;
-width:190px;
-height:470px;
+width:200px;
+#height:470px;
 valign:top;}
 
 #main {
  text-align:center;
  float:left;
- width:550px;
+ width:500px;
 }
 
 #mainf {

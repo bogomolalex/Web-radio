@@ -1,10 +1,17 @@
 <% if @mn -%>
+<p> 
 <% @mn.each do |d| -%>
-<div style="float:left;width:100px;"> <p> <%=link_to content_tag("div",
-         image_tag("rails.png",:size=>"40x40",:alt=>d.descr,:border=>0)+
+<div style="float:left;width:100px;">  <%=link_to content_tag("div",
+         image_tag(d.img||"rails.png",:size=>"40x40",:alt=>d.descr,:border=>0)+
                    content_tag( "p",d.title)),
-         {:controller=>'program',:action=>'tune',:vd=>DateTime.now.strftime('%d.%m.%Y')},:class=>"img_lnk"-%>
-</p></div>
+case d.mtype
+ when "ADMTUNE"         
+    {:controller=>'xparam',:action=>'edit'}
+ else
+   {:controller=>'menu',:action=>'show'}
+end,
+:class=>"img_lnk"-%>
+</div>
 <%end-%>
+</p>
 <%end-%>
-

@@ -2,6 +2,13 @@
 # and open the template in the editor.
 
 module VarGet
+  # Глобальные параметры приложения
+  def sysparam (xname)
+    p=Xparam.find(:first,:conditions=>['name=:p and ptype=:t',{:p=>xname,:t=>'SYS'}])
+    return nil unless p
+    p.value_num||p.value_date||p.value_str
+  end
+
   protected
   # Получить имя текущего модуля
   def get_module_name
@@ -9,12 +16,6 @@ module VarGet
      my_class_name.split("::").first
   end
 
-  # Глобальные параметры приложения
-  def sysparam (xname)
-    p=Xparam.find(:first,:conditions=>['name=:p and ptype=:t',{:p=>xname,:t=>'SYS'}])
-    return nil unless p
-    p.value_num||p.value_date||p.value_str
-  end
 
   # Параметры класса
   def cparam (xname)

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110429133616) do
+ActiveRecord::Schema.define(:version => 20110504132422) do
 
   create_table "logs", :force => true do |t|
     t.string "descr"
@@ -44,10 +44,11 @@ ActiveRecord::Schema.define(:version => 20110429133616) do
   add_index "news", ["value_date"], :name => "index_news_on_value_date"
 
   create_table "programs", :force => true do |t|
-    t.string   "title",       :limit => 100, :default => "", :null => false
-    t.text     "description",                                :null => false
-    t.string   "image_url",   :limit => 200, :default => "", :null => false
-    t.datetime "value_date",                                 :null => false
+    t.string   "title",       :limit => 100, :default => "",    :null => false
+    t.text     "description",                                   :null => false
+    t.string   "image_url",   :limit => 200, :default => "",    :null => false
+    t.datetime "value_date",                                    :null => false
+    t.string   "status_id",   :limit => 3,   :default => "NEW"
   end
 
   add_index "programs", ["value_date"], :name => "index_programs_on_value_date"
@@ -66,10 +67,14 @@ ActiveRecord::Schema.define(:version => 20110429133616) do
     t.string   "value_str",   :limit => 250
     t.date     "value_date"
     t.integer  "value_num"
+<<<<<<< HEAD
     t.datetime "inserted",                                   :null => false
     t.string   "inserted_by", :limit => 30,  :default => "", :null => false
     t.datetime "updated"
     t.string   "updated_by",  :limit => 30,  :default => "", :null => false
+=======
+    t.string   "descr",       :limit => 50
+>>>>>>> origin
   end
 
 end
