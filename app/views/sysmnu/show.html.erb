@@ -7,6 +7,8 @@
 case d.mtype
  when "ADMTUNE"         
     {:controller=>'xparam',:action=>'edit'}
+ when "ADMLOG"
+    {:controller=>'loggs',:action=>'show'}
  else
    {:controller=>'menu',:action=>'show'}
 end,
