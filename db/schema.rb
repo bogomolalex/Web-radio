@@ -67,14 +67,11 @@ ActiveRecord::Schema.define(:version => 20110504132422) do
     t.string   "value_str",   :limit => 250
     t.date     "value_date"
     t.integer  "value_num"
-<<<<<<< HEAD
     t.datetime "inserted",                                   :null => false
     t.string   "inserted_by", :limit => 30,  :default => "", :null => false
     t.datetime "updated"
     t.string   "updated_by",  :limit => 30,  :default => "", :null => false
-=======
     t.string   "descr",       :limit => 50
->>>>>>> origin
   end
 
 end
