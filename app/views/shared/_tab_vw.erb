@@ -20,6 +20,7 @@ end -%>
   &nbsp
  </p> 
 <%end-%>
+ <% if  objs.size>0 -%>
 <table style="<%=tbstyle-%>">
 <% unless headers.nil?-%>
 <tr>
@@ -67,15 +68,16 @@ end
 -%>
  <%end;-%>
 <% if crud -%>
-<td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}" -%></td>
+<td> <%=link_to "#{t(:Butt_Update)}",{:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}"},:style=>"color: #800000; background: #f0f0f0;" -%></td>
 <%end-%>
 <% if select_item -%>
- <td> <%=link_to select_item_name.call(hs.id),:controller=>url[:controller],:action=>url[:action],:id=>url[:id2],:id2=>"#{h(hs.id)}"-%></td>
+ <td> <%=link_to select_item_name.call(hs.id),{:controller=>url[:controller],:action=>url[:action],:id=>url[:id2],:id2=>"#{h(hs.id)}"},:style=>"color: #800000; background: #f0f0f0;"-%></td>
 <%end-%>
 <%end-%>
 <% end-%>
 </tr>
 </table>
 <%unless crud.nil? -%>
+<%end-%>
  </form>
 <%end-%>

@@ -1,3 +1,5 @@
+@import url("clndr.css "); 
+
 #header {
 width: 800px;
 text-align:center;
@@ -30,13 +32,6 @@ width:700px;
 Height: 15px;
 color:red;
 }
-
-/*.sysmnu:before{display: block;
-       height: 20px;
-       background: url(2_tr.gif) no-repeat 100% 0;
-       content: url(2_tl.gif);
-       margin: -20px -20px 0 -20px;}*/
-
 
 .spc
 {width:10px;
@@ -135,61 +130,6 @@ pre {
   font-size: 11px;
 }
 
-.clndr {
-  font-size: 13px;
-  width: 189px;
-  height: 162px;
-  text-align:center;
-  margin:0;
-  padding:0;
-  BORDER: black solid 1px;}
-
-.clndre {
-  font-size: 13px;
-  width: 189px;
-  height: 189px;
-  padding:0;
-  BORDER: black solid 1px; 
-}
-.clndrd {
-  width: 25px;
-  height: 25px;
-  padding: 0px;
-  BORDER: buttonface solid 1px; 
-  text-align: center;
-}
-.clndrd7 {
-  width: 25px;
-  height: 25px;
-  padding: 0px;
-  background-color: #f0f0f0;
-  BORDER: buttonface solid 1px; 
-  text-align: center;
-}
-.clndrcr {
-  color: #666;
-  width: 23px;
-  height: 23px;
-  background-color: #9c9;
-  BORDER: buttonface solid 1px; 
-  text-align: center;
-}
-.clndrh {
-  width: 25px;
-  height: 25px;
-  padding: 0px;
-  color : #666;
-  BORDER: #f0f0f0 solid 1px; 
-  text-align: center;
-  background-color:#f0f0f0;
-}
-
-a.clndr_a:visited  {color: red;}
-
-a.clndr_a:link  {color: red;}
-
-a.clndr_a:hover { background-color:#E3DDCF;color: red;  }
-
 a.img_lnk:hover { background-color:#FFF;color: #333;  }
 a.img_lnk:link { background-color:#FFF;color: #333;  }
 a.img_lnk:visited  {background-color:#FFF; color: #333;}
@@ -202,6 +142,8 @@ a.lnk:hover { color: #FFF; background-color:#000; }
 a { color: #FFF;background-color:#E3DDCF }
 
 a:visited { color: #666; }
+a:link { color: #666; }
+a:hover { color: #666; }
 
 
 a:hover { color: #FFF; background-color:#000; }

@@ -27,7 +27,7 @@ module HelperProcs
    xpar[:fields]||=[{:id=>"id",:proc=>lambda{|item| "Id:"+item}}]
    xpar[:crud]||=false
    xpar[:rowact]||=nil
-   xpar[:tbstyle]||="BORDER: white solid 1px;width:100%;heigh:100%;"
+   xpar[:tbstyle]||="BORDER: black solid 1px;width:100%;background-color:#FFF;heigh:100%;"
    xpar[:select_item]||=false
    xpar[:select_item_name]||=lambda{|x| "#{t(:Butt_Select)}"}
     # кнопка по умолчанию submit
