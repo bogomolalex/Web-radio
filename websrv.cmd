@@ -1,1 +1,1 @@
-ruby ./script/server -p 80 
+mongrel_rails start -p 4000 
