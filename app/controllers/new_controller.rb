@@ -1,5 +1,7 @@
 class NewController < ApplicationController
 
+  before_filter :login_required
+
   layout 'mnow' 
   
   verify :method=>:post,:only=>[:create,:destroy], :redirect_to => {:controller=>'main',:action=>'view'}
@@ -16,20 +18,22 @@ class NewController < ApplicationController
   def edlist
     store_location
     @vnews=New.paginate(:all,:per_page=>sysparam('per_page'), :page=>params[:page]||'1',
-                             :conditions=>[" value_date>=? and status!='ACT'",Date.today-10])
+                             :conditions=>[" value_date>=? and status!='ACT'
+                               and menu_id=1 or status!='ACT' and menu_id!=1",Date.today-10],
+    :order=>"menu_id desc,value_date desc,no desc ")
   end
 
   def mkact
     store_location
     @vnews=New.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
-                             :conditions=>[" value_date>=? or status='NEW'",Date.today],
-                             :order=>"value_date desc,no desc ")
+                             :conditions=>[" (value_date>=? and menu_id=1 or menu_id!=1)and status in ('NEW','ACT')",Date.today],
+                             :order=>"menu_id desc,value_date desc,no desc ")
   end
 
   def arcnew
     store_location
     @vnews=New.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
-                             :conditions=>[" value_date<? and status='ACT'",Date.today],:order=>"value_date desc")
+                             :conditions=>["(value_date<? and menu_id=1 ) and status in ('ACT','NEW') ",Date.today],:order=>"value_date desc")
     render :layout=>'marc'   
   end
 
@@ -82,6 +86,9 @@ class NewController < ApplicationController
      redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
      return
    end
+   unless params[:upload].nil?
+     params[:new][:img_url]= New.save_file(params[:upload])
+   end
     @vnew = New.new(params[:new])
     respond_to do |format|
      if @vnew.save 
@@ -126,6 +133,7 @@ class NewController < ApplicationController
     end
      redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
   end
+  
 private
  def validate_fields
    flash[:error]=nil

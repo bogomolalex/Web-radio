@@ -1,5 +1,7 @@
 class MenuController < ApplicationController
 
+  before_filter :login_required
+
   layout 'mnow' 
 
   def show

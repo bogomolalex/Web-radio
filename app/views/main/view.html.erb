@@ -1,5 +1,5 @@
-<%= render :partial=>"userprof/logio" -%>
-<%if @c %>
+<%= render :partial=>"sessions/logio" -%>
+<%if logged_in? %>
 <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
 <%end-%>
 <div>

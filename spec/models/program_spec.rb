@@ -1,4 +1,4 @@
-require 'spec_helper'
+require File.dirname(__FILE__) + '/../spec_helper'
 
 describe Program do
 
@@ -6,7 +6,7 @@ describe Program do
 
   before(:each) do
     @valid_attributes = {:title=>"Test",:description=>"Test2",
-                         :image_url=>"Test3"}
+                         :image_url=>"Test3",:status_id=>'NEW'}
   end
   
   it "should have the filled Title field " do
@@ -15,11 +15,13 @@ describe Program do
   end
  
   it "should create a new instance given valid attributes" do
+    @valid_attributes[:value_date]=Date.today
     Program.create!(@valid_attributes)
   end
 
   it 'should have default value for value_date' do
      subject.title="Test"
+     subject.status_id='NEW'
      subject.value_date.should be_nil
      subject.save
      subject.value_date.strftime('%d.%m.%Y').should == Date.today.strftime('%d.%m.%Y')

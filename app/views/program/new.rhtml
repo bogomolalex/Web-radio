@@ -1,5 +1,5 @@
 <p><h4>Создать новую программу</h4></p>
-<% if @c -%>
+<% if logged_in? -%>
 <div style="float:left;width:700px;height:30px;">
 <%= content_tag 'div', h(flash[:notice]),
 :class => 'notice', :id => 'notice' if flash[:notice] %>

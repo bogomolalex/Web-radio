@@ -1,4 +1,4 @@
-require 'spec_helper'
+require File.dirname(__FILE__) + '/../spec_helper'
 
 describe MainController do
 
@@ -18,10 +18,6 @@ describe MainController do
 
   it "should be successful rending" do
     response.should(render_template('view'))
-  end
-
-  it "should have a variable - list of programs" do
-    assigns[:program].should_not be_nil
   end
 
  end

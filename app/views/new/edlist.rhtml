@@ -1,12 +1,14 @@
-<% if @c %>
+<% if logged_in? %>
 <div style="width:600px;" >
 <p> <h4>Новости </h4> </p>
 <%= will_paginate @vnews,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>
 <%=show_table ({:objs=>@vnews,
-                :headers=>["Дата","Тема" ,"Краткое содержание новости"],
+                :headers=>["Дата","Заголовок" ,"Меню","Краткое содержание новости"],
                 :fields=>[
 {:id=>"value_date",:proc=>lambda{|item| item.strftime('%d.%m.%Y')}},
-{:id=>"title"},{:id=>"short_descr"}],
+{:id=>"title"},
+{:id=>"menu_title"},
+{:id=>"short_descr"}],
                 :url=>{:controller=>"new",:action=>"destroy"},
                 :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'new',:action => 'new'}],
                 :crud=>true,

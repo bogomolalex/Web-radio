@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
+  map.login '/login', :controller => 'sessions', :action => 'new'
+  map.register '/register', :controller => 'users', :action => 'create'
+  map.signup '/signup', :controller => 'users', :action => 'new'
+  map.resources :users
+
+  map.resource :session
+
   map.resources :programs, :controller =>"program"
   map.resources :news, :controller =>"new"
   map.resources :nmenu,:amenu,:smenu,:xparams
@@ -34,16 +42,16 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   # You can have the root of your site routed with map.root -- just remember to delete public/index.html.
-  # map.root :controller => "welcome"
+   map.root :controller => "main", :action => "view"
 
   # See how all your routes lay out with "rake routes"
+  map.edit_date 'program/edit2/:vd',:controller=>"program",:action=>"edit2"
+  map.clndr_date 'clndr/show/:vd',:controller=>"clndr",:action=>"show"
+#  map.edit_date 'program/show',:controller=>"program",:action=>"show"
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing the them or commenting them out if you're using named routes and resources.
-  map.edit_date 'program/edit2/:vd',:controller=>"program",:action=>"edit2"
-  map.clndr_date 'clndr/show/:vd',:controller=>"clndr",:action=>"show"
-#  map.edit_date 'program/show',:controller=>"program",:action=>"show"
 
   map.connect ':controller/:action'
   map.connect '', :controller => "main", :action => "view"

@@ -3,6 +3,7 @@ class New < ActiveRecord::Base
  cattr_reader :per_page
  @@per_page =5
  belongs_to :program
+ belongs_to :menu
  #Проверки всякие
  validates_presence_of :title,:message=>"Заголовок не заполнен."
  validates_presence_of :value_date,:status,:ntype,:message=>"Дата новости не указана."
@@ -19,14 +20,21 @@ class New < ActiveRecord::Base
 
  def short_descr
     (descr||'xxx').first(80)+"..."
- end 
+ end
+ def menu_title
+   m=Menu.find_by_id(menu_id)
+   unless m.nil?
+    m.title     
+   end
+ end
 
  def self.save_file(upload)
     if upload['img_file'].nil? 
        upload['img_url']=nil
        return
     end 
-    name =  "new#{Digest::SHA1.hexdigest Time.now.to_s}"
+    name =  "n#{Time.now.strftime('%d%m%Y%H%m%S')}."+self.sanitize_filename(upload['img_file'].original_filename.last(3))
+
     directory = "public/images/news"
     # create the file path
     path = File.join(directory, name)
@@ -36,7 +44,7 @@ class New < ActiveRecord::Base
  end
 
  def self.cleanup(filename)
-    File.delete("#{RAILS_ROOT}/public/images/news/#{filename}") if File.exist?("#{RAILS_ROOT}/public/images/news/#{filename}")
+    #File.delete("#{RAILS_ROOT}/public/images/news/#{filename}") if File.exist?("#{RAILS_ROOT}/public/images/news/#{filename}")
  end
  
 
