@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20110419064949) do
   add_index "menus", ["mtype"], :name => "index_menus_on_mtype"
 
   create_table "news", :force => true do |t|
-    t.string  "title",      :limit => 80,                      :null => false
+    t.string  "title",      :limit => 80,  :default => "",     :null => false
     t.string  "img_url",    :limit => 250
     t.date    "value_date",                                    :null => false
     t.integer "no"
