@@ -9,6 +9,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :programs, :controller =>"program"
   map.resources :news, :controller =>"new"
+  map.resources :loggs, :controller =>"loggs"
   map.resources :nmenu,:amenu,:smenu,:xparams
   # The priority is based upon order of creation: first created -> highest priority.
 
