@@ -1,10 +1,11 @@
 class MainController < ApplicationController
 
   def view
-    @news = New.find(:all,:conditions=>[" value_date>=? and status='ACT'
-                          and menu_id=1",
-                          Date.today],:order=>"value_date, no desc")
+    @news = New.find(:first,:conditions=>[" value_date>=? and status='ACT'
+                          and menu_id=1 ",
+                          Date.today],:order=>"value_date, no desc").short_descr
     @pact=sysparam('prog_act')
+    @cdat=params[:vd]||Date.today
   end
 
   def about
@@ -21,6 +22,7 @@ class MainController < ApplicationController
 
   def list
     @program = Program.find(:all)
+    @cdat = Date.strptime("#{params[:vd]}", "%d.%m.%Y") unless params[:vd].nil?
     render :partial => 'program/list', :object => @program
   end
 

@@ -1,10 +1,10 @@
 #header {
-width: 750px;
+width: 800px;
 text-align:center;
 margin: 0,auto;
 }
 #after_header {
-width: 750px;
+width: 800px;
 height:50px;
 text-align:center;
 margin: 0,auto;
@@ -51,23 +51,23 @@ color:red;
 }
 
 #wrap {
-min-height: 750px;
+min-height: 800px;
 height: auto ;
-height: 750px;
-width:750px;
+height: 800px;
+width:800px;
 margin: 0, auto;
 }
 
 
-body { background-color: #fff; color: #333;min-width:750px; }
+body { color: #333;min-width:800px; }
 
 #nav {
- width:750px;
+ width:800px;
  float:left;
 }
 
 .anav {
- width:750px;
+ width:800px;
  heigth: 20px;
  float:right;
  /*-  -background-color: #fff;*/
@@ -88,7 +88,7 @@ height:80px;
 
 #footer {
 height:20px;
-min-width:750px;
+min-width:800px;
 clear:both}
 
 #footer p {
@@ -113,7 +113,7 @@ valign:top;}
 
 #mainf {
  text-align:center;
- width:750px;
+ width:800px;
 }
 
 .but {
@@ -188,16 +188,25 @@ a.clndr_a:visited  {color: red;}
 
 a.clndr_a:link  {color: red;}
 
-a.clndr_a:hover { background-color:#FFF;color: red;  }
+a.clndr_a:hover { background-color:#E3DDCF;color: red;  }
 
-a.img_lnk:hover { background-color:#FFF;color: red;  }
+a.img_lnk:hover { background-color:#FFF;color: #333;  }
+a.img_lnk:link { background-color:#FFF;color: #333;  }
+a.img_lnk:visited  {background-color:#FFF; color: #333;}
 
-a { color: #666; }
+a.img_bg:hover { background-color:#E3DDCF;color: red;  }
+a.img_bg:link { background-color:#E3DDCF;color: red;  }
+
+a.lnk:hover { color: #FFF; background-color:#000; }
+
+a { color: #FFF;background-color:#E3DDCF }
 
 a:visited { color: #666; }
 
 
 a:hover { color: #FFF; background-color:#000; }
+
+a.buts:hover { color: #FFF; background-color:#FFF; }
 
 .fieldWithErrors {
   padding: 1px solid red;

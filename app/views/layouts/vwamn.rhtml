@@ -9,19 +9,22 @@
  <%= yield :stylesheets %>
 </style>
 </head>
-<body>
-<div id="header">Radio-test</div>
-<div id="after_header">Radio-test</div>
+<body BACKGROUND="/images/bgr.jpg">
+<table width="100%" border="0">
+<tr><td align="center">
+<div style="width: 600px;text-align:center;margin: 0,auto;">
+ <%=image_tag("header.jpg",:alt=>"")%>
+</div>
 <div id="header">
  <div class="anav"> 
-   <%= render :partial=>"sessions/logio" -%>
+   <%=render :partial=>"sessions/logio" -%>
    <div style="float:right;">
-    <%= link_to "Домашняя страница", :controller => 'main',:action => 'view'-%>
+    <%=link_to "Домашняя страница", {:controller => 'main',:action => 'view'},:class=>"lnk"-%>
    </div>
  </div>
  <div style="width:750px;height:50px;border-bottom: 1px solid #f0f0f0;">
    <div id="smnnow" >
-         <%=link_to "Сегодня",:controller=>"menu",:action=>"show" -%>
+         <%=link_to "Сегодня",{:controller=>"menu",:action=>"show"},:class=>"a_link" -%>
    </div>
    <div class="spc">&nbsp;</div>
    <div id="smnarc">
@@ -35,7 +38,9 @@
 </div>
 <div id="mainf"><%= @content_for_layout -%><div>
 <div id="footer">
- <p>Copyright &copy; 2011, Radio</p>
+ <p>Copyright &copy; 2011, церковь "Живого Бога" г.Гусев</p>
 </div>
+</td></tr>
+</table>
 </body>
 </html>

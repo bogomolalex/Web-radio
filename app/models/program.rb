@@ -22,9 +22,7 @@ class Program < ActiveRecord::Base
  private
 
   def default_value_date_if_nil 
-     self.value_date=DateTime.now
-#     if self.value_date.nil?
-
+     self.value_date=DateTime.now  if self.value_date.nil?
   end
 
 end
