@@ -43,22 +43,19 @@ pact=='N'?
 [{:id=>"value_date",
   :proc=>lambda{|item| item.strftime('%H:%M')},
   :field_st=>"width:50px;"},
- {:id=>"title",:field_st=>"width:50px;"},
- {:id=>"description",:field_st=>"width:100px;"}]:
-[{:id=>"title",:field_st=>"width:50px;"},
- {:id=>"description",:field_st=>"width:150px;"}],
+ {:id=>"title",:field_st=>"width:50px;"}]:
+[{:id=>"value_date",
+  :proc=>lambda{|item| item.strftime('%H:%M')},
+  :field_st=>"width:50px;"},{:id=>"title",:field_st=>"width:50px;"}],
 :tbstyle=>"BORDER: buttonface solid 1px;",
+
 :rowact=>lambda{|item|
  if item[:status_id]=='ACT' && pact=='Y' && item[:value_date]>=Date.today ||
     pact=='N' && item[:id]==pid
   "color:black;background-color:#c0c0c0"
  end
-
- }
-
-                #:url=>{:controller=>"program",:action=>"show"},
-                #:crud=>true
-               })-%>
+ },:tooltip=>"description"
+ })-%>
 </div>
 </div>
 

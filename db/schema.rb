@@ -11,11 +11,6 @@
 
 ActiveRecord::Schema.define(:version => 20110523094741) do
 
-  create_table "logs", :force => true do |t|
-    t.string "descr"
-    t.string "code"
-  end
-
   create_table "menus", :force => true do |t|
     t.string  "mtype",   :limit => 20,  :default => "", :null => false
     t.string  "title",   :limit => 100

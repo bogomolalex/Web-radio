@@ -11,7 +11,8 @@ module ApplicationHelper
                 :select_item=>xpar[:select_item],
                 :select_item_name=>xpar[:select_item_name],
                 :rowact=>xpar[:rowact],
-                :tbstyle=>xpar[:tbstyle]},
+                :tbstyle=>xpar[:tbstyle],
+                :tooltip=>xpar[:tooltip]},
            :layout=>xpar[:layout]
   end
   

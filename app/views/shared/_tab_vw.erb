@@ -21,7 +21,7 @@ end -%>
  </p> 
 <%end-%>
  <% if  objs.size>0 -%>
-<table style="<%=tbstyle-%>">
+<table style="<%=tbstyle-%>" >
 <% unless headers.nil?-%>
 <tr>
 <% if crud-%>
@@ -40,21 +40,33 @@ end -%>
   objs.each do |hs| -%>
 
 <% if @fl==0-%>
- <tr style=<%=if rowact.nil?
+
+ <tr id="r<%="#{hs.id}"-%>" style="<%=if rowact.nil?
                "background-color:#f0f0f0"
               else
                rowact.call(hs)||"background-color:#f0f0f0"
-              end-%>>
+              end-%>">
  <%@fl=1%>
 <%else-%>
- <tr <%=unless rowact.nil?
+ <tr "<%=unless rowact.nil?
         "style='#{rowact.call(hs)}'"
-      end-%>>
+      end-%>" id="r<%="#{hs.id}"-%>">
  <%@fl=0%>
 <%end-%>
+
+<div id="tooltip<%="#{hs.id}"-%>" 
+ style="display:none; margin: 5px; padding:5px 5px 5px 5px;
+border: #E3DDCF solid 1px; background-color: white; width:200px;">
+ <%=hs.read_attribute(h(tooltip))-%>
+</div>
+<% javascript_tag do -%>
+ var my_tooltip_2 = new Tooltip("r<%="#{hs.id}"-%>", "tooltip<%="#{hs.id}"-%>")
+<%end-%>
+
 <% if crud-%>
  <td><%= check_box_tag "chk_id[]","#{h(hs.id)}" -%></td><% end-%>
  <%fields.each do |fl| -%>
+
   <td <%unless fl[:style].nil?-%>
        style="<%=fl[:style]-%>"
       <%end-%>>
@@ -80,4 +92,14 @@ end
 <%unless crud.nil? -%>
 <%end-%>
  </form>
+<%end-%>
+<% javascript_tag do -%>
+Event.observe(window,"load",function() {
+       $$("*").findAll(function(node){
+         return node.getAttribute('title');
+       }).each(function(node){
+         new Tooltip(node,node.title);
+         node.removeAttribute("title");
+       });
+     });
 <%end-%>
