@@ -23,6 +23,7 @@ class New < ActiveRecord::Base
  def short_descr
     (descr||'xxx').first(80)+"..."
  end
+
  def menu_title
    m=Menu.find_by_id(menu_id)
    unless m.nil?

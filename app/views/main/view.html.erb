@@ -16,13 +16,19 @@
   <tr>
    <td style="width:400px;height:120px;" valign="center" align="center">
     <div>
-        <%=@news.short_descr-%>
+        <%= unless @news.nil? 
+             @news.short_descr
+            end
+         -%>
     </div>
    </td>
   </tr>
   <tr><td valign="top" align="right">
      <div style="width:200px;height:30px;">
-       <i><%=link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_lnk" %></i>&nbsp;&nbsp;&nbsp;&nbsp;
+       <i><%=
+     unless @news.nil?
+        link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_lnk"
+     end -%></i>&nbsp;&nbsp;&nbsp;&nbsp;
     </div></td>
   </tr>
  </table>
