@@ -87,11 +87,11 @@ the editor.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000026">cparam</a>&nbsp;&nbsp;
-      <a href="#M000024">get_module_name</a>&nbsp;&nbsp;
-      <a href="#M000027">get_page_title</a>&nbsp;&nbsp;
-      <a href="#M000028">new</a>&nbsp;&nbsp;
-      <a href="#M000025">sysparam</a>&nbsp;&nbsp;
+      <a href="#M000057">cparam</a>&nbsp;&nbsp;
+      <a href="#M000056">get_module_name</a>&nbsp;&nbsp;
+      <a href="#M000058">get_page_title</a>&nbsp;&nbsp;
+      <a href="#M000059">new</a>&nbsp;&nbsp;
+      <a href="#M000055">sysparam</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -113,114 +113,36 @@ the editor.
     <div id="methods">
       <h3 class="section-bar">Public Class methods</h3>
 
-      <div id="method-M000028" class="method-detail">
-        <a name="M000028"></a>
+      <div id="method-M000059" class="method-detail">
+        <a name="M000059"></a>
 
         <div class="method-heading">
-          <a href="#M000028" class="method-signature">
+          <a href="#M000059" class="method-signature">
           <span class="method-name">new</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000028-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000028-source">
+            onclick="toggleCode('M000059-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000059-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/var_get.rb, line 30</span>
-30:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
-31:    <span class="ruby-identifier">get_page_title</span>
-32:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File lib/var_get.rb, line 31</span>
+31:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>
+32:    <span class="ruby-identifier">get_page_title</span>
+33:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <h3 class="section-bar">Protected Instance methods</h3>
+      <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000026" class="method-detail">
-        <a name="M000026"></a>
-
-        <div class="method-heading">
-          <a href="#M000026" class="method-signature">
-          <span class="method-name">cparam</span><span class="method-args">(xname)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Параметры класса
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000026-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000026-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/var_get.rb, line 20</span>
-20:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cparam</span> (<span class="ruby-identifier">xname</span>)
-21:     <span class="ruby-identifier">p</span>=<span class="ruby-constant">Xparam</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">'name=:p and ptype=:t'</span>,{<span class="ruby-identifier">:p=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xname</span>,<span class="ruby-identifier">:t=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">get_module_name</span>}])
-22:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">p</span>
-23:     <span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_num</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_date</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_str</span>
-24:   <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000024" class="method-detail">
-        <a name="M000024"></a>
+      <div id="method-M000055" class="method-detail">
+        <a name="M000055"></a>
 
         <div class="method-heading">
-          <a href="#M000024" class="method-signature">
-          <span class="method-name">get_module_name</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Получить имя текущего модуля
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000024-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000024-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/var_get.rb, line 7</span>
- 7:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_module_name</span>
- 8:      <span class="ruby-identifier">my_class_name</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>
- 9:      <span class="ruby-identifier">my_class_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;::&quot;</span>).<span class="ruby-identifier">first</span>
-10:   <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000027" class="method-detail">
-        <a name="M000027"></a>
-
-        <div class="method-heading">
-          <a href="#M000027" class="method-signature">
-          <span class="method-name">get_page_title</span><span class="method-args">()</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000027-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000027-source">
-<pre>
-    <span class="ruby-comment cmt"># File lib/var_get.rb, line 26</span>
-26:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_page_title</span>
-27:     <span class="ruby-ivar">@page_title</span> = <span class="ruby-node">&quot;#{sysparam('title')} - #{cparam('title')}&quot;</span>
-28:   <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000025" class="method-detail">
-        <a name="M000025"></a>
-
-        <div class="method-heading">
-          <a href="#M000025" class="method-signature">
+          <a href="#M000055" class="method-signature">
           <span class="method-name">sysparam</span><span class="method-args">(xname)</span>
           </a>
         </div>
@@ -230,15 +152,95 @@ the editor.
 Глобальные параметры приложения
 </p>
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000025-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000025-source">
+            onclick="toggleCode('M000055-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000055-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/var_get.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sysparam</span> (<span class="ruby-identifier">xname</span>)
-14:     <span class="ruby-identifier">p</span>=<span class="ruby-constant">Xparam</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">'name=:p and ptype=:t'</span>,{<span class="ruby-identifier">:p=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xname</span>,<span class="ruby-identifier">:t=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'SYS'</span>}])
-15:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">p</span>
-16:     <span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_num</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_date</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_str</span>
+    <span class="ruby-comment cmt"># File lib/var_get.rb, line 6</span>
+ 6:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">sysparam</span> (<span class="ruby-identifier">xname</span>)
+ 7:     <span class="ruby-identifier">p</span>=<span class="ruby-constant">Xparam</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">'name=:p and ptype=:t'</span>,{<span class="ruby-identifier">:p=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xname</span>,<span class="ruby-identifier">:t=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'SYS'</span>}])
+ 8:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">p</span>
+ 9:     <span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_num</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_date</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_str</span>
+10:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-bar">Protected Instance methods</h3>
+
+      <div id="method-M000057" class="method-detail">
+        <a name="M000057"></a>
+
+        <div class="method-heading">
+          <a href="#M000057" class="method-signature">
+          <span class="method-name">cparam</span><span class="method-args">(xname)</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Параметры класса
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000057-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000057-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/var_get.rb, line 21</span>
+21:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">cparam</span> (<span class="ruby-identifier">xname</span>)
+22:     <span class="ruby-identifier">p</span>=<span class="ruby-constant">Xparam</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">'name=:p and ptype=:t'</span>,{<span class="ruby-identifier">:p=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xname</span>,<span class="ruby-identifier">:t=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">get_module_name</span>}])
+23:     <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">p</span>
+24:     <span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_num</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_date</span><span class="ruby-operator">||</span><span class="ruby-identifier">p</span>.<span class="ruby-identifier">value_str</span>
+25:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000056" class="method-detail">
+        <a name="M000056"></a>
+
+        <div class="method-heading">
+          <a href="#M000056" class="method-signature">
+          <span class="method-name">get_module_name</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p>
+Получить имя текущего модуля
+</p>
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000056-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000056-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/var_get.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_module_name</span>
+15:      <span class="ruby-identifier">my_class_name</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">class</span>.<span class="ruby-identifier">name</span>
+16:      <span class="ruby-identifier">my_class_name</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;::&quot;</span>).<span class="ruby-identifier">first</span>
 17:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000058" class="method-detail">
+        <a name="M000058"></a>
+
+        <div class="method-heading">
+          <a href="#M000058" class="method-signature">
+          <span class="method-name">get_page_title</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000058-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000058-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/var_get.rb, line 27</span>
+27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_page_title</span>
+28:     <span class="ruby-ivar">@page_title</span> = <span class="ruby-node">&quot;#{sysparam('title')} - #{cparam('title')}&quot;</span>
+29:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

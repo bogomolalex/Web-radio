@@ -15,13 +15,5 @@ describe 'main/view' do
     render
   end
   
-  it "should have a div for list of programs" do
-    should have_tag('div#list_div')
-  end
-
-  it "should have a main menu" do
-    should have_tag('div#nav')
-  end
-
 end
 

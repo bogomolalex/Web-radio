@@ -88,9 +88,11 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000002">list</a>&nbsp;&nbsp;
-      <a href="#M000003">signup</a>&nbsp;&nbsp;
-      <a href="#M000001">view</a>&nbsp;&nbsp;
+      <a href="#M000007">about</a>&nbsp;&nbsp;
+      <a href="#M000010">list</a>&nbsp;&nbsp;
+      <a href="#M000009">news</a>&nbsp;&nbsp;
+      <a href="#M000008">online</a>&nbsp;&nbsp;
+      <a href="#M000006">view</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -112,76 +114,126 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000002" class="method-detail">
-        <a name="M000002"></a>
+      <div id="method-M000007" class="method-detail">
+        <a name="M000007"></a>
 
         <div class="method-heading">
-          <a href="#M000002" class="method-signature">
+          <a href="#M000007" class="method-signature">
+          <span class="method-name">about</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000007-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000007-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 11</span>
+11:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">about</span>
+12:     <span class="ruby-ivar">@news</span> = <span class="ruby-constant">New</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">&quot;status='ACT'
+13:                           and menu_id=3 &quot;</span>],<span class="ruby-identifier">:order=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;value_date,no desc&quot;</span>)
+14:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:layout=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'about'</span>
+15:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000010" class="method-detail">
+        <a name="M000010"></a>
+
+        <div class="method-heading">
+          <a href="#M000010" class="method-signature">
           <span class="method-name">list</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000002-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000002-source">
+            onclick="toggleCode('M000010-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000010-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">list</span>
-14:     <span class="ruby-ivar">@program</span> = <span class="ruby-constant">Program</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>)
-15:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'program/list'</span>, <span class="ruby-identifier">:object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@program</span>
-16:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 27</span>
+27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">list</span>
+28:     <span class="ruby-ivar">@program</span> = <span class="ruby-constant">Program</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>)
+29:     <span class="ruby-ivar">@cdat</span> = <span class="ruby-constant">Date</span>.<span class="ruby-identifier">strptime</span>(<span class="ruby-node">&quot;#{params[:vd]}&quot;</span>, <span class="ruby-value str">&quot;%d.%m.%Y&quot;</span>) <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">params</span>[<span class="ruby-identifier">:vd</span>].<span class="ruby-identifier">nil?</span>
+30:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'program/list'</span>, <span class="ruby-identifier">:object</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-ivar">@program</span>
+31:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000003" class="method-detail">
-        <a name="M000003"></a>
+      <div id="method-M000009" class="method-detail">
+        <a name="M000009"></a>
 
         <div class="method-heading">
-          <a href="#M000003" class="method-signature">
-          <span class="method-name">signup</span><span class="method-args">()</span>
+          <a href="#M000009" class="method-signature">
+          <span class="method-name">news</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000003-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000003-source">
+            onclick="toggleCode('M000009-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000009-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 18</span>
-18:  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">signup</span>
-19:  <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 23</span>
+23:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">news</span>
+24:     <span class="ruby-ivar">@news</span> = <span class="ruby-constant">New</span>.<span class="ruby-identifier">find_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:id</span>])
+25:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000001" class="method-detail">
-        <a name="M000001"></a>
+      <div id="method-M000008" class="method-detail">
+        <a name="M000008"></a>
 
         <div class="method-heading">
-          <a href="#M000001" class="method-signature">
+          <a href="#M000008" class="method-signature">
+          <span class="method-name">online</span><span class="method-args">()</span>
+          </a>
+        </div>
+      
+        <div class="method-description">
+          <p><a class="source-toggle" href="#"
+            onclick="toggleCode('M000008-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000008-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 17</span>
+17:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">online</span>
+18:     <span class="ruby-ivar">@news</span> = <span class="ruby-constant">New</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">&quot; status='ACT'
+19:                           and menu_id=2&quot;</span>],<span class="ruby-identifier">:order=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;value_date, no desc&quot;</span>)
+20:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:layout=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">'online'</span>
+21:   <span class="ruby-keyword kw">end</span>
+</pre>
+          </div>
+        </div>
+      </div>
+
+      <div id="method-M000006" class="method-detail">
+        <a name="M000006"></a>
+
+        <div class="method-heading">
+          <a href="#M000006" class="method-signature">
           <span class="method-name">view</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000001-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000001-source">
+            onclick="toggleCode('M000006-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000006-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 3</span>
- 3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">view</span>
- 4: <span class="ruby-comment cmt">#    @page_title = &quot;#{sysparam('title')} - #{cparam('title')}&quot;</span>
- 5:     <span class="ruby-ivar">@program</span> = <span class="ruby-constant">Program</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>)
- 6:     <span class="ruby-ivar">@mdiv</span> = <span class="ruby-constant">MenuController</span>.<span class="ruby-identifier">new</span>.<span class="ruby-identifier">show</span>
- 7:     <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
- 8:      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span>
- 9:      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">js</span>
-10:     <span class="ruby-keyword kw">end</span>
-11:   <span class="ruby-keyword kw">end</span>
+   <span class="ruby-comment cmt"># File app/controllers/main_controller.rb, line 3</span>
+3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">view</span>
+4:     <span class="ruby-ivar">@news</span> = <span class="ruby-constant">New</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:first</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">&quot; value_date&gt;=? and status='ACT'
+5:                           and menu_id=1 &quot;</span>,
+6:                           <span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>],<span class="ruby-identifier">:order=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;value_date, no desc&quot;</span>)
+7:     <span class="ruby-ivar">@pact</span>=<span class="ruby-identifier">sysparam</span>(<span class="ruby-value str">'prog_act'</span>)
+8:     <span class="ruby-ivar">@cdat</span>=<span class="ruby-identifier">params</span>[<span class="ruby-identifier">:vd</span>]<span class="ruby-operator">||</span><span class="ruby-constant">Date</span>.<span class="ruby-identifier">today</span>
+9:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>

@@ -88,7 +88,7 @@
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000023">show</a>&nbsp;&nbsp;
+      <a href="#M000050">show</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -110,31 +110,27 @@
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000023" class="method-detail">
-        <a name="M000023"></a>
+      <div id="method-M000050" class="method-detail">
+        <a name="M000050"></a>
 
         <div class="method-heading">
-          <a href="#M000023" class="method-signature">
+          <a href="#M000050" class="method-signature">
           <span class="method-name">show</span><span class="method-args">()</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000023-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000023-source">
+            onclick="toggleCode('M000050-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000050-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/controllers/menu_controller.rb, line 3</span>
- 3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>
- 4:     <span class="ruby-ivar">@mmain</span> = <span class="ruby-constant">Program</span>.<span class="ruby-identifier">find_by_sql</span>(<span class="ruby-value str">&quot;
- 5:      SELECT *
- 6:        FROM menus where mtype='MAIN' order by no&quot;</span>)
- 7:     <span class="ruby-ivar">@mdiv</span>=<span class="ruby-value str">&quot;&lt;div&gt;&quot;</span>
- 8:     <span class="ruby-ivar">@mmain</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">m</span><span class="ruby-operator">|</span> 
- 9:       <span class="ruby-ivar">@mdiv</span>=<span class="ruby-ivar">@mdiv</span><span class="ruby-operator">+</span><span class="ruby-node">&quot;&lt;div id='m#{m.id}'&gt;#{m.title}&lt;/div&gt;&quot;</span>
-10:     <span class="ruby-keyword kw">end</span>
-11:     <span class="ruby-ivar">@mdiv</span>=<span class="ruby-ivar">@mdiv</span><span class="ruby-operator">+</span><span class="ruby-value str">&quot;&lt;/div&gt;&quot;</span>
-12: <span class="ruby-comment cmt">#          render :layout=&gt;false</span>
+    <span class="ruby-comment cmt"># File app/controllers/menu_controller.rb, line 7</span>
+ 7:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>
+ 8:     <span class="ruby-ivar">@mtype</span>= <span class="ruby-value str">'ADMNOW'</span> 
+ 9:     <span class="ruby-identifier">par</span>=<span class="ruby-identifier">sysparam</span>(<span class="ruby-value str">'prog_act'</span>) 
+10:     <span class="ruby-ivar">@mn</span> = <span class="ruby-constant">Menu</span>.<span class="ruby-identifier">find_by_mtype</span>(<span class="ruby-ivar">@mtype</span>,
+11:       <span class="ruby-identifier">:order=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;no&quot;</span>).<span class="ruby-identifier">mlist</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">&quot;mtype!='PRGACT' &amp;&amp; 'N'=? || 'Y'=?&quot;</span>,<span class="ruby-identifier">par</span>,<span class="ruby-identifier">par</span>])
+12: 
 13:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
