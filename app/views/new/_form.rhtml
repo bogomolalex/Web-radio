@@ -24,7 +24,7 @@
      </td></tr>
    <tr><td>Меню</td>
      <td valign='top' align='left'>
-     <%= f.text_field :menu_id %></td></tr>
+     <%= select("new","menu_id",Menu.find_all_by_mtype('MAIN').collect {|m| [ m.title, m.id ]},{:selected =>@vnew.menu_id }) %></td></tr>
    <tr><td>Связанная с новостью программа</td>
      <td valign='top' align='left'>
      <%= f.text_field :program_id %>

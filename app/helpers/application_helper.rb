@@ -8,7 +8,8 @@ module ApplicationHelper
     render :partial => 'shared/tab_vw',:locals=>{:headers=>xpar[:headers],
                 :objs=>xpar[:objs],:fields=>xpar[:fields],:crud=>xpar[:crud],
                 :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub],
-                :select_item=>xpar[:select_item]},
+                :select_item=>xpar[:select_item],
+                :select_item_name=>xpar[:select_item_name]},
            :layout=>xpar[:layout]
   end
   
