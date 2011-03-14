@@ -7,6 +7,6 @@ class UserprofTest < ActiveSupport::TestCase
   end
 
   def test_presents_of_admin
-    assert_not_nil @admin,"Нет записи админа"
+    assert_not_nil @admin,"Нет записи админа!"
   end
 end
