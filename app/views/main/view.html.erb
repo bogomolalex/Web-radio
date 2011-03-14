@@ -1,0 +1,15 @@
+<% if @c %>
+<p> <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
+<%= link_to "Administration", :controller => 'program',:action => 'show' %>
+<% else %>
+<%= link_to "Login", :controller => 'userprof',:action => 'view' %>
+<% end %>
+<h4>Main#view</h4>
+<%=render :partial => 'menu/show', :locals=>{:mdiv=>@mdiv}%>
+<p>Find me in app/views/main/view.html.erb</p>
+<%= periodically_call_remote :update => 'list_div',
+:url => {:action => "list"},
+:frequency => 10.0 %>
+<div id='list_div'>
+<%=render :partial => 'program/list'%>
+</div>

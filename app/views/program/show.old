@@ -1,0 +1,28 @@
+<p>Find me in app/views/program/show.html.erb</p>
+ <%= link_to "Home ", :controller => 'main',:action => 'view'%>
+Editing program
+<!-- Если пользователь зарегистрирован-->
+<% if @c %>
+ <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
+ <% if @program.empty? %>
+   <%= link_to "Create new", :controller => 'program',:action => 'new'%>
+ <% else %>
+<!-- Список программ-->
+  <table> 
+  <% @program.each do |p| %>
+   <tr><td>
+    <%= "#{p.value_date.strftime('%d.%m.%Y')}" %> 
+    <%= "#{p.value_date.strftime('%H:%M:%S')} #{p.title} #{p.description}" %> 
+   </td><td>
+    <%= link_to t(:Butt_Update), :controller => 'program',:action => 'edit' ,:id => "#{p.id}"%>
+    <%= link_to t(:Butt_Delete), p, :confirm => 'Are you sure?', :method => :delete %>
+   </td>
+   </tr>
+  <% end %>
+  </table>  
+<!-- Кнопка создать-->
+  <%= link_to "Create new", :controller => 'program',:action => 'new'%>
+ <% end %>
+<% else %>
+  report_error("Unauthorized access; password required")
+<% end %>

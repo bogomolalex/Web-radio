@@ -1,0 +1,17 @@
+<table border="1" >
+ <tr>
+  <td>Title
+  </td>
+  <td>Desc
+  </td>
+<% @program.each do |p| %>
+ <tr>
+  <td>
+  <%= "#{h(p.title)}" %>   
+  </td>
+  <td>
+  <%= "#{h(p.description)}" %>   
+  </td>
+ </tr>
+<% end %>
+</table>

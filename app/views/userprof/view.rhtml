@@ -1,0 +1,13 @@
+<%= link_to "Home ", :controller => 'main',:action => 'view'%>
+<% if @c %>
+<p><%= link_to "Logout", :controller => 'userprof',:action => 'logout' %>
+</p>
+<%= link_to "Edit List of today programms", :controller => 'program',:action => 'show' %>
+<%= link_to "Create New program", :controller => 'program',:action => 'show' %>
+<% end %>
+<h4>Main#view</h4>
+<p>Find me in app/views/main/view.html.erb</p>
+<table width="70%"><tr><td>
+<%= render :partial=>"login" %>
+</td></tr>
+</table>

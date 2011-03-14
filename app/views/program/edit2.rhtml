@@ -1,0 +1,18 @@
+<p>Find me in app/views/program/show.html.erb</p>
+Editing program
+<!-- Если пользователь зарегистрирован-->
+<% if @c %>
+  <% if @program %>
+  <!-- Изменить запись-->
+  <% form_for @program,:url=> {:action=>"update" } do |f| %>
+   <%= datetime_select :program, :value_date %>
+   <%= f.text_field :title %>
+   <%= f.text_field :description %>
+   <%= f.submit t(:Butt_Update) %>
+  <% end %>
+ <% else %>
+   empty
+ <% end %>
+<% else %>
+  report_error("Unauthorized access; password required")
+<% end %>

@@ -1,0 +1,5 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+  prog_1:
+    id : 1
+    title : Other programs
+    value_date: <%=DateTime.new%>

@@ -1,0 +1,20 @@
+<%="#{mdiv}"%>
+
+<% javascript_tag do -%>
+$('m1').observe('mouseover',function(){this.setStyle({
+  backgroundColor: "buttonface",
+    });
+})
+$('m1').observe('mouseout',function(){this.setStyle({
+  backgroundColor: '#FFF',
+    });
+})
+$('m2').observe('mouseover',function(){this.setStyle({
+  backgroundColor: "buttonface",
+    });
+})
+$('m2').observe('mouseout',function(){this.setStyle({
+  backgroundColor: '#FFF',
+    });
+})
+<%end-%>

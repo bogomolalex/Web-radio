@@ -1,0 +1,24 @@
+<%=controller.controller_name %> 
+<p>Find me in app/views/program/dates_list.html.erb</p>
+ <%= link_to "Home ", :controller => 'main',:action => 'view'%>
+<!-- Если пользователь зарегистрирован-->
+<%- if @c -%>
+ <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
+<p>List of  program</p>
+ <%- if !@program_dat.empty? -%>
+<!-- Список дат -->
+  <table> 
+  <%- @program_dat.each do |p| -%>
+  <%- @w="#{p.value_date.strftime('%d.%m.%Y')}"-%>
+   <%= link_to "Month", clndr_date_path(@w) %></p>
+   <tr><td>
+    <%= link_to "#{p.value_date.strftime('%d.%m.%Y')}",edit_date_path(@w) %>
+   </td><td>
+  <%- end -%>
+  </table>  
+ <%- end -%>
+<!-- Кнопка создать-->
+  <%= link_to "Create new", :controller => 'program',:action => 'new'-%>
+<%- else -%>
+  report_error("Unauthorized access; password required")
+<%- end -%>
