@@ -2,4 +2,4 @@
   prog_1:
     id : 1
     title : Other programs
-    value_date: <%=DateTime.new%>
+    value_date: 01-01-2011

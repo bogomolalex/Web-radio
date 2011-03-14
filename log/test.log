@@ -662,3 +662,104 @@ Migrating to Logs (20110216153707)
   [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
   [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`username` = 'admin') LIMIT 1[0m
   [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing MainController#view (for 0.0.0.0 at 2011-03-14 15:59:53) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mMysql::Error: Unknown column 'type' in 'where clause': 
+ SELECT *
+ FROM menus where type='MAIN' order by no[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing MainController#view (for 0.0.0.0 at 2011-03-14 16:04:25) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 63ms (View: 47, DB: 47) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+
+
+Processing MainController#view (for 0.0.0.0 at 2011-03-14 16:19:08) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 47, DB: 16) | 200 OK [http://test.host/]
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (`programs`.`id` = 1) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mROLLBACK[0m
