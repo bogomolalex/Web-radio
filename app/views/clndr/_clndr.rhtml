@@ -1,0 +1,11 @@
+<div class="clndr"> 
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[1]}"-%></div>
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[2]}"-%></div>
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[3]}"-%></div>
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[4]}"-%></div>
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[5]}"-%></div>
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[6]}"-%></div>
+<div class="clndrh"><%="#{(t'date.abbr_day_names')[0]}"-%></div>
+<% @arr_cl.each do |clnd| -%>
+<div class="clndrd"><% if clnd[1]==0 -%>&nbsp
+<%else-%><%= link_to clnd[1],{:id=>1},:class=>"clndr_a"-%><%end-%></div><%end-%></div>
