@@ -12,6 +12,35 @@ pre {
   font-size: 11px;
 }
 
+.clndr {
+  font-size: 13px;
+  width: 170px;
+  height: 150px;
+  margin:0;
+  padding:0;
+}
+.clndrd {
+  width: 20px;
+  height: 20px;
+  float:left;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndrh {
+  width: 20px;
+  height: 20px;
+  float:left;
+  color : #666;
+  BORDER: #9c9 solid 1px; 
+  text-align: center;
+  background-color:#9c9;
+}
+
+a.clndr_a:hover { background-color:#9c9;
+color: #666;  }
+a.clndr_a {color: #666;  }
+
+
 a { color: #000; }
 a:visited { color: #666; }
 a:hover { color: #fff; background-color:#000; }

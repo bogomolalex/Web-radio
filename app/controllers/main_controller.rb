@@ -3,6 +3,7 @@ class MainController < ApplicationController
   def view
     @program = Program.find(:all)
     @mdiv = MenuController.new.show
+    @arr_cl=get_clndr(Date.today)
     respond_to do |format|
      format.html
      format.js
