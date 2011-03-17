@@ -2,5 +2,12 @@
 <p>Find me in app/views/clndr/show.html.erb</p>
 Test
 <div>
-<%="#{h(@end_of_date)}"%>
+<%="#{h(@end_of_date)}"-%>
+<%  @arr_cl.each do |a|  
+     a.each  do |d| -%>
+     <div><div><%=d[0]-%></div>
+     <div><%=d[1]-%></div></div>
+<%     end
+end
+-%>
 </div>
