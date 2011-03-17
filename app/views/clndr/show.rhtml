@@ -3,11 +3,7 @@
 Test
 <div>
 <%="#{h(@end_of_date)}"-%>
-<%  @arr_cl.each do |a|  
-     a.each  do |d| -%>
-     <div><div><%=d[0]-%></div>
-     <div><%=d[1]-%></div></div>
-<%     end
-end
--%>
+<% @arr_cl.each do |clnd| -%>
+     <div><div><%=clnd[0]-%><%=clnd[1]-%></div></div>
+<%end-%>
 </div>
