@@ -25,4 +25,5 @@ module ApplicationHelper
    @xdate=xdate
    render :partial => 'clndr/clndr'
   end
+
 end

@@ -14,22 +14,22 @@ pre {
 
 .clndr {
   font-size: 13px;
-  width: 154px;
-  height: 133px;
+  width: 190px;
+  height: 162px;
   margin:0;
   padding:0;
   BORDER: black solid 1px; 
 }
 .clndrd {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   float:left;
   BORDER: buttonface solid 1px; 
   text-align: center;
 }
 .clndrd7 {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #f0f0f0;
   float:left;
   BORDER: buttonface solid 1px; 
@@ -37,16 +37,16 @@ pre {
 }
 .clndrcr {
   color: #666;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   background-color: #9c9;
   float:left;
   BORDER: buttonface solid 1px; 
   text-align: center;
 }
 .clndrh {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   float:left;
   color : #666;
   BORDER: #f0f0f0 solid 1px; 
