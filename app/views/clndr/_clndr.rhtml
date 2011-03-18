@@ -1,4 +1,5 @@
-<div><div style="text-align: center;width:189px;"><b><%="#{(t 'date.standalone_month_names')[@xdate.month]} ,#{@xdate.strftime('%Y')}"-%></b><div>
+<div id="clndr">
+<div style="text-align: center;width:189px;"><b><%="#{(t 'date.standalone_month_names')[@xdate.month]} ,#{@xdate.strftime('%Y')}"-%></b><div>
 <div class='<%= if @arr_cl.size/7>5;
 "clndre"
 else
