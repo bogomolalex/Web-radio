@@ -1,3 +1,4 @@
+<div><div style="text-align: center;width:189px;"><b><%="#{(t 'date.standalone_month_names')[@xdate.month]} ,#{@xdate.strftime('%Y')}"-%></b><div>
 <div class='<%= if @arr_cl.size/7>5;
 "clndre"
 else
@@ -20,3 +21,4 @@ end-%>" >
 <%else-%><%= 
 unless @xdate.day==clnd[1];link_to clnd[1],@a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
 else clnd[1] end-%><%end-%></div><%end-%></div>
+</div>

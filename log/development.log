@@ -13722,3 +13722,2512 @@ Rendering template within layouts/base
 Rendering clndr/show
 Rendered clndr/_clndr (109.4ms)
 Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:43:42) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (15.6ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 125ms (View: 63, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:43:45) [GET]
+  Parameters: {"vd"=>"04-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/04-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:43:48) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.2ms)
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:43:49) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 156ms (View: 141, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:43:58) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:00) [GET]
+  Parameters: {"vd"=>"08-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/08-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:02) [GET]
+  Parameters: {"vd"=>"05-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/05-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:05) [GET]
+  Parameters: {"vd"=>"06-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (109.4ms)
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/06-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:07) [GET]
+  Parameters: {"vd"=>"22-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/22-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:09) [GET]
+  Parameters: {"vd"=>"06-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/06-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:10) [GET]
+  Parameters: {"vd"=>"05-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/05-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:11) [GET]
+  Parameters: {"vd"=>"08-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/08-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:44:11) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (15.6ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 203ms (View: 156, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 11:44:22) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 11:44:32) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 11:44:42) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:44:49) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:44:52) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 156ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:44:55) [GET]
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 266ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:44:59) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (62.5ms)
+Completed in 188ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:01) [GET]
+  Parameters: {"vd"=>"04-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/clndr/show/04-03-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:04) [GET]
+  Parameters: {"vd"=>"31-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/31-03-2011]
+  [4;36;1mSQL (515.6ms)[0m   [0;1mDROP DATABASE IF EXISTS `radio_test`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCREATE DATABASE `radio_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `logs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `descr` varchar(255), `code` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (109.4ms)[0m   [0mCREATE TABLE `menus` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mtype` varchar(20) DEFAULT '' NOT NULL, `title` varchar(100), `descr` varchar(100), `no` int(11), `menu_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `programs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100) DEFAULT '' NOT NULL, `description` text NOT NULL, `image_url` varchar(200) DEFAULT '' NOT NULL, `value_date` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mCREATE TABLE `userprofs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(20), `password` varchar(20), `role` varchar(20), `name` text, `status` varchar(20)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217085404')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110216153707')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110216162246')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110216162530')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217061051')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110217063453')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217064036')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110217081515')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217081651')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:07) [GET]
+  Parameters: {"vd"=>"09-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/clndr/show/09-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:09) [GET]
+  Parameters: {"vd"=>"13-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/clndr/show/13-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:13) [GET]
+  Parameters: {"vd"=>"09-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/09-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:14) [GET]
+  Parameters: {"vd"=>"31-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/clndr/show/31-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:15) [GET]
+  Parameters: {"vd"=>"04-03-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 188ms (View: 172, DB: 0) | 200 OK [http://localhost/clndr/show/04-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:45:16) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (46.9ms)
+Completed in 172ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:45:17) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 11:47:41) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (15.6ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:47:43) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:47:46) [GET]
+  Parameters: {"vd"=>"02-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/02-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:47:49) [GET]
+  Parameters: {"vd"=>"08-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/08-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:47:51) [GET]
+  Parameters: {"vd"=>"09-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/clndr/show/09-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:47:53) [GET]
+  Parameters: {"vd"=>"21-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/21-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 11:47:56) [GET]
+  Parameters: {"vd"=>"13-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/13-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:04:33) [GET]
+  Parameters: {"vd"=>"21-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/21-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:04:35) [GET]
+  Parameters: {"vd"=>"09-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/09-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:04:36) [GET]
+  Parameters: {"vd"=>"08-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 141ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/08-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:04:37) [GET]
+  Parameters: {"vd"=>"02-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/02-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:04:37) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 12:04:38) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 109ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:04:49) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 16ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:04:58) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:05:08) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:05:18) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:05:28) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:05:38) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:05:48) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:05:58) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:06:08) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:06:18) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 31ms (View: 0, DB: 16) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:06:28) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:06:38) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:06:48) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:06:59) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 109ms (View: 16, DB: 16) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:07:08) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 250ms (View: 219, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:07:19) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 203ms (View: 78, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:07:28) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 297ms (View: 266, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:07:38) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:07:48) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 109ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:07:58) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:08:08) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:08:18) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:08:19) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 12:08:28) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.2ms)
+Completed in 219ms (View: 156, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:08:30) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 12:08:33) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 109ms (View: 63, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:08:43) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserprofController#view (for 127.0.0.1 at 2011-03-18 12:08:45) [GET]
+Rendering template within layouts/base
+Rendering userprof/view
+Rendered userprof/_login (15.6ms)
+Completed in 47ms (View: 47, DB: 0) | 200 OK [http://localhost/userprof/view]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing UserprofController#login (for 127.0.0.1 at 2011-03-18 12:08:49) [POST]
+  Parameters: {"userprof"=>{"username"=>"admin", "password"=>"1"}}
+  [4;36;1mUserprof Load (46.9ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (username="admin" and password="1") LIMIT 1[0m
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+Redirected to http://localhost/
+Completed in 63ms (DB: 47) | 302 Found [http://localhost/userprof/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 12:08:50) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:08:53) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 1859ms (View: 1828, DB: 0) | 200 OK [http://localhost/program/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#edit (for 127.0.0.1 at 2011-03-18 12:09:00) [GET]
+  Parameters: {"vd"=>"28.02.2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (date_format(value_date,'%d.%m.%Y')='28.02.2011') [0m
+Rendering template within layouts/base
+Rendering program/edit
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/program/edit/28.02.2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:09:08) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUserprof Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;36;1mProgram Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 63ms (View: 0, DB: 31) | 200 OK [http://localhost/program/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:09:13) [GET]
+  Parameters: {"vd"=>"28.02.2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+
+ArgumentError (invalid date):
+  C:/Ruby187/lib/ruby/1.8/date.rb:752:in `new'
+  app/controllers/clndr_controller.rb:5:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:09:15) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/program/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 12:09:19) [GET]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:09:22) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/program/show]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#new (for 127.0.0.1 at 2011-03-18 12:09:29) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering program/new
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/program/new]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#create (for 127.0.0.1 at 2011-03-18 12:09:32) [POST]
+  Parameters: {"commit"=>"Создать", "program"=>{"title"=>"???", "value_date(1i)"=>"2011", "value_date(2i)"=>"3", "value_date(3i)"=>"18", "description"=>"xxx", "value_date(4i)"=>"10", "value_date(5i)"=>"09"}}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mProgram Create (0.0ms)[0m   [0mINSERT INTO `programs` (`title`, `image_url`, `description`, `value_date`) VALUES('???', '', 'xxx', '2011-03-18 10:09:00')[0m
+  [4;36;1mSQL (31.3ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost/program/edit/18.03.2011
+Completed in 78ms (DB: 31) | 302 Found [http://localhost/program]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#edit (for 127.0.0.1 at 2011-03-18 12:09:32) [GET]
+  Parameters: {"vd"=>"18.03.2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE (date_format(value_date,'%d.%m.%Y')='18.03.2011') [0m
+Rendering template within layouts/base
+Rendering program/edit
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/program/edit/18.03.2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:09:36) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/program/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:09:42) [GET]
+  Parameters: {"vd"=>"28.02.2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+
+ArgumentError (invalid date):
+  C:/Ruby187/lib/ruby/1.8/date.rb:752:in `new'
+  app/controllers/clndr_controller.rb:5:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:09:47) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/program/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#edit (for 127.0.0.1 at 2011-03-18 12:10:18) [GET]
+  Parameters: {"vd"=>"18.03.2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (date_format(value_date,'%d.%m.%Y')='18.03.2011') [0m
+Rendering template within layouts/base
+Rendering program/edit
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/program/edit/18.03.2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#new (for 127.0.0.1 at 2011-03-18 12:10:19) [GET]
+  [4;35;1mUserprof Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering program/new
+Completed in 188ms (View: 47, DB: 16) | 200 OK [http://localhost/program/new]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ProgramController#show (for 127.0.0.1 at 2011-03-18 12:10:20) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+ FROM programs
+ group by DATE_FORMAT(value_date,'%d.%m.%Y')[0m
+Rendering template within layouts/base
+Rendering program/show
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/program/show]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 12:10:21) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 125ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 12:10:32) [POST]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:10:35) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (15.6ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:05) [GET]
+  Parameters: {"vd"=>"03-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/03-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:08) [GET]
+  Parameters: {"vd"=>"05-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/05-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:09) [GET]
+  Parameters: {"vd"=>"06-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/06-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:11) [GET]
+  Parameters: {"vd"=>"07-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/07-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:12) [GET]
+  Parameters: {"vd"=>"08-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/08-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:14) [GET]
+  Parameters: {"vd"=>"09-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/09-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:11:48) [GET]
+  Parameters: {"vd"=>"10-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/10-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 12:12:02) [GET]
+  Parameters: {"vd"=>"12-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:15:11) [GET]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 156ms (View: 63, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:15:18) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mDROP DATABASE IF EXISTS `radio_test`[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mCREATE DATABASE `radio_test` DEFAULT CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mCREATE TABLE `logs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `descr` varchar(255), `code` varchar(255)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (46.9ms)[0m   [0mCREATE TABLE `menus` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `mtype` varchar(20) DEFAULT '' NOT NULL, `title` varchar(100), `descr` varchar(100), `no` int(11), `menu_id` int(11)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `programs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(100) DEFAULT '' NOT NULL, `description` text NOT NULL, `image_url` varchar(200) DEFAULT '' NOT NULL, `value_date` datetime NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (62.5ms)[0m   [0mCREATE TABLE `userprofs` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `username` varchar(20), `password` varchar(20), `role` varchar(20), `name` text, `status` varchar(20)) ENGINE=InnoDB[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (78.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (125.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSELECT version FROM `schema_migrations`[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217085404')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110216153707')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110216162246')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110216162530')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217061051')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110217063453')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217064036')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO `schema_migrations` (version) VALUES ('20110217081515')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO `schema_migrations` (version) VALUES ('20110217081651')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:20:42) [GET]
+  [4;36;1mUserprof Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 313ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:20:45) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:22:54) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:23:11) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (93.8ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:24:23) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:25:20) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:26:52) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+ERROR: compiling _run_rhtml_app47views47clndr47_clndr46rhtml_locals_clndr_object RAISED compile error
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:2: unmatched (: /b><div>\n<div class='"
+; @output_buffer.concat(( if @arr_cl.size/
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:2: syntax error, unexpected tINTEGER, expecting ')'
+; @output_buffer.concat(( if @arr_cl.size/7>5;
+                                           ^
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:4: syntax error, unexpected kELSE, expecting ')'
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:6: syntax error, unexpected kEND, expecting ')'
+end ).to_s); @output_buffer.concat "'> \n<div class=\"clndrh\">"
+   ^
+Function body:           def _run_rhtml_app47views47clndr47_clndr46rhtml_locals_clndr_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];clndr = local_assigns[:clndr];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div><div><b>"; @output_buffer.concat(("#{(t'date.month_names')[xdate.month]}+@xdate.strftime('%B, %Y')).to_s); @output_buffer.concat "</b><div>\n<div class='"
+; @output_buffer.concat(( if @arr_cl.size/7>5;
+"clndre"
+else
+ "clndr" 
+end ).to_s); @output_buffer.concat "'> \n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[1]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[2]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[3]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[4]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[5]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[6]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[0]}").to_s); @output_buffer.concat "</div>\n"
+;  @arr_cl.each do |clnd| 
+@output_buffer.concat "<div class=\""; @output_buffer.concat(( if @xdate.day==clnd[1];"clndrcr"
+else
+unless clnd[0]==7 || clnd[0]==6 
+"clndrd" else "clndrd7" end
+end).to_s); @output_buffer.concat "\" >\n"
+;  if clnd[1]==0 ; @output_buffer.concat "&nbsp\n"
+; else; @output_buffer.concat(( 
+unless @xdate.day==clnd[1];link_to clnd[1],@a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
+else clnd[1] end).to_s); end; @output_buffer.concat "</div>"; end; @output_buffer.concat "</div>\n</div>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:27:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render'
+C:/Developing/Ruby/radio/app/helpers/application_helper.rb:26:in `show_calendar'
+C:/Developing/Ruby/radio/app/views/clndr/show.rhtml:6:in `_run_rhtml_app47views47clndr47show46rhtml'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:2: unmatched (: /b><div>\n<div class='"
+; @output_buffer.concat(( if @arr_cl.size/
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:2: syntax error, unexpected tINTEGER, expecting ')'
+; @output_buffer.concat(( if @arr_cl.size/7>5;
+                                           ^
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:4: syntax error, unexpected kELSE, expecting ')'
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:6: syntax error, unexpected kEND, expecting ')'
+end ).to_s); @output_buffer.concat "'> \n<div class=\"clndrh\">"
+   ^) on line #2 of app/views/clndr/_clndr.rhtml:
+1: <div><div><b><%="#{(t'date.month_names')[xdate.month]}+@xdate.strftime('%B, %Y')%></b><div>
+2: <div class='<%= if @arr_cl.size/7>5;
+3: "clndre"
+4: else
+5:  "clndr" 
+
+    app/views/clndr/_clndr.rhtml:27:in `compile!'
+    app/helpers/application_helper.rb:26:in `show_calendar'
+    app/views/clndr/show.rhtml:6:in `_run_rhtml_app47views47clndr47show46rhtml'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:27:11) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+ERROR: compiling _run_rhtml_app47views47clndr47_clndr46rhtml_locals_clndr_object RAISED compile error
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:3: unmatched (: /b><div>\n<div class='"
+; @output_buffer.concat(( if @arr_cl.size/
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:3: syntax error, unexpected tINTEGER, expecting ')'
+; @output_buffer.concat(( if @arr_cl.size/7>5;
+                                           ^
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:5: syntax error, unexpected kELSE, expecting ')'
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:7: syntax error, unexpected kEND, expecting ')'
+end ).to_s); @output_buffer.concat "'> \n<div class=\"clndrh\">"
+   ^
+Function body:           def _run_rhtml_app47views47clndr47_clndr46rhtml_locals_clndr_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];clndr = local_assigns[:clndr];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<div><div><b>"; @output_buffer.concat(("#{(t'date.month_names')[xdate.month]}
+).to_s); @output_buffer.concat "</b><div>\n<div class='"
+; @output_buffer.concat(( if @arr_cl.size/7>5;
+"clndre"
+else
+ "clndr" 
+end ).to_s); @output_buffer.concat "'> \n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[1]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[2]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[3]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[4]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[5]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[6]}").to_s); @output_buffer.concat "</div>\n<div class=\"clndrh\">"
+; @output_buffer.concat(("#{(t'date.abbr_day_names')[0]}").to_s); @output_buffer.concat "</div>\n"
+;  @arr_cl.each do |clnd| 
+@output_buffer.concat "<div class=\""; @output_buffer.concat(( if @xdate.day==clnd[1];"clndrcr"
+else
+unless clnd[0]==7 || clnd[0]==6 
+"clndrd" else "clndrd7" end
+end).to_s); @output_buffer.concat "\" >\n"
+;  if clnd[1]==0 ; @output_buffer.concat "&nbsp\n"
+; else; @output_buffer.concat(( 
+unless @xdate.day==clnd[1];link_to clnd[1],@a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
+else clnd[1] end).to_s); end; @output_buffer.concat "</div>"; end; @output_buffer.concat "</div>\n</div>"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:28:in `compile!'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:20:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:26:in `benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:19:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable_partial.rb:44:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/partials.rb:184:in `render_partial'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:262:in `render'
+C:/Developing/Ruby/radio/app/helpers/application_helper.rb:26:in `show_calendar'
+C:/Developing/Ruby/radio/app/views/clndr/show.rhtml:6:in `_run_rhtml_app47views47clndr47show46rhtml'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:34:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:301:in `with_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/renderable.rb:30:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/template.rb:194:in `render_template'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:260:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:343:in `_render_with_layout'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_view/base.rb:257:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1241:in `render_for_file'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:937:in `render_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1317:in `default_render'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:1323:in `perform_action_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.2/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/flash.rb:141:in `perform_action'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `send'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:523:in `process_without_filters'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:391:in `process'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/base.rb:386:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/routing/route_set.rb:433:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:88:in `dispatch'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:111:in `_call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:82:in `initialize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.2/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/head.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/methodoverride.rb:24:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/rewindable_input.rb:25:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/reloader.rb:9:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/failsafe.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `synchronize'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/lock.rb:11:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/dispatcher.rb:106:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:46:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `each'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/urlmap.rb:40:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/content_length.rb:13:in `call'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:46:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.2/lib/action_controller/vendor/rack-1.0/rack/handler/webrick.rb:13:in `run'
+C:/Ruby187/lib/ruby/gems/1.8/gems/rails-2.3.2/lib/commands/server.rb:111
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby187/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+
+ActionView::TemplateError (compile error
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:3: unmatched (: /b><div>\n<div class='"
+; @output_buffer.concat(( if @arr_cl.size/
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:3: syntax error, unexpected tINTEGER, expecting ')'
+; @output_buffer.concat(( if @arr_cl.size/7>5;
+                                           ^
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:5: syntax error, unexpected kELSE, expecting ')'
+C:/Developing/Ruby/radio/app/views/clndr/_clndr.rhtml:7: syntax error, unexpected kEND, expecting ')'
+end ).to_s); @output_buffer.concat "'> \n<div class=\"clndrh\">"
+   ^) on line #3 of app/views/clndr/_clndr.rhtml:
+1: <div><div><b><%="#{(t'date.month_names')[xdate.month]}
+2: %></b><div>
+3: <div class='<%= if @arr_cl.size/7>5;
+4: "clndre"
+5: else
+6:  "clndr" 
+
+    app/views/clndr/_clndr.rhtml:28:in `compile!'
+    app/helpers/application_helper.rb:26:in `show_calendar'
+    app/views/clndr/show.rhtml:6:in `_run_rhtml_app47views47clndr47show46rhtml'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (218.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:27:44) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+
+ActionView::TemplateError (undefined local variable or method `xdate' for #<ActionView::Base:0x36e32c8>) on line #1 of app/views/clndr/_clndr.rhtml:
+1: <div><div><b><%="#{(t'date.month_names')[xdate.month]}"
+2: #+@xdate.strftime('%B, %Y')
+3: %></b><div>
+4: <div class='<%= if @arr_cl.size/7>5;
+
+    app/views/clndr/_clndr.rhtml:1:in `_run_rhtml_app47views47clndr47_clndr46rhtml_locals_clndr_object'
+    app/helpers/application_helper.rb:26:in `show_calendar'
+    app/views/clndr/show.rhtml:6:in `_run_rhtml_app47views47clndr47show46rhtml'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.1ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:28:06) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:28:34) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:29:18) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:29:24) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:29:40) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:29:48) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+
+ActionView::TemplateError (undefined method `+@' for "March, 2011":String) on line #2 of app/views/clndr/_clndr.rhtml:
+1: <div><div><b><%="#{(t 'date.standalone_month_names')[@xdate.month]}"
+2: +@xdate.strftime('%B, %Y')
+3: %></b><div>
+4: <div class='<%= if @arr_cl.size/7>5;
+5: "clndre"
+
+    app/views/clndr/_clndr.rhtml:2:in `_run_rhtml_app47views47clndr47_clndr46rhtml_locals_clndr_object'
+    app/helpers/application_helper.rb:26:in `show_calendar'
+    app/views/clndr/show.rhtml:6:in `_run_rhtml_app47views47clndr47show46rhtml'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.1ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:14) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:23) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:27) [GET]
+  Parameters: {"vd"=>"11-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/11-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:30) [GET]
+  Parameters: {"vd"=>"10-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/10-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:32) [GET]
+  Parameters: {"vd"=>"09-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/09-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:35) [GET]
+  Parameters: {"vd"=>"03-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (15.6ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 172ms (View: 125, DB: 16) | 200 OK [http://localhost/clndr/show/03-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:38) [GET]
+  Parameters: {"vd"=>"06-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/06-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:40) [GET]
+  Parameters: {"vd"=>"20-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (15.6ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/clndr/show/20-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:44) [GET]
+  Parameters: {"vd"=>"06-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/06-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:45) [GET]
+  Parameters: {"vd"=>"03-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/03-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:46) [GET]
+  Parameters: {"vd"=>"09-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/09-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:47) [GET]
+  Parameters: {"vd"=>"10-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/10-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:47) [GET]
+  Parameters: {"vd"=>"11-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/11-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:30:48) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:30:53) [GET]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:01) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:31:15) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (109.4ms)
+Completed in 234ms (View: 156, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:18) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:26) [GET]
+  Parameters: {"vd"=>"07-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/07-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:29) [GET]
+  Parameters: {"vd"=>"11-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/11-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:43) [GET]
+  Parameters: {"vd"=>"07-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/07-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:45) [GET]
+  Parameters: {"vd"=>"08-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/08-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:48) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:31:51) [GET]
+  Parameters: {"vd"=>"24-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/24-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:31:58) [GET]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (15.6ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.2ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:32:03) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:33:01) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:33:12) [POST]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:33:21) [POST]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:33:31) [POST]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:33:41) [POST]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:33:48) [GET]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.2ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:33:59) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:34:09) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:34:19) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:34:29) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 0, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:34:39) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:34:49) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:34:49) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:34:52) [GET]
+  Parameters: {"vd"=>"01-01-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (109.4ms)
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/01-01-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:34:58) [GET]
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 141ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:35:08) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:35:18) [POST]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-18 15:35:21) [GET]
+  [4;36;1mUserprof Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `userprofs`[0m
+  [4;35;1mUserprof Load (0.0ms)[0m   [0mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered clndr/_clndr (31.3ms)
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-18 15:35:32) [POST]
+  [4;35;1mUserprof Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered program/_list (0.0ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:40) [GET]
+  Parameters: {"vd"=>"03-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/03-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:43) [GET]
+  Parameters: {"vd"=>"01-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:44) [GET]
+  Parameters: {"vd"=>"08-03-2011"}
+  [4;35;1mUserprof Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/clndr/show/08-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:46) [GET]
+  Parameters: {"vd"=>"09-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/09-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:47) [GET]
+  Parameters: {"vd"=>"10-03-2011"}
+  [4;35;1mUserprof Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/clndr/show/10-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:49) [GET]
+  Parameters: {"vd"=>"11-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 94ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/11-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:51) [GET]
+  Parameters: {"vd"=>"12-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/clndr/show/12-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:52) [GET]
+  Parameters: {"vd"=>"13-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (15.6ms)
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/clndr/show/13-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:54) [GET]
+  Parameters: {"vd"=>"01-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/01-03-2011]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing ClndrController#show (for 127.0.0.1 at 2011-03-18 15:35:56) [GET]
+  Parameters: {"vd"=>"06-03-2011"}
+  [4;35;1mUserprof Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `userprofs`[0m
+  [4;36;1mUserprof Load (0.0ms)[0m   [0;1mSELECT * FROM `userprofs` WHERE (`userprofs`.`id` = 1) [0m
+Rendering template within layouts/base
+Rendering clndr/show
+Rendered clndr/_clndr (0.0ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/clndr/show/06-03-2011]

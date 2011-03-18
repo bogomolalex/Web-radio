@@ -8,8 +8,7 @@ class ClndrControllerTest < ActionController::TestCase
   end
   
   def test_get_array_of_days
-   @arr = get_clndr(@xdat)
-   assert_not_nil @arr,"Массив календаря пуст"
-   assert_not_equal 0,@arr.size,"Массив имеет размер 0"
+   get :show ,:vd=>@xdat.strftime('%d-%m-%Y')
+   assert_response :success
   end
 end
