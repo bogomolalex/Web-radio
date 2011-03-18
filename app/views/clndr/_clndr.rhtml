@@ -7,5 +7,12 @@
 <div class="clndrh"><%="#{(t'date.abbr_day_names')[6]}"-%></div>
 <div class="clndrh"><%="#{(t'date.abbr_day_names')[0]}"-%></div>
 <% @arr_cl.each do |clnd| -%>
-<div class="clndrd"><% if clnd[1]==0 -%>&nbsp
-<%else-%><%= link_to clnd[1],{:id=>1},:class=>"clndr_a"-%><%end-%></div><%end-%></div>
+<div class="<%= if @xdate.day==clnd[1];"clndrcr"
+else
+unless clnd[0]==7 || clnd[0]==6 
+"clndrd" else "clndrd7" end
+end-%>" >
+<% if clnd[1]==0 -%>&nbsp
+<%else-%><%= 
+unless @xdate.day==clnd[1];link_to clnd[1],@a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
+else clnd[1] end-%><%end-%></div><%end-%></div>

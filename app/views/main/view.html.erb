@@ -14,4 +14,4 @@
 <%=render :partial => 'program/list'%>
 </div>
 <%= link_to "Calendar", :controller => 'clndr',:action => 'show',:id=>"01-01-2011" %>
-<%=render :partial => 'clndr/clndr', :locals=>{:arr_cl=>@arr_cl}%>
+<%=show_calendar Date.today,{:controller=>"clndr",:action=>"show",:vd=>"18-01-2001"} %>

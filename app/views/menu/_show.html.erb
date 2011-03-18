@@ -1,6 +1,8 @@
 <%="#{mdiv}"%>
 
 <% javascript_tag do -%>
+Event.observe(window, 'load',
+function() {
 $('m1').observe('mouseover',function(){this.setStyle({
   backgroundColor: "buttonface",
     });
@@ -17,4 +19,6 @@ $('m2').observe('mouseout',function(){this.setStyle({
   backgroundColor: '#FFF',
     });
 })
+}
+ );
 <%end-%>

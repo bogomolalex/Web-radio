@@ -14,14 +14,32 @@ pre {
 
 .clndr {
   font-size: 13px;
-  width: 170px;
-  height: 150px;
+  width: 154px;
+  height: 133px;
   margin:0;
   padding:0;
+  BORDER: black solid 1px; 
 }
 .clndrd {
   width: 20px;
   height: 20px;
+  float:left;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndrd7 {
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  float:left;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndrcr {
+  color: #666;
+  width: 20px;
+  height: 20px;
+  background-color: #9c9;
   float:left;
   BORDER: buttonface solid 1px; 
   text-align: center;
@@ -31,9 +49,9 @@ pre {
   height: 20px;
   float:left;
   color : #666;
-  BORDER: #9c9 solid 1px; 
+  BORDER: #f0f0f0 solid 1px; 
   text-align: center;
-  background-color:#9c9;
+  background-color:#f0f0f0;
 }
 
 a.clndr_a:hover { background-color:#9c9;
