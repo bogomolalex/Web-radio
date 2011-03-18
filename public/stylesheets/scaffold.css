@@ -1,6 +1,6 @@
 body { background-color: #fff; color: #333; }
 
-body, p, ol, ul, td {
+body, p, ol, ul, td,div {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
   line-height: 18px;
@@ -14,8 +14,16 @@ pre {
 
 .clndr {
   font-size: 13px;
-  width: 190px;
+  width: 189px;
   height: 162px;
+  margin:0;
+  padding:0;
+  BORDER: black solid 1px;}
+
+.clndre {
+  font-size: 13px;
+  width: 189px;
+  height: 189px;
   margin:0;
   padding:0;
   BORDER: black solid 1px; 
