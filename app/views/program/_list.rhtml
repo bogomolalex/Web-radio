@@ -1,18 +1,1 @@
-<table border="1" >
- <tr>
-  <td>Title
-  </td>
-  <td>Desc
-  </td>
- </tr> 
-<% @program.each do |p| %>
- <tr>
-  <td>
-  <%= "#{h(p.title)}" %>   
-  </td>
-  <td>
-  <%= "#{h(p.description)}" %>   
-  </td>
- </tr>
-<% end %>
-</table>
+<%=show_table ({:headers=>["Header1","Header2","Header_3"],:objs=>Program.find(:all),:fields=>["id","title","description"]})-%>

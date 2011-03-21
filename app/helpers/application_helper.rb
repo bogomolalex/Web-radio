@@ -29,6 +29,7 @@ module ApplicationHelper
   def show_table(xpar)
    @headers = xpar[:headers]
    @objs = xpar[:objs]
+   @fields = xpar[:fields]
    render :partial => 'list_data/list'
   end
 
