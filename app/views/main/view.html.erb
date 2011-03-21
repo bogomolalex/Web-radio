@@ -15,3 +15,4 @@
 </div>
 <%= link_to "Calendar", :controller => 'clndr',:action => 'show',:id=>"01-01-2011" %>
 <%=show_calendar Date.today,{:controller=>"clndr",:action=>"show",:vd=>"18-01-2001"} %>
+<%=show_table ({:headers=>['Header1','Header2'],:objs=>Program.find(:all)})-%>

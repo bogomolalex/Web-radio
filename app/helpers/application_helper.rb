@@ -20,10 +20,16 @@ module ApplicationHelper
   end
 
   def show_calendar(xdate,key={})
-   @arr_cl=get_clndr(xdate)
-   @a_hash=key
-   @xdate=xdate
+   @arr_cl = get_clndr(xdate)
+   @a_hash = key
+   @xdate = xdate
    render :partial => 'clndr/clndr'
+  end
+
+  def show_table(xpar)
+   @headers = xpar[:headers]
+   @objs = xpar[:objs]
+   render :partial => 'list_data/list'
   end
 
 end
