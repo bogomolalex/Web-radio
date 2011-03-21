@@ -23,7 +23,7 @@ module ApplicationHelper
    @arr_cl = get_clndr(xdate)
    @a_hash = key
    @xdate = xdate
-   render :partial => 'clndr/clndr'
+   render :partial => 'shared/clndr'
   end
 
   def show_table(xpar)

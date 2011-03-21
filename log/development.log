@@ -37393,3 +37393,486 @@ Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:06) [POST]
 Rendered shared/_tab_vw (0.0ms)
 Rendered program/_list (0.0ms)
 Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:16) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (109.4ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:16) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:26) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:26) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:36) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:36) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-21 17:44:42) [GET]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 141ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:46) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:53) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 0, DB: 16) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:44:56) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:03) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:06) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:13) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:16) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:23) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:26) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:33) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:36) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:43) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:46) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:53) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:45:56) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-21 17:45:57) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Rendered clndr/_clndr (15.6ms)
+Completed in 141ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:06) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:08) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:16) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 141ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:18) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:26) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:28) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:36) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:38) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:46) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:48) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:56) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:46:58) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2011-03-21 17:47:00) [GET]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0m
+ SELECT *
+ FROM menus where mtype='MAIN' order by no[0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendering template within layouts/base
+Rendering main/view
+Rendered menu/_show (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Rendered shared/_clndr (46.9ms)
+Completed in 172ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:47:06) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:47:11) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:47:16) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:47:21) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (0.0ms)
+Completed in 31ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:47:26) [POST]
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mProgram Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2011-03-21 17:47:31) [POST]
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mProgram Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `programs`[0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 47ms (View: 16, DB: 0) | 200 OK [http://localhost/main/list]
