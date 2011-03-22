@@ -1,5 +1,7 @@
 body { background-color: #fff; color: #333; }
 
+.but { border:1px solid transparent;background: #f0f0f0;width: 70px;}
+
 body, p, ol, ul, td,div {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size:   13px;
