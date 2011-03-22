@@ -8,7 +8,7 @@ class MenuTest < ActiveSupport::TestCase
   end
  
   def test_must_have_menu_records
-    assert_not_equal 0,@menu.size,"Нет записей в меню!"
+    assert_not_equal 0,@menu.size,"No records!"
   end
 
 end
