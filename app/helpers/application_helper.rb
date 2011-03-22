@@ -20,17 +20,14 @@ module ApplicationHelper
   end
 
   def show_calendar(xdate,key={})
-   @arr_cl = get_clndr(xdate)
-   @a_hash = key
-   @xdate = xdate
-   render :partial => 'shared/clndr'
+   render :partial => 'shared/clndr',:locals=>{:arr_cl=>get_clndr(xdate),
+                                               :a_hash=>key,:xdate=>xdate}
   end
 
   def show_table(xpar)
-   @headers = xpar[:headers]
-   @objs = xpar[:objs]
-   @fields = xpar[:fields]
-   render :partial => 'shared/tab_vw'
+   xpar[:fields]||=["id"]
+   render :partial => 'shared/tab_vw',:locals=>{:headers=>xpar[:headers],
+                :objs=>xpar[:objs],:fields=>xpar[:fields]}
   end
 
 end
