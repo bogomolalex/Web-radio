@@ -1,5 +1,5 @@
 <!--/* */-->
-<%= form_tag :controller=>url[:controller],:action=>url[:action],id=>url[:id] unless url.nil? -%>
+<%= form_tag :controller=>url[:controller],:action=>url[:action],:id=>url[:id] unless url.nil? -%>
 <p>
 <div style="float:left;" >       
  <div style="float:left;"><%= submit_tag h(but_sub[:text]),:class=>"but" unless url.nil? -%>&nbsp</div>
@@ -14,17 +14,18 @@ end -%>
 &nbsp
 </p>
 <table width="100%" heigh="90%" style="  BORDER: buttonface solid 1px;">
+<% unless headers.nil?-%>
 <tr>
-<% unless crud.nil?-%>
+<% if crud-%>
  <th style="background-color:solid;">&nbsp</th>
-<% end-%>
-<% unless headers.nil?
- headers.each do |hd| -%>
+<%end-%>
+<% headers.each do |hd| -%>
  <th style="background-color:solid;"><%=h(hd)-%></th>
-<% end;end;-%>
-<% unless crud.nil?-%>
+<% end;-%>
+<% if crud-%>
  <th style="background-color:solid;">&nbsp</th>
-<% end-%>
+<%end-%>
+<%end-%>
 </tr>
 <%@fl=0%>
 <% unless objs.nil?
@@ -36,12 +37,14 @@ end -%>
  <tr >
  <%@fl=0%>
 <%end-%>
-<% unless crud.nil?-%>
+<% if crud-%>
  <td><%= check_box_tag "chk_id[]","#{h(hs.id)}" -%></td><% end-%>
  <%fields.each do |fl| -%>
   <td><%=h(hs.read_attribute(h("#{fl}")))-%>
  <%end;-%>
-<td> <%=link_to "#{t(:Butt_Update)}",:controller=>"program"-%></td>
+<% if crud-%>
+<td> <%=link_to "#{t(:Butt_Update)}",:controller=>"program" -%></td>
+<%end-%>
 <%end-%>
 <% end-%>
 </tr>

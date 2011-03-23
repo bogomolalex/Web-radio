@@ -7,23 +7,15 @@
 <!-- Кнопка создать-->
  <%= link_to "View list of program", :controller => 'program',:action => 'show' %></p>
 
-  <%= link_to "Create new", :controller => 'program',:action => 'new'%>
-<!-- Список програм -->
-  <%= form_tag "/program/delete99/#{h(params[:vd])}" %>
-  <p><%= submit_tag t(:Butt_Delete) %></p>
-
-  <table> 
-  <% @program.each do |p| %>
-   <tr><td>
-    <%= check_box_tag "chk_id[]","#{h(p.id)}" %>
-    <%="#{h(p.value_date.strftime('%H.%M.%S'))} #{h(p.title)} #{h(p.description)}" %>
-    <%= link_to "#{t(:Butt_Update)}", :controller => 'program',:action => 'edit2',:id=>p%>
-<!--    <%= link_to "#{t(:Butt_Delete)}", :controller => 'program',:action => 'delete2',:id=>p%>-->
-   </td></tr>
-   <% end %>
-  </table>  
-  </form>
-
+<div style="width:500px;" >
+<%=show_table ({:objs=>@program,
+                :headers=>["Title" ,"Description"],
+                :fields=>["title","description"],
+                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}"},
+                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new'}],
+                :crud=>true,
+                :but_sub=>{:text=>t(:Butt_Delete)}})-%>
+</div>
 <% else %>
   report_error("Unauthorized access; password required")
 <% end %>
