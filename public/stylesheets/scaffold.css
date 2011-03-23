@@ -1,6 +1,11 @@
 body { background-color: #fff; color: #333; }
 
-.but { border:1px solid transparent;background: #f0f0f0;width: 70px;}
+.but {
+ background: #f0f0f0;width: 70px;
+ border-style: solid;
+ border-width: 1px;
+ padding: 0px;}
+
 
 body, p, ol, ul, td,div {
   font-family: verdana, arial, helvetica, sans-serif;

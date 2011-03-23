@@ -1,0 +1,40 @@
+<%= form_tag "#{h(url)}" unless crud.nil? -%>
+ <p><%= submit_tag t(:Butt_Delete),:class=>"but" unless crud.nil? %>
+ <%= submit_tag t(:Butt_Create),:class=>"but" unless crud.nil? %>
+</p>
+<table width="100%" heigh="100%" style="  BORDER: buttonface solid 1px;">
+<tr>
+<% unless crud.nil?-%>
+ <th style="background-color:solid;">&nbsp</th>
+<% end-%>
+<% unless headers.nil?
+ headers.each do |hd| -%>
+ <th style="background-color:solid;"><%=h(hd)-%></th>
+<% end;end;-%>
+<% unless crud.nil?-%>
+ <th style="background-color:solid;">&nbsp</th>
+<% end-%>
+</tr>
+<%@fl=0%>
+<% unless objs.nil?
+  objs.each do |hs| -%>
+<% if @fl==0-%>
+ <tr style="background-color:#f0f0f0">
+ <%@fl=1%>
+<%else-%>
+ <tr >
+ <%@fl=0%>
+<%end-%>
+<% unless crud.nil?-%>
+ <td><%= check_box_tag "chk_id[]","#{h(hs.id)}" -%></td><% end-%>
+ <%fields.each do |fl| -%>
+  <td><%=h(hs.read_attribute(h("#{fl}")))-%>
+ <%end;-%>
+<td> <%=link_to "#{t(:Butt_Update)}",:controller=>"program"-%></td>
+<%end-%>
+<% end-%>
+</tr>
+</table>
+<%unless crud.nil? -%>
+ </form>
+<%end-%>
