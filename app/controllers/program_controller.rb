@@ -68,6 +68,11 @@ class ProgramController < ApplicationController
 
   def delete99
    @vd="#{params[:vd]}"
+   #
+   unless params[:create].nil?
+    redirect_to :controller => 'program',:action => 'new'
+    return
+   end 
    if params[:chk_id]
     @programs = params[:chk_id].map { |t| Program.find(t) }
     @programs.each { |t| 
