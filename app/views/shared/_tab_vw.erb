@@ -1,8 +1,19 @@
-<%= form_tag "#{h(url)}" unless crud.nil? -%>
- <p><%= submit_tag t(:Butt_Delete),:class=>"but" unless crud.nil? %>
- <%= submit_tag t(:Butt_Create),:class=>"but" unless crud.nil? %>
+<!--/* */-->
+<%= form_tag :controller=>url[:controller],:action=>url[:action],id=>url[:id] unless url.nil? -%>
+<p>
+<div style="float:left;" >       
+ <div style="float:left;"><%= submit_tag h(but_sub[:text]),:class=>"but" unless url.nil? -%>&nbsp</div>
+<% unless btns.nil?
+    btns.each do |b| -%>
+ <div style="float:left;"><%= button_to h(b[:text]),
+{:controller=>b[:controller],:action=>b[:action],:id=>b[:id]},:name=>h(b[:name]),
+:class=>"but"  -%>&nbsp</div>
+<%end
+end -%>
+</div>
+&nbsp
 </p>
-<table width="100%" heigh="100%" style="  BORDER: buttonface solid 1px;">
+<table width="100%" heigh="90%" style="  BORDER: buttonface solid 1px;">
 <tr>
 <% unless crud.nil?-%>
  <th style="background-color:solid;">&nbsp</th>

@@ -26,11 +26,24 @@ module ApplicationHelper
 
   def show_table(xpar)
    xpar[:fields]||=["id"]
-   xpar[:crud]||=true
-   xpar[:url]||=""
-   render :partial => 'shared/tab_vw',:locals=>{:headers=>xpar[:headers],
+   xpar[:crud]||=false
+    # кнопка по умолчанию submit
+   unless xpar[:url].nil?
+     xpar[:but_sub]||={:text=>t(:Butt_Send)}
+   end
+    # кнопки по умолчанию для CRUD
+   if xpar[:crud]
+    xpar[:url]||={:controller=>"",:action=>"",:id=>""}
+    # кнопки по умолчанию для CRUD
+    if xpar[:btns].nil?
+     xpar[:btns]||=Array.new
+     xpar[:btns]<<{:name=>"delete",:text=>t(:Butt_Delete),:controller=>"",:action=>"delete",:id=>"#{params[:id]}" }
+     xpar[:but_sub]={:text=>t(:Butt_Create)}
+    end
+   end
+    render :partial => 'shared/tab_vw',:locals=>{:headers=>xpar[:headers],
                 :objs=>xpar[:objs],:fields=>xpar[:fields],:crud=>xpar[:crud],
-                :url=>xpar[:url]}
+                :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub]}
   end
 
 end
