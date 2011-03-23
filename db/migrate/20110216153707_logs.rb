@@ -1,7 +1,10 @@
 class Logs < ActiveRecord::Migration
 
   def self.up
-   add_column :logs,:code,:string
+   create_table "logs", :force => true do |t|
+     t.string "descr"
+     t.string "code"
+   end
   end
 
   def self.down

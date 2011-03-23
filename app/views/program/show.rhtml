@@ -10,7 +10,6 @@
   <table> 
   <%- @program_dat.each do |p| -%>
   <%- @w="#{p.value_date.strftime('%d.%m.%Y')}"-%>
-   <%= link_to "Month", clndr_date_path(@w) %></p>
    <tr><td>
     <%= link_to "#{p.value_date.strftime('%d.%m.%Y')}",edit_date_path(@w) %>
    </td><td>
