@@ -1,18 +1,21 @@
-<p>Find me in app/views/program/show.html.erb</p>
-Editing program
+<p>Find me in app/views/program/dates_list.html.erb</p>
+ <%= link_to "Home ", :controller => 'main',:action => 'view'%>
 <!-- Если пользователь зарегистрирован-->
 <% if @c %>
-  <% if @program %>
-  <!-- Изменить запись-->
-  <% form_for @program,:url=> {:action=>"update" } do |f| %>
-   <%= datetime_select :program, :value_date %>
-   <%= f.text_field :title %>
-   <%= f.text_field :description %>
-   <%= f.submit t(:Butt_Update) %>
-  <% end %>
- <% else %>
-   empty
- <% end %>
+ <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
+<p>List of  program   <%="#{h(params[:vd])}"%></p>
+<!-- Кнопка создать-->
+ <%= link_to "View list of program", :controller => 'program',:action => 'show' %></p>
+
+<div style="width:500px;" >
+<%=show_table ({:objs=>@program,
+                :headers=>["Title" ,"Description"],
+                :fields=>["title","description"],
+                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}"},
+                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new'}],
+                :crud=>true,
+                :but_sub=>{:text=>t(:Butt_Delete)}})-%>
+</div>
 <% else %>
   report_error("Unauthorized access; password required")
 <% end %>
