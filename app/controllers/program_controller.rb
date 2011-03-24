@@ -17,7 +17,7 @@ class ProgramController < ApplicationController
   end
 
 
-  def edit
+  def edit2
     @program = Program.find(:all,
                  :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'")
     if @program.size==0
@@ -25,7 +25,7 @@ class ProgramController < ApplicationController
     end 
   end
 
-  def edit2
+  def edit
     @program = Program.find(params[:id])
   end
 
