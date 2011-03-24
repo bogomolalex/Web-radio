@@ -5,7 +5,7 @@
 <%= link_to "Login", :controller => 'userprof',:action => 'view' %>
 <% end %>
 <h4>Main#view</h4>
-<%=render :partial => 'menu/show', :locals=>{:mdiv=>@mdiv}%>
+<%= render :partial => 'menu/show', :locals=>{:mdiv=>@mdiv}%>
 <div style="200"; text-align='center'">
  <%= render :partial=>"shared/radio" %>
 </div>
