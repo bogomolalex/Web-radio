@@ -1,0 +1,6 @@
+<%=show_table ({#:headers=>["Header1","Header2","Header_3"],
+                :objs=>@program_dat,
+                :fields=>["value_date"],
+                #:url=>{:controller=>"program",:action=>"show"},
+                #:crud=>true
+               })-%>
