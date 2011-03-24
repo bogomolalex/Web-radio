@@ -1,19 +1,23 @@
-<!--/* */-->
 <%= form_tag :controller=>url[:controller],:action=>url[:action],:id=>url[:id] unless url.nil? -%>
-<p>
-<div style="float:left;" >       
+<%unless url.nil?-%>
+ <p> 
  <div style="float:left;">
-<%= submit_tag h(but_sub[:text]),:class=>"but" unless url.nil? -%>&nbsp</div>
-<% unless btns.nil?
-    btns.each do |b| -%>
+<%= submit_tag h(but_sub[:text]),:class=>"but"-%>&nbsp</div>
+<%end-%>
+
+<% unless btns.nil?-%>
+<div style="float:left;" >       
+<%    btns.each do |b| -%>
  <div style="float:left;">
   <%=submit_tag h(b[:text]),:name=>h(b[:name]),:class=>"but"  -%>&nbsp</div>
+</div>
 <%end
 end -%>
-</div>
-&nbsp
-</p>
-<table width="100%" heigh="90%" style="  BORDER: buttonface solid 1px;">
+<%unless url.nil?-%>
+  &nbsp
+ </p> 
+<%end-%>
+<table width="100%" heigh="100%" style="BORDER: buttonface solid 1px;">
 <% unless headers.nil?-%>
 <tr>
 <% if crud-%>
