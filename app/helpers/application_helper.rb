@@ -46,4 +46,14 @@ module ApplicationHelper
                 :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub]}
   end
 
+  def show_menu(xtype)
+    mmain = Menu.find_by_mtype(xtype,:order=>"no")
+#    mdiv=content_tag :div
+#    mmain.each do |m| 
+#      @mdiv= @mdiv+content_tag :div,"#{m.title}",{:id=>'m#{m.id}'}
+#    end
+#    mdiv=@mdiv+"</div>"
+#	   render :layout=>false
+  end
+
 end
