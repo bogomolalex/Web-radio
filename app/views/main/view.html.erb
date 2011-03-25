@@ -1,3 +1,4 @@
+<div>
 <div id="login">
  <% if @c %>
  <p> <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
@@ -7,7 +8,6 @@
  <% end %>
 </div>
 <div id="nav">
- <h4>Main#view</h4>
  <%=render :partial => 'menu/show', :locals=>{:mdiv=>@mdiv}%>
 </div>
 <div id="radio">
@@ -15,13 +15,13 @@
 </div>
 <div id="lsider"><%= periodically_call_remote :update => 'list_div',
 :url => {:action => "list"},
-:frequency => 10.0 %>
-<div id='list_div' style="width: 189px;height: 162px;">
-<%=render :partial => 'program/list'%>
+:frequency => 10.0 -%>
+<div id='list_div' style="float:left;">
+<%=render :partial => 'program/list'-%>
 </div>
 </div>
 <div id="main">
 <p>Find me in app/views/main/view.html.erb</p>
-<%= link_to "Calendar", :controller => 'clndr',:action => 'show',:id=>"01-01-2011" %>
-<%=show_calendar Date.today,{:controller=>"clndr",:action=>"show",:vd=>"18-01-2001"} %>
+ <%show_calendar Date.today,{:controller=>"clndr",:action=>"show",:vd=>"18-01-2001"} -%>
+</div>
 </div>
