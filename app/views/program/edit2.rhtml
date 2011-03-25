@@ -10,7 +10,7 @@
 <div style="width:500px;" >
 <%=show_table ({:objs=>@program,
                 :headers=>["Title" ,"Description"],
-                :fields=>["title","description"],
+                :fields=>[{:id=>"title"},{:id=>"description"}],
                 :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}"},
                 :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new'}],
                 :crud=>true,
