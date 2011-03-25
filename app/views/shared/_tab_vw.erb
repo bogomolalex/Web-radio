@@ -47,7 +47,7 @@ end -%>
   <td><%=
 ptmp=hs.read_attribute(h("#{fl[:id]}"))
 if fl.has_key? :proc 
- h(fl[:proc].call(ptmp));
+ fl[:proc].call(ptmp);
 else
  h(ptmp)
 end 

@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def show_table(xpar)
-   xpar[:fields]||=[{:id=>"id",:proc=>lambda{|item| item}}]
+   xpar[:fields]||=[{:id=>"id",:proc=>lambda{|item| "Id:"+item}}]
    xpar[:crud]||=false
     # кнопка по умолчанию submit
    unless xpar[:url].nil?
