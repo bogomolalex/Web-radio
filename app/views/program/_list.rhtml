@@ -1,6 +1,6 @@
 <%=show_table ({#:headers=>["Header1","Header2","Header_3"],
                 :objs=>Program.find(:all),
-                :fields=>["id","title","description"],
+                :fields=>["value_date","title","description"],
                 #:url=>{:controller=>"program",:action=>"show"},
                 #:crud=>true
                })-%>
