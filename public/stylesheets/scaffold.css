@@ -48,7 +48,7 @@ valign:top;}
  text-align:center;
  float:left;
  width:550px;
- background: #f0f0f0;
+# background: #f0f0f0;
 }
 
 #mainf {
@@ -89,13 +89,13 @@ pre {
   font-size: 13px;
   width: 189px;
   height: 189px;
-#  margin:0;
   padding:0;
   BORDER: black solid 1px; 
 }
 .clndrd {
   width: 25px;
   height: 25px;
+  padding: 0px;
   float: left;
   BORDER: buttonface solid 1px; 
   text-align: center;
@@ -103,6 +103,7 @@ pre {
 .clndrd7 {
   width: 25px;
   height: 25px;
+  padding: 0px;
   background-color: #f0f0f0;
   float:left;
   BORDER: buttonface solid 1px; 
@@ -110,8 +111,8 @@ pre {
 }
 .clndrcr {
   color: #666;
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   background-color: #9c9;
   float:left;
   BORDER: buttonface solid 1px; 
@@ -120,7 +121,8 @@ pre {
 .clndrh {
   width: 25px;
   height: 25px;
-  float:left;
+  padding: 0px;
+  float: left;
   color : #666;
   BORDER: #f0f0f0 solid 1px; 
   text-align: center;
