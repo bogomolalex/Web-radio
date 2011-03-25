@@ -4,7 +4,8 @@ class ProgramController < ApplicationController
     @program_dat = Program.find_by_sql("
      SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
        FROM programs
-      group by DATE_FORMAT(value_date,'%d.%m.%Y')")
+      group by DATE_FORMAT(value_date,'%d.%m.%Y')
+      order by 1 desc")
   end
 
   def show1
@@ -19,7 +20,8 @@ class ProgramController < ApplicationController
 
   def edit2
     @program = Program.find(:all,
-                 :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'")
+                 :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'",
+                 :order=>"value_date ")
     if @program.size==0
       redirect_to :controller=>"program",:action=>"show"
     end 
