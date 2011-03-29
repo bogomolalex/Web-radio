@@ -1,0 +1,28 @@
+<% unless menu.nil? -%>
+<ul class="menu">
+ <% menu.each do |m|-%>
+ <%= content_tag(:li,link_to (m.title,:controller=>"program"),{:class=>"#{mtype}"});-%>
+<%end-%>
+</ul>
+<% end-%>
+
+<% javascript_tag do -%>
+Event.observe(window, 'load',
+function() {
+$$('.MAIN').each(
+function(e)
+{e.observe('mouseover',
+function(){this.setStyle({
+  backgroundColor: "buttonface",
+    });
+})
+e.observe('mouseout',
+function(){this.setStyle({
+  backgroundColor: '#FFF',
+    });
+})
+}
+)
+}
+ );
+<%end-%>
