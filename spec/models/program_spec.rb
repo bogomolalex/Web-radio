@@ -17,16 +17,19 @@ describe Program do
   end
 
     
-    it 'value_date should have today' do
-     lmb=lambda do
-       |t| 
-         t.strftime('%d.%m.%Y') 
-      end
+  it 'value_date should have today' do
+     p = Program.new(@valid_attributes)
+     p.value_date.should be_nil
+     p.save
+     p.value_date.strftime('%d.%m.%Y').should == Date.today.strftime('%d.%m.%Y')
+  end
+
+  it "value_date should be == Factory->:program.value_date " do
+     pr = Factory(:program)
      p=Program.new(@valid_attributes)
      p.value_date.should be_nil
      p.save
-    lmb.call(p.value_date).should == Date.today.strftime('%d.%m.%Y')
-    end
-
+     p.value_date.strftime('%d.%m.%Y').should == pr.value_date.strftime('%d.%m.%Y')
+  end
 
 end
