@@ -1,12 +1,13 @@
 require 'spec_helper'
 
-describe Program do
+describe 'Programs model' do
+
   before(:each) do
     @valid_attributes = {:title=>"Test",:description=>"Test2",
                          :image_url=>"Test3"}
   end
 
-  it "Value_date must be present" do
+  it "should have the filled Title field " do
     p=Program.new
     p.should_not be_valid
     p.errors.on(:title).should_not be_nil
@@ -17,7 +18,7 @@ describe Program do
   end
 
     
-  it 'value_date should have today' do
+  it 'should have default value for value_date' do
      p = Program.new(@valid_attributes)
      p.value_date.should be_nil
      p.save
