@@ -6,6 +6,7 @@ class ProgramController < ApplicationController
        FROM programs
       group by DATE_FORMAT(value_date,'%d.%m.%Y')
       order by 1 desc")
+    
   end
 
   def show1
