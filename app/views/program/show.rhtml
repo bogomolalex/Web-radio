@@ -1,12 +1,12 @@
 <%=controller.controller_name %> 
 <p>Find me in app/views/program/dates_list.html.erb</p>
  <%= link_to "Home ", :controller => 'main',:action => 'view'%>
-<!-- Если пользователь зарегистрирован-->
+<!-- ╨Я╤А╨╕╨╝╨╡╤А -->
 <%- if @c -%>
  <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
 <p>List of  program</p>
  <%- if !@program_dat.empty? -%>
-<!-- Список дат -->
+<!-- ╨╡╤Й╨╡ -->
 <%= render :partial=>"grplst"-%>
 <%- end -%>
 <%- else -%>
