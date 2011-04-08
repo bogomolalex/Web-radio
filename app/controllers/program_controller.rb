@@ -1,5 +1,6 @@
 class ProgramController < ApplicationController
 
+  verify :method=>:post,:only=>'create'
   def show
     @program_dat = Program.find_by_sql("
      SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
@@ -53,10 +54,10 @@ class ProgramController < ApplicationController
   end
 
   def create
-    @program = Program.new(params[:program])
-    @vd="#{@program.value_date.strftime('%d.%m.%Y')}"
+    @program1 = Program.new(params[:program])
+    @vd="#{@program1.value_date.strftime('%d.%m.%Y')}"
     respond_to do |format|
-      if @program.save
+     if @program1.save 
         flash[:notice] = 'Programs was successfully created.'
         format.html { redirect_to edit_date_url(@vd) }
       else

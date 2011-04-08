@@ -43,9 +43,11 @@ ActionController::Routing::Routes.draw do |map|
   map.clndr_date 'clndr/show/:vd',:controller=>"clndr",:action=>"show"
 #  map.edit_date 'program/show',:controller=>"program",:action=>"show"
 
+  map.connect ':controller/:action'
   map.connect '', :controller => "main", :action => "view"
   map.connect ':controller/:action/:vd',
                 :requirements=> {:vd => /\d+.\d+.\d+/ }
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+
 end

@@ -96,7 +96,48 @@ describe ProgramController do
      response.should(render_template('edit'))
     end
 
-
   end
+  describe "POST 'create'" do
+    before do
+      @prog_params={:program=>{:title=>"ssss",:description=>"wwerwer",
+                    :image_url=>"ddd",:value_date=>DateTime.now
+                  }}
+    end
 
+    context "when succesful" do
+
+      it "should redirect to edit_date_url" do
+        post :create,@prog_params
+        response.should redirect_to(edit_date_url(assigns[:vd]))
+      end
+
+      it "should create record" do
+       lambda {
+         post :create,@prog_params
+       }.should change(Program,:count).by(1)
+      end
+
+    end
+    context "when failure" do
+      before do
+        @prog_params[:program][:title]=''
+      end
+
+      it "re-renders 'new'" do
+        post :create,@prog_params
+        response.should render_template('new')
+      end
+      it "do not create record" do
+       lambda {
+         post :create,@prog_params
+        }.should_not change(Program,:count)
+      end
+    end
+  context 'when using other verb than POST' do
+    it 'rejects request' do
+      controller.should_not_receive(:create) 
+      get :create,@prog_params
+    end
+  end
+  end
 end
