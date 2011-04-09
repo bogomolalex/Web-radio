@@ -1,5 +1,7 @@
 require 'spec_helper'
 
+include VarGet
+
 describe ProgramController do
    #Delete this example and add some real ones
   describe 'controller' do
@@ -139,5 +141,19 @@ describe ProgramController do
       get :create,@prog_params
     end
   end
+  end
+ 
+  context 'should have access to self parameters :cparam' do
+   it "should get current class parameter" do
+    valid_attributes = {
+      :name=>"Test",
+      :ptype=>'Spec',
+      :value_str=>"testing strinf",
+      :inserted=>DateTime.now,
+      :inserted_by=>'USER'}
+     p=Xparam.create!(valid_attributes)
+     get_module_name.should == 'Spec'
+     cparam("Test").should == "testing strinf"
+   end
   end
 end

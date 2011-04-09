@@ -1,6 +1,6 @@
 class ProgramController < ApplicationController
-
   verify :method=>:post,:only=>'create'
+
   def show
     @program_dat = Program.find_by_sql("
      SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
