@@ -1,12 +1,8 @@
+<%= render :partial=>"userprof/logio" -%>
+<% if @c %>
+<%= link_to "Administration", :controller => 'program',:action => 'show' -%>
+<%end-%>
 <div>
-<div id="login">
- <% if @c %>
- <p> <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
- <%= link_to "Administration", :controller => 'program',:action => 'show' %>
- <% else %>
- <%= link_to "Login", :controller => 'userprof',:action => 'view' %>
- <% end %>
-</div>
 <div id="nav">
 <%= show_menu("MAIN") -%>
 </div>

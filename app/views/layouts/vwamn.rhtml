@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<%=stylesheet_link_tag "scaffold"%>
+<%= javascript_include_tag :defaults %>
+<head>
+<title><%= @page_title %></title>
+</head>
+<body>
+<div id="header">Radio-test</div>
+<div id="after_header">Radio-test</div>
+<div id="header">
+ <div class="anav"> <%= render :partial=>"userprof/logio" -%> </div>
+ <div style="width:750px;height:50px">
+   <div class="sysmnu">Сегодня</div><div class="spc">&nbsp;</div>
+   <div class="sysmnu">Архив</div><div class="spc">&nbsp;</div>
+   <div class="sysmnu">Настройки</div>
+  </div>
+</div>
+<div id="mainf"><%= @content_for_layout -%><div>
+<div id="footer">
+ <p>Copyright &copy; 2011, Radio</p>
+</div>
+</body>
+</html>

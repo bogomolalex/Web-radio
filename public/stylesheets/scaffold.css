@@ -1,13 +1,45 @@
 #header {
 width: 750px;
 text-align:center;
-height: 30px;
-margin: 0, auto;
+margin: 0,auto;
+}
+#after_header {
+width: 750px;
+height:50px;
+text-align:center;
+margin: 0,auto;
+}
+
+.sysmnu{
+Width: 100px;
+Height: 20px;
+background-color: #C0f0f0;
+padding:5px 0 0px 0;
+text-align:center;
+float : left;
+border-radius: 6px 6px 0 0;
+-moz-border-radius:6px 6px 0 0 ;
+-khtml-border-radius:6px 6px  0 0 ;
+}
+
+/*.sysmnu:before{display: block;
+       height: 20px;
+       background: url(2_tr.gif) no-repeat 100% 0;
+       content: url(2_tl.gif);
+       margin: -20px -20px 0 -20px;}*/
+
+
+.spc
+{width:100;
+ height:24px;
+ padding-right: 15px;
+ border-bottom: 1px solid #C0f0f0;
+ float: left;
 }
 
 .menu 
-{padding:0; 
-float: left;
+{padding:0;
+ float: left;
 }
 
 .MAIN {
@@ -45,11 +77,18 @@ body { background-color: #fff; color: #333;min-width:750px; }
  float:left;
 }
 
+.anav {
+ width:750px;
+ heigth: 20px;
+ float:right;
+ /*-  -background-color: #fff;*/
+}
+
 #login {
 float:right;
 text-align:center;
 width:200px;
-height:100px;
+/*height:10px;*/
 }
 
 #radio {
@@ -80,13 +119,11 @@ valign:top;}
  text-align:center;
  float:left;
  width:550px;
-# background: #f0f0f0;
 }
 
 #mainf {
  text-align:center;
  width:750px;
-
 }
 
 .but {

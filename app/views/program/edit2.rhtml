@@ -1,8 +1,5 @@
-<p>Find me in app/views/program/dates_list.html.erb</p>
- <%= link_to "Home ", :controller => 'main',:action => 'view'%>
 <!-- Если пользователь зарегистрирован-->
 <% if @c %>
- <%= link_to "Logout", :controller => 'userprof',:action => 'logout' %></p>
 <p>List of  program   <%="#{h(params[:vd])}"%></p>
 <!-- Кнопка создать-->
  <%= link_to "View list of program", :controller => 'program',:action => 'show' %></p>

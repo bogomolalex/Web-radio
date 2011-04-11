@@ -1,5 +1,8 @@
 class ProgramController < ApplicationController
+
   verify :method=>:post,:only=>'create'
+
+  layout "vwamn" ,:only =>[:show,:edit2,:edit,:new]
 
   def show
     @program_dat = Program.find_by_sql("
