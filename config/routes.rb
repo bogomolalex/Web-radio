@@ -11,7 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-  #   map.resources :products
+  map.resources :xparams
 
   # Sample resource route with options:
   #   map.resources :products, :member => { :short => :get, :toggle => :post }, :collection => { :sold => :get }
@@ -43,9 +43,11 @@ ActionController::Routing::Routes.draw do |map|
   map.clndr_date 'clndr/show/:vd',:controller=>"clndr",:action=>"show"
 #  map.edit_date 'program/show',:controller=>"program",:action=>"show"
 
+  map.connect ':controller/:action'
   map.connect '', :controller => "main", :action => "view"
   map.connect ':controller/:action/:vd',
                 :requirements=> {:vd => /\d+.\d+.\d+/ }
   map.connect ':controller/:action/:id'
   map.connect ':controller/:action/:id.:format'
+
 end

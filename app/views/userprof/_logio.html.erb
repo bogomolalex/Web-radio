@@ -1,0 +1,8 @@
+<div id="login">
+ <% if @c %>
+  <%= link_to "Logout", :controller => 'userprof',:action => 'logout' -%>
+ <% else %>
+  <%= link_to "Login", :controller => 'userprof',:action => 'view' -%>
+ <% end %>
+<%= link_to "Home ", :controller => 'main',:action => 'view'-%>
+</div>

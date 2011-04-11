@@ -3,6 +3,8 @@
 
 class ApplicationController < ActionController::Base
 
+  include VarGet
+
   def _renderizer;  render params[:args];  end
 
 
