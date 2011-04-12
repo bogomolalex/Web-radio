@@ -1,8 +1,12 @@
 class ProgramController < ApplicationController
 
+  layout 'vwamn'
+  
   verify :method=>:post,:only=>'create'
 
-  layout "vwamn" ,:only =>[:show,:edit2,:edit,:new]
+  before_filter :get_layout ,:only =>[:show,:edit2,:edit,:new]
+
+
 
   def show
     @program_dat = Program.find_by_sql("
@@ -11,6 +15,24 @@ class ProgramController < ApplicationController
       group by DATE_FORMAT(value_date,'%d.%m.%Y')
       order by 1 desc")
     
+  end
+
+  def ashow
+   @program_dat = Program.find_by_sql("
+     SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+       FROM programs
+      group by DATE_FORMAT(value_date,'%d.%m.%Y')
+      order by 1 desc")
+
+  end
+
+  def aashow
+   @program_dat = Program.find_by_sql("
+     SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
+       FROM programs
+      group by DATE_FORMAT(value_date,'%d.%m.%Y')
+      order by 1 desc")
+
   end
 
   def show1
@@ -99,4 +121,10 @@ class ProgramController < ApplicationController
     end
     redirect_to edit_date_url(@vd)
   end
+ private
+
+ def  get_layout
+       @adm_menu_id=1
+ end
+
 end

@@ -4,7 +4,7 @@
 <%=stylesheet_link_tag "scaffold"%>
 <%= javascript_include_tag :defaults %>
 <head>
-<title><%= @page_title %></title>
+<title><%= @page_title %> <%=@adm_menu_id%> </title>
 </head>
 <body>
 <div id="header">Radio-test</div>
@@ -12,9 +12,27 @@
 <div id="header">
  <div class="anav"> <%= render :partial=>"userprof/logio" -%> </div>
  <div style="width:750px;height:50px;border-bottom: 1px solid #f0f0f0;">
-   <div class="sysmnu" style="background-color: #9c9;">Сегодня</div><div class="spc">&nbsp;</div>
-   <div class="sysmnu">Архив</div><div class="spc">&nbsp;</div>
-   <div class="sysmnu">Настройки</div>
+   <div class="sysmnu"
+        <% if @adm_menu_id==1 -%>
+        style="background-color: #9c9;">Сегодня
+        <%else-%>>
+         <%=link_to "Сегодня",:controller=>"nmenu",:action=>"show" -%>
+        <%end-%> </div>
+   <div class="spc">&nbsp;</div>
+   <div class="sysmnu"
+       <% if @adm_menu_id==2 -%>
+        style="background-color: #9c9;">Архив
+       <%else-%>>
+         <%=link_to "Архив",:controller=>"amenu",:action=>"show" -%>
+        <%end-%> 
+    </div>
+   <div class="spc">&nbsp;</div>
+   <div class="sysmnu" <% if @adm_menu_id==3 -%>
+        style="background-color: #9c9;">Настройки
+          <%else-%>>
+         <%=link_to "Настройки",:controller=>"smenu",:action=>"show" -%>
+        <%end-%>
+   </div>
   </div>
 </div>
 <div id="mainf"><%= @content_for_layout -%><div>

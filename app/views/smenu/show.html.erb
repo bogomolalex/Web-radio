@@ -1,0 +1,5 @@
+<% if @mn -%>
+<% @mn.each do |d| -%>
+  <%=link_to d.title,:controller=>'program',:action=>'show'-%>
+<%end-%>
+<%end-%>
