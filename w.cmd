@@ -1,0 +1,13 @@
+git rm app/controllers/amenu_controller.rb
+git rm app/controllers/arcprog_controller.rb
+git rm app/controllers/nmenu_controller.rb
+git rm app/controllers/smenu_controller.rb
+git rm app/views/amenu/show.html.erb
+git rm app/views/arcprog/_grplst.rhtml
+git rm app/views/arcprog/_list.rhtml
+git rm app/views/arcprog/show.rhtml
+git rm app/views/menu/_show.html.erb
+git rm app/views/nmenu/show.html.erb
+git rm app/views/program/aashow.rhtml
+git rm app/views/program/delete2.rhtml
+git rm app/views/smenu/show.html.erb
