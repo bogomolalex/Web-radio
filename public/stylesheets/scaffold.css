@@ -193,9 +193,11 @@ pre {
   background-color:#f0f0f0;
 }
 
-a.clndr_a:hover { background-color:#9c9;
-color: #666;  }
-a.clndr_a {color: #666;  }
+a.clndr_a:visited  {color: red;}
+a.clndr_a:link  {color: red;}
+
+a.clndr_a:hover { background-color:#FFF;
+color: red;  }
 
 
 a { color: #000; }

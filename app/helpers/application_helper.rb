@@ -10,7 +10,7 @@ module ApplicationHelper
                 :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub]}
   end
   
-  def show_calendar(xdate,key={},day_check=lambda{|x,a| x==a})
+  def show_calendar(xdate,key={},day_check=lambda{|x,a| x!=a})
 #    day_check||=lambda{|x,a| x==a}
     render :partial => 'shared/clndr',:locals=>{:arr_cl=>get_clndr(xdate),
                                                :a_hash=>key,:xdate=>xdate,

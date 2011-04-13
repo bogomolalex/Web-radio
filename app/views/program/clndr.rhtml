@@ -9,7 +9,7 @@
 <div style="float:left;width:300px;text-align: right;">
 <%=show_calendar @begin_of_date,{},
 lambda{|x,c| 
-@arcm.find{|n| n[:value_date].day==c}
+@arcm.find{|n| n[:value_date].day==c && c!=x}
 } -%>
 </div>
 <div style="float:left;width:300px;text-align: right;">
