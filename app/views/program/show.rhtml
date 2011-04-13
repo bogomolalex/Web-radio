@@ -2,10 +2,8 @@
 <!-- Пример -->
 <% if @c -%>
 <p>List of  program</p>
- <%- if !@program_dat.empty? -%>
 <!-- еще -->
 <%= render :partial=>"grplst"-%>
-<%- end -%>
 <%- else -%>
   report_error("Unauthorized access; password required")
 <%- end -%>

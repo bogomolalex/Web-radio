@@ -54,7 +54,7 @@ end
 -%>
  <%end;-%>
 <% if crud-%>
-<td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}" -%></td>
+<td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}",:mn=>@adm_menu_id -%></td>
 <%end-%>
 <%end-%>
 <% end-%>

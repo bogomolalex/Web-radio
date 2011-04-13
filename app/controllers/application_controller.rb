@@ -5,9 +5,6 @@ class ApplicationController < ActionController::Base
 
   include VarGet
 
-  def _renderizer;  render params[:args];  end
-
-
   layout "base"
 
   before_filter :set_customer

@@ -1,6 +1,20 @@
 <% if @c %>
 <div style="float:left;width:750px;text-align: left;">
- <%= link_to "Список программ по датам", :controller => 'program',:action => 'show' %></p>
+ <%= link_to("Список программ по датам",
+:controller =>lambda{
+session['chk_mnu_type']||=1
+case session['chk_mnu_type']
+when 1 
+'menu'   
+when 2
+'arcmnu'
+when 3
+'sysmnu'
+else
+'menu'   
+end
+}.call,:action => 'show')
+-%></p>
 </div>
 <p> Программы на <%="#{h(params[:vd])}"%></p>
 <div style="width:500px;" >
@@ -9,8 +23,8 @@
                 :fields=>[
 {:id=>"value_date",:proc=>lambda{|item| item.strftime('%H:%M')}},
 {:id=>"title"},{:id=>"description"}],
-                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}"},
-                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new'}],
+                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}",:mn=>@adm_menu_id},
+                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new',:mn=>@adm_menu_id}],
                 :crud=>true,
                 :but_sub=>{:text=>t(:Butt_Delete)}})-%>
 </div>

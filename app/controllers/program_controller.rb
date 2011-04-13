@@ -1,8 +1,9 @@
 class ProgramController < ApplicationController
 
-  verify :method=>:post,:only=>'create'
+  layout 'vwamn'
 
-  layout "vwamn" ,:only =>[:show,:edit2,:edit,:new]
+  
+  verify :method=>:post,:only=>'create'
 
   def show
     @program_dat = Program.find_by_sql("
@@ -11,6 +12,17 @@ class ProgramController < ApplicationController
       group by DATE_FORMAT(value_date,'%d.%m.%Y')
       order by 1 desc")
     
+  end
+
+  def clndr
+    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today
+    @arc=Program.find(:all,
+    :conditions=>["value_date>= ? and value_date<?",
+                  @begin_of_date,@begin_of_date+1])
+    @arcm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
+                       Date.new(@begin_of_date.year,@begin_of_date.month,1),
+                       Date.new(@begin_of_date.year,@begin_of_date.month+1,1)-1])
+
   end
 
   def show1
@@ -27,9 +39,6 @@ class ProgramController < ApplicationController
     @program = Program.find(:all,
                  :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'",
                  :order=>"value_date ")
-    if @program.size==0
-      redirect_to :controller=>"program",:action=>"show"
-    end 
   end
 
   def edit
@@ -99,4 +108,5 @@ class ProgramController < ApplicationController
     end
     redirect_to edit_date_url(@vd)
   end
+
 end
