@@ -1,7 +1,8 @@
 <div id="clndr">
 <table cellpadding="0" cellspacing="0" align="center" style="border:black solid 1px;text-align: center;width:192px;">
 <b><%="#{(t 'date.standalone_month_names')[xdate.month]} ,#{xdate.strftime('%Y')}"-%></b><div>
-<tr style="padding: 0px;"> 
+<!-- Заголовок дни недели-->
+  <tr style="padding: 0px;">
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[1]}"-%></th>
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[2]}"-%></th>
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[3]}"-%></th>
@@ -10,6 +11,7 @@
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[6]}"-%></th>
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[0]}"-%></th>
 </tr>
+<!-- Рисуем календаль-->
 <% arr_cl.each do |clnd| -%>
 <% if clnd[0]==1 -%>
  <tr >
@@ -22,8 +24,12 @@ else
  'clndrd7'
  end
 end-%>"><% if clnd[1]==0 -%> &nbsp<%else-%><%= 
- unless xdate.day==clnd[1];link_to clnd[1],a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
- else h(clnd[1]) end-%>
+ if day_check.call(xdate.day,clnd[1])
+  # День текущий
+  link_to clnd[1],a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
+ else 
+   h(clnd[1])
+ end-%>
 <%end-%></td>
  <% if clnd[0]==7-%>  </tr>
  <%end-%>

@@ -4,15 +4,16 @@ module HelperProcs
  # Массив календаря
  #
   def get_clndr(xdat)
+   #получим начало и конец месяца
    begin_of_date=Date.new(xdat.year,xdat.month,1)
    end_of_date=Date.new(xdat.year,xdat.month+1,1)-1
-   #
+   # создаем массив
    ar=(begin_of_date..end_of_date).map{|dn| [dn.cwday,dn.day,dn.strftime('%d-%m-%Y')] }
    ar_beg=(1..ar[0][0]-1).map do |xday|
-     [xday,0]
+     [xday,0,nil]
    end
    ar_end=(ar[ar.size-1][0]+1..7).map do |xday|
-     [xday,0]
+     [xday,0,nil]
    end
    #
    ar_beg+ar+ar_end
@@ -31,7 +32,7 @@ module HelperProcs
     # кнопки по умолчанию для CRUD
     if xpar[:btns].nil?
      xpar[:btns]||=Array.new
-     xpar[:btns]<<{:name=>"delete",:text=>t(:Butt_Delete),:controller=>"",:action=>"delete",:id=>"#{params[:id]}" }
+     xpar[:btns]<<{:name=>"delete",:text=>t(:Butt_Delete),:controller=>"",:action=>"delete",:id=>"#{params[:id]},:mn=>@adm_menu_id" }
      xpar[:but_sub]={:text=>t(:Butt_Create)}
     end
    end

@@ -1,18 +1,11 @@
 class MenuController < ApplicationController
 
-  @mtype= 'MAIN'
+  layout 'vwamn'
 
   def show
-    @mmain = Menu.find_by_sql("
-     SELECT *
-       FROM menus where mtype='#{@mtype}' order by no")
-    @mdiv="<div>"
-    @mmain.each do |m| 
-      @mdiv=@mdiv+"<div id='m#{m.id}'>#{m.title}</div>"
-    end
-    @mdiv=@mdiv+"</div>"
-#	   render :layout=>false
+    session['chk_mnu_type']=1
+    @mtype= 'ADMNOW' 
+    @mn = Menu.find_all_by_mtype(@mtype,:order=>"no")
   end
-
 
 end

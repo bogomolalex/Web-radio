@@ -10,14 +10,19 @@ module ApplicationHelper
                 :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub]}
   end
   
-  def show_calendar(xdate,key={})
-   render :partial => 'shared/clndr',:locals=>{:arr_cl=>get_clndr(xdate),
-                                               :a_hash=>key,:xdate=>xdate}
+  def show_calendar(xdate,key={},day_check=lambda{|x,a| x==a})
+#    day_check||=lambda{|x,a| x==a}
+    render :partial => 'shared/clndr',:locals=>{:arr_cl=>get_clndr(xdate),
+                                               :a_hash=>key,:xdate=>xdate,
+                                               :day_check=>day_check
+                                               }
   end
 
   def show_menu(xtype,xtempl=nil)
     menu=show_menu_params(xtype)
-    render :partial=>xtempl||"shared/menu",:locals=>{:menu=>menu,:mtype=>xtype}
+    render :partial=>xtempl||"shared/menu",
+      :locals=>{:menu=>menu,:mtype=>xtype
+                }
   end
 
 

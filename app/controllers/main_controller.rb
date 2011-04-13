@@ -1,9 +1,7 @@
 class MainController < ApplicationController
 
   def view
-#    @page_title = "#{sysparam('title')} - #{cparam('title')}"
     @program = Program.find(:all)
-    @mdiv = MenuController.new.show
     respond_to do |format|
      format.html
      format.js
