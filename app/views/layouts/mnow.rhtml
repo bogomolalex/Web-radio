@@ -1,0 +1,30 @@
+<% content_for :stylesheets do %>
+#smnnow{
+Width: 100px;
+Height: 28px;
+background-color: #9c9;
+padding:5px 0 0px 0;
+text-align:center;
+float : left;
+border-radius: 6px 6px 0 0;
+-moz-border-radius:6px 6px 0 0 ;
+-khtml-border-radius:6px 6px  0 0 ;
+}
+#smnarc,#smnsys 
+{
+Width: 100px;
+Height: 28px;
+background-color: #f0f0f0;
+padding:5px 0 0px 0;
+text-align:center;
+float : left;
+border-radius: 6px 6px 0 0;
+-moz-border-radius:6px 6px 0 0 ;
+-khtml-border-radius:6px 6px  0 0 ;
+}
+<% end %>
+
+<% content_for :content do %> 
+ <%= yield(:mnow_content) or yield %>
+<% end %>
+<%= render :file => 'layouts/vwamn' %>

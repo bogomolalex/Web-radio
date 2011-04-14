@@ -1,6 +1,6 @@
 <% if @mn -%>
 <% @mn.each do |d| -%>
-   <%=link_to d.title,:controller=>'program',:action=>'edit2',:vd=>DateTime.now.strftime('%d.%m.%Y')-%>
+   <%=link_to d.title,:controller=>'program',:action=>'tune',:vd=>DateTime.now.strftime('%d.%m.%Y')-%>
 <%end-%>
 <%end-%>
 

@@ -1,6 +1,6 @@
 class ProgramController < ApplicationController
 
-  layout 'vwamn'
+ layout 'mnow' 
 
   
   verify :method=>:post,:only=>'create'
@@ -23,6 +23,7 @@ class ProgramController < ApplicationController
                        Date.new(@begin_of_date.year,@begin_of_date.month,1),
                        Date.new(@begin_of_date.year,@begin_of_date.month+1,1)-1])
 
+    render :layout=>'marc'
   end
 
   def show1
@@ -39,6 +40,13 @@ class ProgramController < ApplicationController
     @program = Program.find(:all,
                  :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'",
                  :order=>"value_date ")
+  end
+
+  def tune
+    @program = Program.find(:all,
+                 :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'",
+                 :order=>"value_date ")
+   render :layout=>"msys"
   end
 
   def edit
