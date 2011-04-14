@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110409070550) do
+ActiveRecord::Schema.define(:version => 20110414131510) do
 
   create_table "logs", :force => true do |t|
     t.string "descr"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(:version => 20110409070550) do
     t.string  "descr",   :limit => 100
     t.integer "no"
     t.integer "menu_id"
+    t.string  "img"
   end
 
   create_table "programs", :force => true do |t|

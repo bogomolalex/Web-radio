@@ -1,6 +1,10 @@
 <% if @mn -%>
 <% @mn.each do |d| -%>
-   <%=link_to d.title,:controller=>'program',:action=>'edit2',:vd=>DateTime.now.strftime('%d.%m.%Y')-%>
+<div style="float:left;width:100px;"> <p> <%=link_to content_tag("div",
+         image_tag("rails.png",:size=>"40x40",:alt=>d.descr,:border=>0)+
+                   content_tag( "p",d.title)),
+         {:controller=>'program',:action=>'tune',:vd=>DateTime.now.strftime('%d.%m.%Y')},:class=>"img_lnk"-%>
+</p></div>
 <%end-%>
 <%end-%>
 

@@ -1,6 +1,6 @@
 class MenuController < ApplicationController
 
-  layout 'vwamn'
+  layout 'mnow' 
 
   def show
     session['chk_mnu_type']=1

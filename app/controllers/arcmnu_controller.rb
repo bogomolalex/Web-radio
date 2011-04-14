@@ -1,5 +1,7 @@
 class ArcmnuController < MenuController
-  
+
+  layout 'marc'   
+
   def show
     session['chk_mnu_type']=2
     @mtype= 'ADMARC' 
