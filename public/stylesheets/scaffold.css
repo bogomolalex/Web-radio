@@ -57,7 +57,7 @@ text-decoration:none; # removes underline from text.
 .MAIN a:hover {
 background-color:buttonface;
 color: #666;
-}
+} 
 
 
 #wrap {
@@ -194,15 +194,19 @@ pre {
 }
 
 a.clndr_a:visited  {color: red;}
+
 a.clndr_a:link  {color: red;}
 
-a.clndr_a:hover { background-color:#FFF;
-color: red;  }
+a.clndr_a:hover { background-color:#FFF;color: red;  }
 
+a.img_lnk:hover { background-color:#FFF;color: red;  }
 
-a { color: #000; }
+a { color: #666; }
+
 a:visited { color: #666; }
-a:hover { color: #fff; background-color:#000; }
+
+
+a:hover { color: #FFF; background-color:#000; }
 
 .fieldWithErrors {
   padding: 2px;
