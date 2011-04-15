@@ -19,7 +19,7 @@ unless menu.nil? -%>
           {:controller=>controller,
            :action=>action,
            id_name.to_sym=>id}),
-          {:class=>"#{mtype}"})-%>
+          {:class=>"#{mtype}#{i}"})-%>
 <%i=i+1-%>
 <%end-%>
 </ul>
@@ -28,17 +28,17 @@ unless menu.nil? -%>
 <% javascript_tag do -%>
 Event.observe(window, 'load',
 function() {
-$$('.MAIN').each(
+$$('li[class*="MAIN"]').each(
 function(e)
 {e.observe('mouseover',
-function(){this.setStyle({
-  backgroundColor: "buttonface",
-    });
+function(){
+  if (this.getStyle('background-color')!='#666' )
+   this.setStyle({backgroundColor: "buttonface"});
 })
 e.observe('mouseout',
-function(){this.setStyle({
-  backgroundColor: '#FFF',
-    });
+function(){
+  if (this.getStyle('background-color')!='#666' )
+   this.setStyle({backgroundColor: '#FFF'});
 })
 }
 )

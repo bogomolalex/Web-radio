@@ -6,6 +6,9 @@
 <div id="nav">
 <%=render :partial => 'hmenu'-%>
 </div>
+<div id="radio">
+ <%= render :partial=>"shared/radio" %>
+</div>
 <div id="lsider"><%= periodically_call_remote :update => 'list_div',
 :url => {:action => "list"},
 :frequency => 10.0 -%>

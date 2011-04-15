@@ -1,0 +1,39 @@
+<% content_for :stylesheets do -%>
+.MAIN2{
+display:inline;
+padding-right: 15px;
+padding-left: 15px;
+line-height: 20px;
+text-decoration:none;
+float:left; 
+background-color: #666;
+}
+
+.MAIN2 a:hover {
+background-color:#666;
+color: #FFF;
+} 
+.MAIN2 a:visited{
+background-color:#666;
+color: #FFF;
+} 
+
+.MAIN0 ,.MAIN1 {
+display:inline;
+padding-right: 15px;
+padding-left: 15px;
+line-height: 20px;
+text-decoration:none;
+float:left; 
+}
+
+.MAIN0 a:hover,.MAIN1 a:hover {
+background-color:buttonface;
+color: #666;
+} 
+}
+<% end -%>
+<% content_for :content do -%> 
+ <%= yield(:main_content) or yield -%>
+<% end %>
+<%= render :file => 'layouts/base' -%>
