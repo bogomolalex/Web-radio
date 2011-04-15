@@ -1,7 +1,26 @@
-<% unless menu.nil? -%>
+<% i=0
+unless menu.nil? -%>
 <ul class="menu">
- <% menu.each do |m|-%>
- <%= content_tag(:li,link_to (m.title,:controller=>"program"),{:class=>"#{mtype}"});-%>
+<% menu.each do |m|-%>
+<% action = controller = 'none'
+   id_name = 'id'
+   id = nil
+   if url.kind_of?(Array)
+    unless url[i].nil?
+     controller = url[i][:controller]||'none'
+     action = url[i][:action]||'none'
+     id_name = url[i][:id_name]||'id'
+     id = url[i][:id]
+    end
+   end
+  -%>
+ <%= content_tag(:li,
+         link_to(m.title,
+          {:controller=>controller,
+           :action=>action,
+           id_name.to_sym=>id}),
+          {:class=>"#{mtype}#{i}"})-%>
+<%i=i+1-%>
 <%end-%>
 </ul>
 <% end-%>
@@ -9,17 +28,17 @@
 <% javascript_tag do -%>
 Event.observe(window, 'load',
 function() {
-$$('.MAIN').each(
+$$('li[class*="MAIN"]').each(
 function(e)
 {e.observe('mouseover',
-function(){this.setStyle({
-  backgroundColor: "buttonface",
-    });
+function(){
+  if (this.getStyle('background-color')!='#666' )
+   this.setStyle({backgroundColor: "buttonface"});
 })
 e.observe('mouseout',
-function(){this.setStyle({
-  backgroundColor: '#FFF',
-    });
+function(){
+  if (this.getStyle('background-color')!='#666' )
+   this.setStyle({backgroundColor: '#FFF'});
 })
 }
 )

@@ -2,18 +2,21 @@ class MainController < ApplicationController
 
   def view
     @program = Program.find(:all)
-    respond_to do |format|
-     format.html
-     format.js
-    end
+  end
+
+  def about
+    @program = Program.find(:all)
+    render :layout=>'about'
+  end
+
+  def online
+    @program = Program.find(:all)
+    render :layout=>'online'
   end
 
   def list
     @program = Program.find(:all)
     render :partial => 'program/list', :object => @program
   end
-
- def signup
- end
 
 end

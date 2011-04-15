@@ -41,25 +41,6 @@ border-radius: 6px 6px 0 0;
  float: left;
 }
 
-.MAIN {
-display:inline;
-padding-right: 15px;
-padding-left: 15px;
-line-height: 10px;
-text-decoration:none; # removes underline from text. 
-float:left; # keeps the list horizontal. 
-}
-
-.MAIN a {
-text-decoration:none; # removes underline from text. 
-}
-
-.MAIN a:hover {
-background-color:buttonface;
-color: #666;
-} 
-
-
 #wrap {
 min-height: 750px;
 height: auto ;
