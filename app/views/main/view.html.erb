@@ -4,7 +4,11 @@
 <%end-%>
 <div>
 <div id="nav">
-<%= show_menu("MAIN") -%>
+<%= show_menu("MAIN",
+[{:controller=>"program",:action=>"show"},
+{:controller=>"program",:action=>"edit2",:id_name=>"vd",:id=>'01-01-2010'},
+{:controller=>"program",:action=>"edit"}
+]) -%>
 </div>
 <div id="radio">
  <%= render :partial=>"shared/radio" %>

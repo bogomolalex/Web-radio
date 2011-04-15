@@ -19,10 +19,10 @@ module ApplicationHelper
          :layout=>key[:layout]
   end
 
-  def show_menu(xtype,xtempl=nil)
+  def show_menu(xtype,url=[{}],xtempl=nil)
     menu=show_menu_params(xtype)
     render :partial=>xtempl||"shared/menu",
-      :locals=>{:menu=>menu,:mtype=>xtype
+      :locals=>{:menu=>menu,:mtype=>xtype,:url=>url
                 }
   end
 
