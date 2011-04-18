@@ -5,19 +5,26 @@
 <div style="float:left;width:300px;text-align: right;">
 <%=show_calendar @begin_of_date,{},
 lambda{|x,c| 
-@arcm.find{|n| n[:value_date].day==c && c!=x}
-}
- -%>
+c>Date.today.day 
+},
+lambda{|x,c| 
+ if @lstm.find{|n| n[:value_date].day==c}
+   x
+ else
+  "dd"
+ end
+} -%>
 </div>
 <div style="float:left;width:300px;text-align: right;">
-<%if @arc.size>0 -%>
 <%=show_table ({#:headers=>["Header1","Header2","Header_3"],
-                :objs=>@arc,
+                :objs=>@lst,
                 :fields=>[{:id=>"value_date",:proc=>lambda{|item| item.strftime('%H:%M')}},
                           {:id=>"title"},
                           {:id=>"description"}],
-               })-%>
-<%end-%>
+                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}"},
+                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new',:vd=>"#{h(params[:vd])}"}],
+                :crud=>true,
+                :but_sub=>{:text=>t(:Butt_Delete)}})-%>
 </div>
 <%- else -%>
   report_error("Unauthorized access; password required")

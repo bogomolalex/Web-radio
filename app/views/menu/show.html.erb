@@ -2,11 +2,19 @@
 <p> 
 <% @mn.each do |d| -%>
 <div style="float:left;width:100px;">  <%=link_to content_tag("div",
-         image_tag("rails.png",:size=>"40x40",:alt=>d.descr,:border=>0)+
+         image_tag(d.img||"rails.png",:size=>"40x40",:alt=>d.descr,:border=>0)+
                    content_tag( "p",d.title)),
-         {:controller=>'program',:action=>'edit2',:vd=>DateTime.now.strftime('%d.%m.%Y')},:class=>"img_lnk"-%>
-<%end-%>
+case d.mtype
+ when "LIST"         
+   {:controller=>'program',:action=>'edit2',:vd=>DateTime.now.strftime('%d-%m-%Y')}
+ when "TOMW"
+   {:controller=>'program',:action=>'towm',:vd=>(DateTime.now+1).strftime('%d-%m-%Y')}
+ else
+   {:controller=>'menu',:action=>'show'}
+end,
+:class=>"img_lnk"-%>
 </div>
+<%end-%>
 </p>
 <%end-%>
 

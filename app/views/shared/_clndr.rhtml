@@ -26,10 +26,11 @@ else
 end-%>"><% if clnd[1]==0 -%> &nbsp<%else-%><%= 
  if day_check.call(xdate.day,clnd[1])
   # День текущий
-  link_to clnd[1],a_hash.merge({:vd=>clnd[2]}),:class=>"clndr_a";
+  link_to "#{clnd[1]}",a_hash.merge({:vd=>clnd[2]}),:class=>day_mark.call("clndr_a",clnd[1]);
  else 
    h(clnd[1])
- end-%>
+ end -%>
+<%=%>
 <%end-%></td>
  <% if clnd[0]==7-%>  </tr>
  <%end-%>

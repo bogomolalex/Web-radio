@@ -5,7 +5,7 @@ class SysmnuController < MenuController
   def show
     session['chk_mnu_type']=3
     @mtype= 'ADMSYS' 
-    @mn = Menu.find_all_by_mtype(@mtype,:order=>"no")
+    @mn = Menu.find_by_mtype(@mtype,:order=>"no").mlist
   end
 
 
