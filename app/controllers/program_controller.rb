@@ -15,31 +15,39 @@ class ProgramController < ApplicationController
   end
 
   def clndr
-    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today
+    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
+    p=Program.find(:first,:select=>" max(value_date) as vd",
+                   :conditions=>[" value_date<=? and value_date<?",
+                    @begin_of_date+1,Date.today])
+    @begin_of_date=p.vd.to_datetime||@begin_of_date||Date.today
     @arc=Program.find(:all,
     :conditions=>["value_date>= ? and value_date<?",
                   @begin_of_date,@begin_of_date+1])
     @arcm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
                        Date.new(@begin_of_date.year,@begin_of_date.month,1),
-                       Date.new(@begin_of_date.year,@begin_of_date.month+1,1)-1])
+                       Date.today-1])
 
     render :layout=>'marc'
   end
 
-  def show1
-    @programs = Programs.find(params[:id])
+  def towm
+    store_location
+    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
+    @lst=Program.find(:all,
+    :conditions=>["value_date>= ? and value_date<?",
+                  @begin_of_date,@begin_of_date+1])
+    @lstm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
+                       Date.today+1,
+                       Date.new(@begin_of_date.year,@begin_of_date.month+1,1)])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @programs }
-    end
   end
 
-
   def edit2
-    @program = Program.find(:all,
-                 :conditions=>"date_format(value_date,'%d.%m.%Y')='#{params[:vd]}'",
-                 :order=>"value_date ")
+    store_location
+    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
+    @program=Program.find(:all,
+    :conditions=>["value_date>= ? and value_date<?",
+                  @begin_of_date,@begin_of_date+1])
   end
 
   def tune
@@ -59,7 +67,7 @@ class ProgramController < ApplicationController
     respond_to do |format|
       if @program.update_attributes(params[:program])
         format.html { 
-         redirect_to edit_date_url(@vd)}
+         redirect_to_back_or_default(edit_date_url(@vd)) }
       else
         format.html { render :action => "edit" }
       end
@@ -67,10 +75,18 @@ class ProgramController < ApplicationController
   end
 
   def new
+    begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
+    p=Program.find(:first,:select=>" max(value_date) as vd",
+                   :conditions=>["value_date>= ? and value_date<?",
+                    begin_of_date,begin_of_date+1])
     @program = Program.new
     @program.title="???"
     @program.description="xxx"
-    @program.value_date=Time.new
+    if p[:vd].nil?
+     @program.value_date=DateTime.strptime("#{params[:vd]} 08:00", "%d-%m-%Y %H:%M")||DateTime.now
+    else
+     @program.value_date=p.vd
+    end
   end
 
   def create
@@ -79,7 +95,8 @@ class ProgramController < ApplicationController
     respond_to do |format|
      if @program1.save 
         flash[:notice] = 'Programs was successfully created.'
-        format.html { redirect_to edit_date_url(@vd) }
+        format.html { 
+         redirect_to_back_or_default(edit_date_url(@vd)) }
       else
         format.html { render :action => "new" }
       end
@@ -94,14 +111,14 @@ class ProgramController < ApplicationController
    @vd="#{params[:vd]}"
    #
    unless params[:create].nil?
-    redirect_to :controller => 'program',:action => 'new'
+    redirect_to :controller => 'program',:action => 'new',:vd=>@vd
     return
    end 
    if params[:chk_id]
     @programs = params[:chk_id].map { |t| Program.find(t) }
     @programs.each { |t| 
      t.destroy }
-    redirect_to edit_date_url(@vd)
+ redirect_to_back_or_default(edit_date_url(@vd)) 
   else
     redirect_to edit_date_url(@vd)
   end

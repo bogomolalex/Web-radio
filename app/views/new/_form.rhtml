@@ -1,0 +1,40 @@
+<% if @vnew %>
+<div>
+ <div style="float:right;width:200px;">
+     <%= image_tag "news/#{@vnew.img_url}" unless @vnew.new_record?-%>
+ </div>
+<div style"float:left;width:400px;">
+ <table border="0" >
+  <% form_for @vnew,:url=>{:action=>(@vnew.new_record?? "create":"update")},:html=>{:multipart => true} do |f| %>
+   <tr><td>Название новости :</td>
+     <td valign='top' align='left'>
+   <%= f.text_field :title %></td></tr>
+   <tr><td style="width:200px;">
+       Дата активизации :</td>
+     <td valign='top' align='left'>
+   <%= date_select :new, :value_date %></td></tr>
+   <tr><td>Порядковый номер </td>
+     <td valign='top' align='left'>
+    <%= f.text_field :no %></td></tr>
+   <tr><td>Рисунок</td>
+     <td valign='top' align='left'>
+     <%= file_field 'upload','img_file' %>
+     <%= f.hidden_field :img_url -%>
+     </td></tr>
+   <tr><td>Меню</td>
+     <td valign='top' align='left'>
+     <%= f.text_field :menu_id %></td></tr>
+   <tr><td>Связанная с новостью программа</td>
+     <td valign='top' align='left'>
+     <%= f.text_field :program_id %></td></tr>
+   <tr><td valign='top'>Текст</td><td>
+    <%= f.text_area :descr,:cols => 50, :rows => 20 %></td></tr>
+   <tr><td></td><td>
+    <%=  @vnew.new_record?? f.submit(t(:Butt_Create)): f.submit(t(:Butt_Update))%></td></tr>
+  <% end %>
+  </table>
+ <div>
+</div>
+<% else %>
+ ...
+<% end %>

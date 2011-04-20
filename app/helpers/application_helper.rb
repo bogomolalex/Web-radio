@@ -11,10 +11,11 @@ module ApplicationHelper
            :layout=>xpar[:layout]
   end
   
-  def show_calendar(xdate,key={},day_check=lambda{|x,a| x!=a})
+  def show_calendar(xdate,key={},day_check=lambda{|x,a| x!=a},day_mark=lambda{|x,a| x})
     render :partial => 'shared/clndr',:locals=>{:arr_cl=>get_clndr(xdate),
                                                :a_hash=>key,:xdate=>xdate,
-                                               :day_check=>day_check
+                                               :day_check=>day_check,
+                                               :day_mark=>day_mark
                                                },
          :layout=>key[:layout]
   end

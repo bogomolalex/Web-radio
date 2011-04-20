@@ -22,4 +22,19 @@ class ApplicationController < ActionController::Base
    return false
   end
 
+  def store_location
+    session['saved_location'] = request.request_uri
+  end
+
+  def redirect_to_back_or_default(default)
+    if session['saved_location'].nil?
+      redirect_to default
+      session['saved_location'] = nil
+    else
+      redirect_to session['saved_location']
+      session['saved_location'] = nil
+    end
+  end
+
+
 end

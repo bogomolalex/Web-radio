@@ -1,0 +1,9 @@
+<p>Find me in app/views/program/show.html.erb</p>
+Editing program
+<!-- �᫨ ���짮��⥫� ��ॣ����஢��-->
+<% if @c %>
+ <%= render :partial=>"form",
+            :locals=>{:vnew=>@vnew,:action=>"create" }-%>
+<% else %>
+  report_error("Unauthorized access; password required")
+<% end %>

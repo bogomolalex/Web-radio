@@ -45,7 +45,7 @@ end -%>
  <td><%= check_box_tag "chk_id[]","#{h(hs.id)}" -%></td><% end-%>
  <%fields.each do |fl| -%>
   <td><%=
-ptmp=hs.read_attribute(h("#{fl[:id]}"))
+ptmp=hs.read_attribute(h("#{fl[:id]}"))||hs.instance_eval("#{fl[:id]}")
 if fl.has_key? :proc 
  fl[:proc].call(ptmp);
 else
@@ -54,7 +54,7 @@ end
 -%>
  <%end;-%>
 <% if crud-%>
-<td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}",:mn=>@adm_menu_id -%></td>
+<td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}" -%></td>
 <%end-%>
 <%end-%>
 <% end-%>

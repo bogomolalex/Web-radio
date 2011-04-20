@@ -6,8 +6,8 @@
                 :fields=>[
 {:id=>"value_date",:proc=>lambda{|item| item.strftime('%H:%M')}},
 {:id=>"title"},{:id=>"description"}],
-                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}",:mn=>@adm_menu_id},
-                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new',:mn=>@adm_menu_id}],
+                :url=>{:controller=>"program",:action=>"delete99",:id=>"#{h(params[:vd])}"},
+                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'program',:action => 'new',:vd=>"#{h(params[:vd])}"}],
                 :crud=>true,
                 :but_sub=>{:text=>t(:Butt_Delete)}})-%>
 </div>
