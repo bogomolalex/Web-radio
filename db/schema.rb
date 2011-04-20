@@ -41,15 +41,15 @@ ActiveRecord::Schema.define(:version => 20110414131510) do
   end
 
   create_table "xparams", :force => true do |t|
-    t.string   "name",        :limit => 20,  :null => false
-    t.string   "ptype",       :limit => 20,  :null => false
+    t.string   "name",        :limit => 20,  :default => "", :null => false
+    t.string   "ptype",       :limit => 20,  :default => "", :null => false
     t.string   "value_str",   :limit => 250
     t.date     "value_date"
-    t.datetime "inserted",                   :null => false
-    t.string   "inserted_by", :limit => 30,  :null => false
-    t.datetime "updated"
-    t.string   "updated_by",  :limit => 30,  :null => false
     t.integer  "value_num"
+    t.datetime "inserted",                                   :null => false
+    t.string   "inserted_by", :limit => 30,  :default => "", :null => false
+    t.datetime "updated"
+    t.string   "updated_by",  :limit => 30,  :default => "", :null => false
   end
 
 end
