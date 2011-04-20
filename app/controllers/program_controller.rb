@@ -38,19 +38,9 @@ class ProgramController < ApplicationController
                   @begin_of_date,@begin_of_date+1])
     @lstm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
                        Date.today+1,
-                       Date.new(@begin_of_date.year,@begin_of_date.month+1,1)-1])
+                       Date.new(@begin_of_date.year,@begin_of_date.month+1,1)])
 
   end
-
-  def show1
-    @programs = Programs.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.xml  { render :xml => @programs }
-    end
-  end
-
 
   def edit2
     store_location

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110414131510) do
+ActiveRecord::Schema.define(:version => 20110419064949) do
 
   create_table "logs", :force => true do |t|
     t.string "descr"
@@ -25,12 +25,32 @@ ActiveRecord::Schema.define(:version => 20110414131510) do
     t.string  "img"
   end
 
+  add_index "menus", ["mtype"], :name => "index_menus_on_mtype"
+
+  create_table "news", :force => true do |t|
+    t.string  "title",      :limit => 80,                      :null => false
+    t.string  "img_url",    :limit => 250
+    t.date    "value_date",                                    :null => false
+    t.integer "no"
+    t.integer "menu_id"
+    t.integer "program_id"
+    t.text    "descr"
+    t.string  "status",     :limit => 3,   :default => "NEW",  :null => false
+    t.string  "ntype",      :limit => 20,  :default => "NEWS", :null => false
+  end
+
+  add_index "news", ["menu_id"], :name => "index_news_on_menu_id"
+  add_index "news", ["program_id"], :name => "index_news_on_program_id"
+  add_index "news", ["value_date"], :name => "index_news_on_value_date"
+
   create_table "programs", :force => true do |t|
     t.string   "title",       :limit => 100, :default => "", :null => false
     t.text     "description",                                :null => false
     t.string   "image_url",   :limit => 200, :default => "", :null => false
     t.datetime "value_date",                                 :null => false
   end
+
+  add_index "programs", ["value_date"], :name => "index_programs_on_value_date"
 
   create_table "userprofs", :force => true do |t|
     t.string "username", :limit => 20

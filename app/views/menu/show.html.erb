@@ -9,6 +9,8 @@ case d.mtype
    {:controller=>'program',:action=>'edit2',:vd=>DateTime.now.strftime('%d-%m-%Y')}
  when "TOMW"
    {:controller=>'program',:action=>'towm',:vd=>(DateTime.now+1).strftime('%d-%m-%Y')}
+ when "NEW"
+   {:controller=>'new',:action=>'edlist'}
  else
    {:controller=>'menu',:action=>'show'}
 end,

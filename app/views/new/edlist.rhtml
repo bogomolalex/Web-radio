@@ -1,0 +1,16 @@
+<% if @c %>
+<div style="width:600px;" >
+<p> <h4>Новости </h4> </p>
+<%=show_table ({:objs=>@vnews,
+                :headers=>["Дата","Тема" ,"Краткое содержание новости"],
+                :fields=>[
+{:id=>"value_date",:proc=>lambda{|item| item.strftime('%d.%m.%Y')}},
+{:id=>"title"},{:id=>"short_descr"}],
+                :url=>{:controller=>"new",:action=>"destroy"},
+                :btns=>[{:text=>t(:Butt_Create),:name=>"create",:controller => 'new',:action => 'new'}],
+                :crud=>true,
+                :but_sub=>{:text=>t(:Butt_Delete)}})-%>
+</div>
+<% else %>
+  report_error("Unauthorized access; password required")
+<% end %>

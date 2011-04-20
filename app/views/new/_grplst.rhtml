@@ -1,0 +1,10 @@
+<%=show_table ({#:headers=>["Header1","Header2","Header_3"],
+                :objs=>@vnews,
+                :fields=>[{:id=>"value_date",
+:proc=>lambda{|item| 
+              link_to "#{item.strftime('%d.%m.%Y')}",edit_date_path("#{item.strftime('%d.%m.%Y')}")
+             }
+}],
+                #:url=>{:controller=>"program",:action=>"show"},
+                #:crud=>true
+               })-%>

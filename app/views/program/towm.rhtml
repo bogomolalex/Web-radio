@@ -11,7 +11,7 @@ lambda{|x,c|
  if @lstm.find{|n| n[:value_date].day==c}
    x
  else
-  "dd"
+  nil
  end
 } -%>
 </div>
