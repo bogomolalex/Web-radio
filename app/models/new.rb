@@ -1,8 +1,10 @@
 
 class New < ActiveRecord::Base
 
+ belongs_to :program
+
  def short_descr
-    read_attribute('descr')[0,80]+'...'
+    (descr||'xxx').first(80)+"..."
  end 
 
  def self.save_file(upload)
@@ -10,7 +12,7 @@ class New < ActiveRecord::Base
        upload['img_url']=nil
        return
     end 
-    name =  "new#{sanitize_filename(upload['img_file'].original_filename)}"
+    name =  "new#{Digest::SHA1.hexdigest Time.now.to_s}"
     directory = "public/images/news"
     # create the file path
     path = File.join(directory, name)
@@ -26,10 +28,13 @@ class New < ActiveRecord::Base
 
 
 def self.sanitize_filename(file_name)
+
   # get only the filename, not the whole path (from IE)
   just_filename = File.basename(file_name) 
   # replace all none alphanumeric, underscore or perioids
   # with underscore
+  just_filename.sub! /\A.*(\\|\/)/, ''
+  just_filename.gsub! /[^\w\.\-]/, '_'
   just_filename.sub(/[^\w\.\-]/,'_') 
 end
 

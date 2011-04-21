@@ -1,10 +1,11 @@
 <% if @vnew %>
 <div>
  <div style="float:right;width:200px;">
-     <%= image_tag "news/#{@vnew.img_url}" unless @vnew.new_record?-%>
+     <%= image_tag "news/#{@vnew.img_url}" unless @vnew.img_url.blank? unless @vnew.new_record? -%>
  </div>
 <div style"float:left;width:400px;">
  <table border="0" >
+  <%@vnew.program_id="#{id2}" unless id2.nil?-%>
   <% form_for @vnew,:url=>{:action=>(@vnew.new_record?? "create":"update")},:html=>{:multipart => true} do |f| %>
    <tr><td>Название новости :</td>
      <td valign='top' align='left'>
@@ -18,7 +19,7 @@
     <%= f.text_field :no %></td></tr>
    <tr><td>Рисунок</td>
      <td valign='top' align='left'>
-     <%= file_field 'upload','img_file' %>
+     <%= file_field 'upload','img_file',:accept => 'image/jpeg'  %>
      <%= f.hidden_field :img_url -%>
      </td></tr>
    <tr><td>Меню</td>
@@ -26,11 +27,14 @@
      <%= f.text_field :menu_id %></td></tr>
    <tr><td>Связанная с новостью программа</td>
      <td valign='top' align='left'>
-     <%= f.text_field :program_id %></td></tr>
+     <%= f.text_field :program_id %>
+     <%=  f.submit t(:Butt_Select), :name=>"sel_prog"%></td></tr>
    <tr><td valign='top'>Текст</td><td>
     <%= f.text_area :descr,:cols => 50, :rows => 20 %></td></tr>
    <tr><td></td><td>
-    <%=  @vnew.new_record?? f.submit(t(:Butt_Create)): f.submit(t(:Butt_Update))%></td></tr>
+    <%=  f.submit t(:Butt_Cancel), :name=>"cancel"%>
+    <%=  @vnew.new_record?? f.submit(t(:Butt_Create)): f.submit(t(:Butt_Update))%>
+   </td></tr>
   <% end %>
   </table>
  <div>

@@ -1,19 +1,9 @@
 <p>Find me in app/views/program/show.html.erb</p>
 Editing program
 <!-- �᫨ ���짮��⥫� ��ॣ����஢��-->
-<% if @c %>
-  <% if @program %>
-<!-- ������� ������-->
-  <%# @program  - ��� �� ��।����� %>
-  <% form_for @program,:url=> {:action=>"create" } do |f| %>
-   <%= datetime_select :program, :value_date %>
-   <%= f.text_field :title %>
-   <%= f.text_field :description %>
-   <%= f.submit t(:Butt_Create) %>
-  <% end %>
- <% else %>
-   empty
- <% end %>
-<% else %>
+<% if @c -%>
+ <%= render :partial=>"form",
+            :locals=>{:program=>@program ,:action=>"create" }-%>
+<% else -%>
   report_error("Unauthorized access; password required")
-<% end %>
+<% end -%>

@@ -19,9 +19,17 @@ class NewController < ApplicationController
   end
 
   def update
+   unless params[:sel_prog].nil?
+     redirect_to :controller=>"program",:action=>"towm",:vd=>(DateTime.now).strftime('%d-%m-%Y'),:id=>params[:id],:select=>"yes"
+     return
+   end
+   unless params[:cancel].nil?
+     redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
+     return
+   end
     @vnew = New.find(params[:id])
     unless params[:upload].nil?
-     New.cleanup(params[:new][:img_url])
+     New.cleanup(@vnew.img_url)
      params[:new][:img_url]= New.save_file(params[:upload]) 
     end
     respond_to do |format|
@@ -43,6 +51,14 @@ class NewController < ApplicationController
   end
 
   def create
+   unless params[:sel_prog].nil?
+     redirect_to :controller=>"program",:action=>"towm",:vd=>(DateTime.now).strftime('%d-%m-%Y'),:id=>params[:id],:select=>"yes"
+     return
+   end
+   unless params[:cancel].nil?
+     redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
+     return
+   end
     vnew = New.new(params[:new])
     respond_to do |format|
      if vnew.save 

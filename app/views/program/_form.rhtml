@@ -1,0 +1,11 @@
+  <% form_for @program,:url=>{:action=>(@program.new_record?? "create":"update")} do |f| -%>
+   <%= datetime_select :program, :value_date -%>
+   <%= f.text_field :title -%>
+   <%= f.text_field :description -%>
+   <% f.fields_for :news do |new| -%>
+     <%=new.label "Novost"-%>
+     <%=new.text_area :descr-%>
+   <%end-%>
+   <%=  f.submit t(:Butt_Cancel), :name=>"cancel"%>
+   <%=  @program.new_record?? f.submit(t(:Butt_Create)): f.submit(t(:Butt_Update))%>
+  <% end -%>

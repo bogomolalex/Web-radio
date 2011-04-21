@@ -31,7 +31,6 @@ class ProgramController < ApplicationController
   end
 
   def towm
-    store_location
     @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
     @lst=Program.find(:all,
     :conditions=>["value_date>= ? and value_date<?",
@@ -39,7 +38,15 @@ class ProgramController < ApplicationController
     @lstm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
                        Date.today+1,
                        Date.new(@begin_of_date.year,@begin_of_date.month+1,1)])
-
+    respond_to do |format|
+     if (params[:select]||'no')=="yes" 
+         format.html { 
+          render "selprg"}
+      else
+       store_location
+       format.html {}
+      end
+    end
   end
 
   def edit2
@@ -59,9 +66,14 @@ class ProgramController < ApplicationController
 
   def edit
     @program = Program.find(params[:id])
+    @news = @program.news    
   end
 
   def update
+   unless params[:cancel].nil?
+     redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
+     return
+   end
     @program = Program.find(params[:id])
     @vd="#{@program.value_date.strftime('%d.%m.%Y')}"
     respond_to do |format|
@@ -82,6 +94,7 @@ class ProgramController < ApplicationController
     @program = Program.new
     @program.title="???"
     @program.description="xxx"
+    @program.news.build
     if p[:vd].nil?
      @program.value_date=DateTime.strptime("#{params[:vd]} 08:00", "%d-%m-%Y %H:%M")||DateTime.now
     else
@@ -90,7 +103,17 @@ class ProgramController < ApplicationController
   end
 
   def create
+   unless params[:cancel].nil?
+     redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
+     return
+   end
     @program1 = Program.new(params[:program])
+    news=@program1.news
+    news.each  do |new|
+     new.value_date=@program1.value_date
+     new.title=@program1.title
+     new.img_url=""
+    end
     @vd="#{@program1.value_date.strftime('%d.%m.%Y')}"
     respond_to do |format|
      if @program1.save 
