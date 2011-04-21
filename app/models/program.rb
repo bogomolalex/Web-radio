@@ -1,5 +1,9 @@
 class Program < ActiveRecord::Base
 
+ has_many :news, :class_name=>'New'
+
+ accepts_nested_attributes_for :news
+
  before_save :default_value_date_if_nil
 
  validates_presence_of :title

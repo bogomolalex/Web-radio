@@ -7,7 +7,8 @@ module ApplicationHelper
     xpar=show_table_params(xpar)
     render :partial => 'shared/tab_vw',:locals=>{:headers=>xpar[:headers],
                 :objs=>xpar[:objs],:fields=>xpar[:fields],:crud=>xpar[:crud],
-                :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub]},
+                :url=>xpar[:url],:btns=>xpar[:btns],:but_sub=>xpar[:but_sub],
+                :select_item=>xpar[:select_item]},
            :layout=>xpar[:layout]
   end
   

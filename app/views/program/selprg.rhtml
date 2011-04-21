@@ -1,0 +1,29 @@
+<% if @c -%>
+<!-- Пример -->
+<p>List of  program</p>
+<!-- еще -->
+<div style="float:left;width:300px;text-align: right;">
+<%=show_calendar @begin_of_date,{:controller=>"program",:action=>"towm",:select=>"yes",:id=>"#{h(params[:id])}"},
+lambda{|x,c| 
+c==Date.today.day || @lstm.find{|n| n[:value_date].day==c}
+},
+lambda{|x,c| 
+ if @lstm.find{|n| n[:value_date].day==c ||c==Date.today.day }
+   x
+ else
+  nil
+ end
+} -%>
+</div>
+<div style="float:left;width:300px;text-align: right;">
+<%=show_table ({:objs=>@lst,
+                :fields=>[{:id=>"value_date",:proc=>lambda{|item| item.strftime('%H:%M')}},
+                          {:id=>"title"},
+                          {:id=>"description"}],
+                          :url=>{:controller=>"new",:action=>"edit",:id2=>"#{h(params[:id])}"},
+                          :select_item=>true
+})-%>
+</div>
+<%- else -%>
+  report_error("Unauthorized access; password required")
+<%- end -%>

@@ -1,8 +1,13 @@
-<p>Find me in app/views/program/show.html.erb</p>
-Editing program
-<!-- �᫨ ���짮��⥫� ��ॣ����஢��-->
+<p>
+<div style="float:left;width:100px;">
+  <%=link_to "Новости",:controller=>"new",:action=>"edlist",:id=>nil-%>
+</div>
+</p>
+<div style="float:left;width:750px">
+<p><h4>Редактирование новости</h4></p>
+</div>
 <% if @c %>
- <%= render :partial=>"form",:locals=>{:vnew=>@vnew}-%>
+ <%= render :partial=>"form",:locals=>{:vnew=>@vnew,:id2=>params[:id2]}-%>
 <% else %>
   report_error("Unauthorized access; password required")
 <% end %>

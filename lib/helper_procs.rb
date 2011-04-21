@@ -22,6 +22,7 @@ module HelperProcs
   def show_table_params(xpar)
    xpar[:fields]||=[{:id=>"id",:proc=>lambda{|item| "Id:"+item}}]
    xpar[:crud]||=false
+   xpar[:select_item1]||=false
     # кнопка по умолчанию submit
    unless xpar[:url].nil?
      xpar[:but_sub]||={:text=>t(:Butt_Send)}

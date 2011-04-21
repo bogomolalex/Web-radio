@@ -2,7 +2,10 @@
 <%unless url.nil?-%>
  <p> 
  <div style="float:left;">
-<%= submit_tag h(but_sub[:text]),:class=>"but"-%>&nbsp</div>
+ <% if objs.size>0 && !select_item -%>
+   <%= submit_tag h(but_sub[:text]),:class=>"but"-%>
+ <%end-%>
+  &nbsp</div>
 <%end-%>
 
 <% unless btns.nil?-%>
@@ -32,7 +35,7 @@ end -%>
 <%end-%>
 </tr>
 <%@fl=0%>
-<% unless objs.nil?
+<% unless objs.size==0
   objs.each do |hs| -%>
 <% if @fl==0-%>
  <tr style="background-color:#f0f0f0">
@@ -53,8 +56,11 @@ else
 end 
 -%>
  <%end;-%>
-<% if crud-%>
+<% if crud -%>
 <td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}" -%></td>
+<%end-%>
+<% if select_item -%>
+ <td> <%=link_to "#{t(:Butt_Select)}",:controller=>url[:controller],:action=>url[:action],:id=>url[:id2],:id2=>"#{h(hs.id)}"-%></td>
 <%end-%>
 <%end-%>
 <% end-%>
