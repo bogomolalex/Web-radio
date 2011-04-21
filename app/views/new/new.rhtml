@@ -8,7 +8,7 @@
 </div>
 <% if @c %>
  <%= render :partial=>"form",
-            :locals=>{:vnew=>@vnew,:action=>"create",:id2=>nil }-%>
+            :locals=>{:vnew=>@vnew,:action=>"create",:id2=>params[:id2] }-%>
 <% else %>
   report_error("Unauthorized access; password required")
 <% end %>

@@ -5,7 +5,7 @@
  </div>
 <div style"float:left;width:400px;">
  <table border="0" >
-  <%@vnew.program_id="#{id2}"-%>
+  <%@vnew.program_id="#{id2}" unless id2.nil?-%>
   <% form_for @vnew,:url=>{:action=>(@vnew.new_record?? "create":"update")},:html=>{:multipart => true} do |f| %>
    <tr><td>Название новости :</td>
      <td valign='top' align='left'>

@@ -39,7 +39,7 @@ class ProgramController < ApplicationController
                        Date.today+1,
                        Date.new(@begin_of_date.year,@begin_of_date.month+1,1)])
     respond_to do |format|
-     if (params[:select]||'no')=="yes" && !params[:id].nil?
+     if (params[:select]||'no')=="yes" 
          format.html { 
           render "selprg"}
       else

@@ -51,6 +51,10 @@ class NewController < ApplicationController
   end
 
   def create
+   unless params[:sel_prog].nil?
+     redirect_to :controller=>"program",:action=>"towm",:vd=>(DateTime.now).strftime('%d-%m-%Y'),:id=>params[:id],:select=>"yes"
+     return
+   end
    unless params[:cancel].nil?
      redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
      return

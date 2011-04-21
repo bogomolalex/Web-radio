@@ -20,7 +20,7 @@ lambda{|x,c|
                 :fields=>[{:id=>"value_date",:proc=>lambda{|item| item.strftime('%H:%M')}},
                           {:id=>"title"},
                           {:id=>"description"}],
-                          :url=>{:controller=>"new",:action=>"edit",:id2=>"#{h(params[:id])}"},
+                          :url=>{:controller=>"new",:action=>(params[:id].nil?? "new" : "edit" ),:id2=>"#{h(params[:id])}"},
                           :select_item=>true
 })-%>
 </div>
