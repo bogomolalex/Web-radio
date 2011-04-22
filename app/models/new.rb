@@ -1,6 +1,9 @@
 
 class New < ActiveRecord::Base
 
+ cattr_reader :per_page
+ @@per_page = 5
+
  belongs_to :program
 
  def short_descr

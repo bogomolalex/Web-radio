@@ -1,6 +1,7 @@
 <% if @c %>
 <div style="width:600px;" >
 <p> <h4>Новости </h4> </p>
+<%= will_paginate @vnews,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>
 <%=show_table ({:objs=>@vnews,
                 :headers=>["Дата","Тема" ,"Краткое содержание новости"],
                 :fields=>[
