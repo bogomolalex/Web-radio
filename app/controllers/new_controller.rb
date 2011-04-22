@@ -10,8 +10,9 @@ class NewController < ApplicationController
 
   def edlist
     store_location
-   # @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
-    @vnews=New.find(:all)
+    @vnews=New.paginate(:all,:page=>params[:page]||'1',
+                             :conditions=>[" value_date>=?",Date.today])
+#    @vnews = @vnews.paginate 
   end
 
   def edit
