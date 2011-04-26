@@ -1,0 +1,14 @@
+<% if @c %>
+<div style="width:600px;" >
+<p> <h4>Архивный список новостей </h4> </p>
+<%= will_paginate @vnews,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>
+<%=show_table ({:objs=>@vnews,
+                :headers=>["Дата","Тема" ,"Краткое содержание новости"],
+                :fields=>[
+{:id=>"value_date",:proc=>lambda{|item| item.strftime('%d.%m.%Y')}},
+{:id=>"title"},{:id=>"short_descr"}]
+})-%>
+</div>
+<% else %>
+  report_error("Unauthorized access; password required")
+<% end %>

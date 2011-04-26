@@ -60,7 +60,7 @@ end
 <td> <%=link_to "#{t(:Butt_Update)}",:controller=>url[:controller],:action=>"edit",:id=>"#{h(hs.id)}" -%></td>
 <%end-%>
 <% if select_item -%>
- <td> <%=link_to "#{t(:Butt_Select)}",:controller=>url[:controller],:action=>url[:action],:id=>url[:id2],:id2=>"#{h(hs.id)}"-%></td>
+ <td> <%=link_to select_item_name.call(hs.id),:controller=>url[:controller],:action=>url[:action],:id=>url[:id2],:id2=>"#{h(hs.id)}"-%></td>
 <%end-%>
 <%end-%>
 <% end-%>

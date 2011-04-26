@@ -11,8 +11,21 @@ class NewController < ApplicationController
   def edlist
     store_location
     @vnews=New.paginate(:all,:page=>params[:page]||'1',
-                             :conditions=>[" value_date>=?",Date.today])
+                             :conditions=>[" value_date>=? and status!='ACT'",Date.today-10])
 #    @vnews = @vnews.paginate 
+  end
+
+  def mkact
+    store_location
+    @vnews=New.paginate(:all,:page=>params[:page]||'1',
+                             :conditions=>[" value_date>=? or status='NEW'",Date.today])
+  end
+
+  def arcnew
+    store_location
+    @vnews=New.paginate(:all,:page=>params[:page]||'1',
+                             :conditions=>[" value_date<? and status='ACT'",Date.today],:order=>"value_date desc")
+    render :layout=>'marc'   
   end
 
   def edit
@@ -49,6 +62,7 @@ class NewController < ApplicationController
     @vnew.title="?"
     @vnew.no=100
     @vnew.img_url="none"
+    @vmn=Menu.find_by_mtype('MAIN')
   end
 
   def create
@@ -84,6 +98,26 @@ class NewController < ApplicationController
      t.destroy }
     redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
    end
+  end
+
+  def updact
+    if params[:id2].nil?
+     store_location
+    end
+    unless params[:id2].nil?
+     n=New.find(params[:id2])
+     n.status=case n.status
+      when 'NEW'
+       'ACT'
+      when 'ACT'
+       'NEW'
+      end
+     if n.value_date<Date.today
+      n.value_date=Date.today
+     end
+     n.save
+    end
+     redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
   end
 
 end
