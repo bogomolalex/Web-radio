@@ -18,7 +18,8 @@ class NewController < ApplicationController
   def mkact
     store_location
     @vnews=New.paginate(:all,:page=>params[:page]||'1',
-                             :conditions=>[" value_date>=? or status='NEW'",Date.today])
+                             :conditions=>[" value_date>=? or status='NEW'",Date.today],
+                             :order=>"value_date desc,no desc ")
   end
 
   def arcnew

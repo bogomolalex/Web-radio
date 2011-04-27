@@ -1,7 +1,7 @@
 <% if @mn -%>
 <p> 
 <% @mn.each do |d| -%>
-<div style="float:left;width:100px;">  <%=link_to content_tag("div",
+<div style="float:left;width:150px;">  <%=link_to content_tag("div",
          image_tag(d.img||"rails.png",:size=>"40x40",:alt=>d.descr,:border=>0)+
                    content_tag( "p",d.title)),
 case d.mtype

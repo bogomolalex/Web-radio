@@ -13,7 +13,7 @@
    <tr><td style="width:200px;">
        Дата активизации :</td>
      <td valign='top' align='left'>
-   <%= date_select :new, :value_date %></td></tr>
+   <%= f.date_select  :value_date %></td></tr>
    <tr><td>Порядковый номер </td>
      <td valign='top' align='left'>
     <%= f.text_field :no %></td></tr>
@@ -24,7 +24,7 @@
      </td></tr>
    <tr><td>Меню</td>
      <td valign='top' align='left'>
-     <%= select("new","menu_id",Menu.find_all_by_mtype('MAIN').collect {|m| [ m.title, m.id ]},{:selected =>@vnew.menu_id }) %></td></tr>
+     <%= f.select(:menu_id,Menu.find_all_by_mtype('MAIN').collect {|m| [ m.title, m.id ]}) %></td></tr>
    <tr><td>Связанная с новостью программа</td>
      <td valign='top' align='left'>
      <%= f.text_field :program_id %>

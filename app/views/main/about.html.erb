@@ -4,10 +4,37 @@
 <%end-%>
 <div>
 <div id="nav">
- <%=render :partial => 'hmenu'-%>
+<%=render :partial => 'hmenu'-%>
 </div>
 <div id="main">
-<p>Find me in app/views/main/view.html.erb</p>
- <%=show_calendar Date.today,{:controller=>"clndr",:action=>"show",:vd=>"18-01-2001"} -%>
+ <div style="float:left;width:30px;">&nbsp;</div>
+ <div style="border: 0px solid #CCCCCC;float:left;width:450px;">
+ <%unless @news.nil? -%>
+ <%@news.each do |n| -%>
+ <div style="border: 0px solid #CCCCCC;float:left;width:450px;">  
+  <p>
+   <h4>
+    <div style="float:left;width:350px;height:40px;">
+     <%=h(n.title)-%>
+    </div>
+   </h4>
+  </p>
+  <%unless n.img_url.blank?-%>
+   <table border=0 width="250" cellspacing=0 cellpadding=0 align=left style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #CCCCCC;">
+    <tr>
+     <td> 
+      <%= image_tag "news/#{h(n.img_url)}"  -%>
+     </td>
+    </tr> 
+   </table>
+  <%end-%>
+   <%=h(n.descr)-%>
+  </div>
+ <%end-%>
+<%end-%>
+ </div>
 </div>
+
+</div>
+
 </div>
