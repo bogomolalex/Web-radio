@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110429133616) do
+ActiveRecord::Schema.define(:version => 20110504130042) do
 
   create_table "logs", :force => true do |t|
     t.string "descr"
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20110429133616) do
     t.datetime "updated"
     t.string   "updated_by",  :limit => 30,  :null => false
     t.integer  "value_num"
+    t.string   "descr",       :limit => 50
   end
 
 end

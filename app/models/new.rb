@@ -2,7 +2,7 @@
 class New < ActiveRecord::Base
 
  cattr_reader :per_page
- @@per_page = 5
+ @@per_page =5
 
  belongs_to :program
 
@@ -40,6 +40,5 @@ def self.sanitize_filename(file_name)
   just_filename.gsub! /[^\w\.\-]/, '_'
   just_filename.sub(/[^\w\.\-]/,'_') 
 end
-
 
 end
