@@ -1,0 +1,24 @@
+<% if @c %>
+<div style="width:600px;" >
+<p> <h4>Активизировать передачу для трансляции </h4> </p>
+<%= will_paginate @vprg,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>
+<%=show_table ({:objs=>@vprg,
+                :headers=>["Время","Передача" ,"Краткое описание передачи"],
+                :fields=>[
+{:id=>"value_date",:proc=>lambda{|item| item.strftime('%H:%M')}},
+{:id=>"title"},{:id=>"description"}],
+                :url=>{:controller=>"program",:action=>"updact"},
+                :select_item=>true,
+                :select_item_name=>lambda{|x| 
+case @vprg.find{|n| x==n.id}.status_id
+ when 'NEW'
+  "Активизир."
+ when 'ACT'
+  "Отключить"
+ else
+  "None"
+ end}})-%>
+</div>
+<% else %>
+  report_error("Unauthorized access; password required")
+<% end %>

@@ -5,6 +5,7 @@ class MainController < ApplicationController
     @news = New.find(:all,:conditions=>[" value_date>=? and status='ACT'
                           and menu_id=1",
                           Date.today],:order=>"value_date, no desc")
+    @pact=sysparam('prog_act')
   end
 
   def about

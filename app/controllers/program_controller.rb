@@ -157,4 +157,35 @@ class ProgramController < ApplicationController
     redirect_to edit_date_url(@vd)
   end
 
+  def mkact
+    store_location
+    @vprg=Program.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
+                             :conditions=>[" value_date>=? ",Date.today],
+                             :order=>"value_date desc ")
+  end
+
+  def updact
+    if params[:id2].nil?
+     store_location
+    end
+    unless params[:id2].nil?
+     #
+     vprg=Program.find(:all,:conditions=>[" value_date>=? and id!=?",Date.today,params[:id2]])
+     vprg.each do |p|
+      p.status_id='NEW'
+      p.save
+     end
+     #
+     n=Program.find(params[:id2])
+     n.status_id=case n.status_id
+      when 'NEW'
+       'ACT'
+      when 'ACT'
+       'NEW'
+      end
+     n.save
+    end
+     redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
+  end
+
 end

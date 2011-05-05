@@ -13,6 +13,8 @@ case d.mtype
    {:controller=>'new',:action=>'edlist'}
  when "NEWACT"
    {:controller=>'new',:action=>'mkact'}
+ when "PRGACT"
+   {:controller=>'program',:action=>'mkact'}
  else
    {:controller=>'menu',:action=>'show'}
 end,
