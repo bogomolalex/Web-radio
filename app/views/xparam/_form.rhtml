@@ -1,10 +1,10 @@
 <% if @vprm %>
 <div>
-<div style"float:left;width:400px;">
+<div style="float:left;width:400px;">
   <% form_tag({:controller=>"xparam",:action=>"update"},:method=>'post') do-%>
- <table border="0" >
+ <table border="0" width="750px">
    <% @vprm.each do |f| -%>
-    <tr><td><%=f.descr-%> :</td>
+    <tr><td align='left' ><%=f.descr-%> :</td>
       <td valign='top' align='left'>
     <%if f.value_str%>
       <%if f.value_str=='Y' || f.value_str=='N'-%>

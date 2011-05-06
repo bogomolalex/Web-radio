@@ -20,7 +20,7 @@ end -%>
   &nbsp
  </p> 
 <%end-%>
-<table width="100%" heigh="100%" style="BORDER: buttonface solid 1px;">
+<table style="<%=tbstyle-%>">
 <% unless headers.nil?-%>
 <tr>
 <% if crud-%>
@@ -37,17 +37,27 @@ end -%>
 <%@fl=0%>
 <% unless objs.size==0
   objs.each do |hs| -%>
+
 <% if @fl==0-%>
- <tr style="background-color:#f0f0f0">
+ <tr style=<%=if rowact.nil?
+               "background-color:#f0f0f0"
+              else
+               rowact.call(hs)||"background-color:#f0f0f0"
+              end-%>>
  <%@fl=1%>
 <%else-%>
- <tr >
+ <tr <%=unless rowact.nil?
+        "style='#{rowact.call(hs)}'"
+      end-%>>
  <%@fl=0%>
 <%end-%>
 <% if crud-%>
  <td><%= check_box_tag "chk_id[]","#{h(hs.id)}" -%></td><% end-%>
  <%fields.each do |fl| -%>
-  <td><%=
+  <td <%unless fl[:field_st].nil?-%>
+       style="<%=fl[:field_st]-%>"
+      <%end-%>>
+<%=
 ptmp=hs.read_attribute(h("#{fl[:id]}"))||hs.instance_eval("#{fl[:id]}")
 if fl.has_key? :proc 
  fl[:proc].call(ptmp);

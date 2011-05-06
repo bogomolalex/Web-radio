@@ -9,13 +9,14 @@
 <div id="lsider"><%= periodically_call_remote :update => 'list_div',
 :url => {:action => "list"},
 :frequency => 10.0 -%>
-<div id='list_div'>
+<div id='list_div' >
  <%=render :partial => 'program/list' -%>
 </div>
 </div>
+<div style="float:left;width:50px;">&nbsp;</div>
 <div id="main">
  <div style="float:left;width:30px;">&nbsp;</div>
- <div style="border: 0px solid #CCCCCC;float:left;width:450px;">
+ <div style="border: 0px solid #CCCCCC;float:left;width:400px;">
  <%@news.each do |n| -%>
  <div style="border: 0px solid #CCCCCC;float:left;">  
   <p>
