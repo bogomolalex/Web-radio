@@ -13,7 +13,12 @@
 <div id="header">Radio-test</div>
 <div id="after_header">Radio-test</div>
 <div id="header">
- <div class="anav"> <%= render :partial=>"userprof/logio" -%> </div>
+ <div class="anav"> 
+   <%= render :partial=>"userprof/logio" -%>
+   <div style="float:right;">
+    <%= link_to "Домашняя страница", :controller => 'main',:action => 'view'-%>
+   </div>
+ </div>
  <div style="width:750px;height:50px;border-bottom: 1px solid #f0f0f0;">
    <div id="smnnow" >
          <%=link_to "Сегодня",:controller=>"menu",:action=>"show" -%>

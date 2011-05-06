@@ -183,6 +183,9 @@ class ProgramController < ApplicationController
       when 'ACT'
        'NEW'
       end
+     if n.value_date<DateTime.now && n.status_id=='ACT'
+      n.value_date=DateTime.now
+     end 
      n.save
     end
      redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
