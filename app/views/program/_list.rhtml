@@ -1,7 +1,12 @@
 <%pact=ApplicationController.new.sysparam('prog_act')
  pid=Program.find(:all,:conditions=>["value_date>=? and value_date<=?",Date.today,DateTime.now],:order=>"value_date desc")[0].id
 -%>
-<%=show_table ({:objs=>Program.find(:all),
+<div style="width:200px">
+  Список программ на <%=Date.today.strftime('%d.%m.%Y')-%>
+<%=show_table ({:objs=>
+    @program = Program.find(:all,
+:conditions=>[" value_date>=? and value_date<?",Date.today,Date.today+1],
+:order =>"value_date desc"),
                 :fields=>
 pact=='N'?
 [{:id=>"value_date",
@@ -23,3 +28,4 @@ pact=='N'?
                 #:url=>{:controller=>"program",:action=>"show"},
                 #:crud=>true
                })-%>
+</div>
