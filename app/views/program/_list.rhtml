@@ -1,5 +1,10 @@
 <%pact=ApplicationController.new.sysparam('prog_act')
- pid=Program.find(:all,:conditions=>["value_date>=? and value_date<=?",Date.today,DateTime.now],:order=>"value_date desc")[0].id
+ arr=Program.find(:all,:conditions=>["value_date>=? and value_date<=?",Date.today,DateTime.now],:order=>"value_date desc")
+ unless arr.size==0
+  pid=arr[0].id
+ else
+  pid=1
+ end 
 -%>
 <div style="width:200px">
   Список программ на <%=Date.today.strftime('%d.%m.%Y')-%>
