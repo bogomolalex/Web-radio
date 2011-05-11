@@ -32,12 +32,12 @@ $$('li[class*="MAIN"]').each(
 function(e)
 {e.observe('mouseover',
 function(){
-  if (this.getStyle('backgroundColor')!='#666' )
+  if (this.getStyle('backgroundColor')!='#666666' && this.getStyle('backgroundColor')!="rgb(102, 102, 102)")
    this.setStyle({backgroundColor: "buttonface"});
 })
 e.observe('mouseout',
 function(){
-  if (this.getStyle('backgroundColor')!='#666' )
+  if (this.getStyle('backgroundColor')!='#666666' && this.getStyle('backgroundColor')!="rgb(102, 102, 102)")
    this.setStyle({backgroundColor: '#FFF'});
 })
 }

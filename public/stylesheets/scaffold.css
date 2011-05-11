@@ -21,6 +21,15 @@ border-radius: 6px 6px 0 0;
 -moz-border-radius:6px 6px 0 0 ;
 -khtml-border-radius:6px 6px  0 0 ;
 }
+.notice{
+width:700px;
+Height: 15px;
+}
+.notice_error{
+width:700px;
+Height: 15px;
+color:red;
+}
 
 /*.sysmnu:before{display: block;
        height: 20px;
@@ -191,7 +200,7 @@ a:visited { color: #666; }
 a:hover { color: #FFF; background-color:#000; }
 
 .fieldWithErrors {
-  padding: 2px;
+  padding: 1px solid red;
   background-color: red;
   display: table;
 }

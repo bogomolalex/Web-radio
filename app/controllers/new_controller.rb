@@ -2,7 +2,8 @@ class NewController < ApplicationController
 
   layout 'mnow' 
   
-  verify :method=>:post,:only=>'create'
+  verify :method=>:post,:only=>[:create,:destroy], :redirect_to => {:controller=>'main',:action=>'view'}
+  verify :method=>:put,:only=>[:update,:updact], :redirect_to => {:controller=>'main',:action=>'view'}
 
   def index
    redirect_to :controller=>"menu",:action=>"show"
@@ -63,7 +64,7 @@ class NewController < ApplicationController
 
   def new
     @vnew = New.new
-    @vnew.title="?"
+    @vnew.title=""
     @vnew.no=100
     @vnew.img_url="none"
     @vmn=Menu.find_by_mtype('MAIN')
@@ -78,14 +79,15 @@ class NewController < ApplicationController
      redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
      return
    end
-    vnew = New.new(params[:new])
+    @vnew = New.new(params[:new])
     respond_to do |format|
-     if vnew.save 
+     if @vnew.save 
         flash[:notice] = 'Programs was successfully created.'
         format.html { 
-         redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
-}
+         redirect_to_back_or_default({:controller=>"new",:action=>"show"})}
       else
+        flash[:error] = "Ошибка!!! #{@vnew.errors[:title]} заголовок." if @vnew.errors.invalid?(:title)
+        flash[:error] = "Ошибка!!! #{@vnew.errors[:value_date]} дата." if @vnew.errors.invalid?(:value_date)
         format.html { render :action => "new" }
       end
     end
