@@ -1,8 +1,26 @@
 <div id="clndr">
-<table cellpadding="0" cellspacing="0" align="center" style="border:black solid 1px;text-align: center;width:192px;">
-<b><%="#{(t 'date.standalone_month_names')[xdate.month]} ,#{xdate.strftime('%Y')}"-%></b><div>
 <!-- Заголовок дни недели-->
-  <tr style="padding: 0px;">
+<%
+if xdate.month==12
+ next_month=Date.new(xdate.year+1,1,1)
+else
+ next_month=Date.new(xdate.year,xdate.month+1,1)
+end
+if xdate.month==1
+ prev_month=Date.new(xdate.year-1,12,1)
+else
+ prev_month=Date.new(xdate.year,xdate.month-1,1)
+end
+%>
+<table cellpadding="0" cellspacing="0" align="center" style="text-align: center;width:192px;">
+<tr>
+  <td >  <%=link_to "<<", a_hash.merge({:vd=>prev_month.strftime('%d-%m-%Y')})-%></td>
+  <td colspan="5"><b><%="#{(t 'date.standalone_month_names')[xdate.month]} ,#{xdate.strftime('%Y')}"-%></b></td>
+   <td> <%=link_to ">>", a_hash.merge({:vd=>next_month.strftime('%d-%m-%Y')})-%></td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" align="center" style="border:black solid 1px;text-align: center;width:192px;">
+<tr style="padding: 0px;">
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[1]}"-%></th>
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[2]}"-%></th>
  <th class="clndrh"><%="#{(t'date.abbr_day_names')[3]}"-%></th>

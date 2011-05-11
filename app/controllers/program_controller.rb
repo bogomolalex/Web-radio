@@ -15,29 +15,51 @@ class ProgramController < ApplicationController
   end
 
   def clndr
-    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
-    p=Program.find(:first,:select=>" max(value_date) as vd",
-                   :conditions=>[" value_date<=? and value_date<?",
-                    @begin_of_date+1,Date.today])
-    @begin_of_date=p.vd.to_datetime||@begin_of_date||Date.today
+    @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today
+    if @begin_of_date.month==Date.today.month && @begin_of_date>Date.today-1
+      @begin_of_date=Date.today-1
+    end
     @arc=Program.find(:all,
     :conditions=>["value_date>= ? and value_date<?",
                   @begin_of_date,@begin_of_date+1])
-    @arcm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
+    @arcm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ? and value_date<?",
                        Date.new(@begin_of_date.year,@begin_of_date.month,1),
-                       Date.today-1])
-
-    render :layout=>'marc'
+  lambda{
+  if @begin_of_date.month==12
+    Date.new(@begin_of_date.year+1,1,1)
+  else
+    Date.new(@begin_of_date.year,@begin_of_date.month+1,1)-1                   
+  end   
+}.call,Date.today])
+#   p=Program.find(:first,:select=>" max(value_date) as vd",
+#                  :conditions=>[" value_date>=? and value_date<?",
+#                      @begin_of_date+1,Date.today])
+#   unless p.vd.nil?
+#     @begin_of_date=p.vd.to_datetime
+#   end
+   render :layout=>'marc'
   end
 
   def towm
     @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
+    if @begin_of_date.month==(Date.today+1).month &&@begin_of_date<(Date.today+1)
+      @begin_of_date=Date.today+1
+    end
     @lst=Program.find(:all,
     :conditions=>["value_date>= ? and value_date<?",
                   @begin_of_date,@begin_of_date+1])
-    @lstm=Program.find(:all,:conditions=>["value_date>= ? and value_date<= ?",
-                       Date.today+1,
-                       Date.new(@begin_of_date.year,@begin_of_date.month+1,1)])
+    @lstm=Program.find(:all,
+                       :conditions=>["value_date>= ? and value_date<= ? and value_date>?",
+    lambda{ Date.new(@begin_of_date.year,@begin_of_date.month,1)
+           }.call,
+    lambda{if @begin_of_date.month==12
+            Date.new(@begin_of_date.year+1,1,1)
+           else
+            Date.new(@begin_of_date.year,@begin_of_date.month+1,1)-1
+           end
+           }.call,
+        Date.today
+          ])
     respond_to do |format|
      if (params[:select]||'no')=="yes" 
          format.html { 
@@ -81,6 +103,7 @@ class ProgramController < ApplicationController
         format.html { 
          redirect_to_back_or_default(edit_date_url(@vd)) }
       else
+        validate_fields
         format.html { render :action => "edit" }
       end
     end
@@ -92,8 +115,6 @@ class ProgramController < ApplicationController
                    :conditions=>["value_date>= ? and value_date<?",
                     begin_of_date,begin_of_date+1])
     @program = Program.new
-    @program.title="???"
-    @program.description="xxx"
     @program.news.build
     if p[:vd].nil?
      @program.value_date=DateTime.strptime("#{params[:vd]} 08:00", "%d-%m-%Y %H:%M")||DateTime.now
@@ -107,21 +128,25 @@ class ProgramController < ApplicationController
      redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
      return
    end
-    @program1 = Program.new(params[:program])
-    news=@program1.news
+    @program = Program.new(params[:program])
+    news=@program.news
     news.each  do |new|
-     new.value_date=@program1.value_date
-     new.title=@program1.title
+     new.value_date=@program.value_date
+     new.program_id=0
+     new.menu_id=0
+     new.no=100
+     new.title=@program.title
      new.img_url=""
     end
-    @vd="#{@program1.value_date.strftime('%d.%m.%Y')}"
+    @vd="#{@program.value_date.strftime('%d.%m.%Y')}"
     respond_to do |format|
-     if @program1.save 
+     if @program.save 
         flash[:notice] = 'Programs was successfully created.'
         format.html { 
          redirect_to_back_or_default(edit_date_url(@vd)) }
       else
-        format.html { render :action => "new" }
+       validate_fields
+       format.html { render :action => "new" }
       end
     end
   end
@@ -160,7 +185,7 @@ class ProgramController < ApplicationController
   def mkact
     store_location
     @vprg=Program.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
-                             :conditions=>[" value_date>=? ",Date.today],
+                             :conditions=>[" value_date>=? and value_date<?",Date.today,Date.today+1],
                              :order=>"value_date desc ")
   end
 
@@ -191,4 +216,16 @@ class ProgramController < ApplicationController
      redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
   end
 
+private
+ def validate_fields
+  flash[:notice]=nil
+  flash[:error]=nil
+   [:title,:value_date,:image_url,:status_id,:description].each  do |attr|
+      if @program.errors.invalid?(attr)
+          flash[:error] = @program.errors[attr]
+          break
+        end
+   end
+
+ end
 end
