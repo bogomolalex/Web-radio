@@ -1,6 +1,8 @@
 
 class New < ActiveRecord::Base
 
+ validates_presence_of :title,:value_date,:status,:ntype,:message=>'Не заполнен '
+
  cattr_reader :per_page
  @@per_page =5
 

@@ -3,7 +3,7 @@
  <div style="float:right;width:200px;">
      <%= image_tag "news/#{@vnew.img_url}" unless @vnew.img_url.blank? unless @vnew.new_record? -%>
  </div>
-<div style"float:left;width:400px;">
+<div style="float:left;">
  <table border="0" >
   <%@vnew.program_id="#{id2}" unless id2.nil?-%>
   <% form_for @vnew,:url=>{:action=>(@vnew.new_record?? "create":"update")},:html=>{:multipart => true} do |f| %>
