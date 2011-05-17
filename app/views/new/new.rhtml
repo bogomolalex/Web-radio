@@ -3,7 +3,7 @@
   <%=link_to "Новости",:controller=>"new",:action=>"edlist",:id=>nil-%>
 </div>
 </p>
-<div style="float:left;width:700px;height:20px;valign:center;">
+<div style="float:left;width:700px;height:20px;">
 <%= content_tag 'div', h(flash[:notice]),
 :class => 'notice', :id => 'notice' if flash[:notice] %>
 <%= content_tag 'div', h(flash[:error]),

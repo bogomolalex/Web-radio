@@ -1,11 +1,28 @@
-  <% form_for @program,:url=>{:action=>(@program.new_record?? "create":"update")} do |f| -%>
-   <%= datetime_select :program, :value_date -%>
+<div style="float:left;width:750px;">
+ <table border="0" >
+<% form_for @program,:url=>{:action=>(@program.new_record?? "create":"update")} do |f| -%>
+ <tr><td style="width:250px" align='left'>Дата и время :</td>
+   <td valign='top' align='left'>
+     <%= datetime_select :program, :value_date -%>
+   </td></tr>
+  <tr><td align='left'>Заголовок программы :</td>
+   <td valign='top' align='left'>
    <%= f.text_field :title -%>
-   <%= f.text_field :description -%>
+   </td></tr>
+  <tr><td align='left'>Краткое содержание программы :</td>
+   <td valign='top' align='left'>
+    <%= f.text_field :description -%>
+   </td></tr>
+  <tr><td valign='top' align='left'>Связанная с программой новость :</td>
+   <td valign='top' align='left'>
    <% f.fields_for :news do |new| -%>
-     <%=new.label "Novost"-%>
      <%=new.text_area :descr-%>
    <%end-%>
-   <%=  f.submit t(:Butt_Cancel), :name=>"cancel"%>
+   </td></tr>
+  <tr><td> </td>
+   <td><%=  f.submit t(:Butt_Cancel), :name=>"cancel"%>
    <%=  @program.new_record?? f.submit(t(:Butt_Create)): f.submit(t(:Butt_Update))%>
-  <% end -%>
+   </td></tr>
+<% end -%>
+ </table>
+</div>

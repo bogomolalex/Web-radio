@@ -1,9 +1,15 @@
-<p>Find me in app/views/program/show.html.erb</p>
-Editing program
-<!-- �᫨ ���짮��⥫� ��ॣ����஢��-->
+<p><h4>Создать новую программу</h4></p>
 <% if @c -%>
+<div style="float:left;width:700px;height:30px;">
+<%= content_tag 'div', h(flash[:notice]),
+:class => 'notice', :id => 'notice' if flash[:notice] %>
+<%= content_tag 'div', h(flash[:error]),
+:class => 'notice_error', :id => 'error' if flash[:error] %>
+</div>
+<div style="float:left;">
  <%= render :partial=>"form",
             :locals=>{:program=>@program ,:action=>"create" }-%>
 <% else -%>
   report_error("Unauthorized access; password required")
 <% end -%>
+</div>

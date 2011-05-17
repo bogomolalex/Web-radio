@@ -1,11 +1,11 @@
 <% if @c -%>
 <!-- Пример -->
-<p>List of  program</p>
+<p><h4>Список программ на будущую дату</h4></p>
 <!-- еще -->
 <div style="float:left;width:300px;text-align: right;">
 <%=show_calendar @begin_of_date,{},
 lambda{|x,c| 
-c>Date.today.day 
+(c>Date.today.day && @begin_of_date.month==Date.today.month  ||@begin_of_date>Date.today && @begin_of_date>Date.today &&@begin_of_date.month!=Date.today.month)
 },
 lambda{|x,c| 
  if @lstm.find{|n| n[:value_date].day==c}
@@ -15,6 +15,7 @@ lambda{|x,c|
  end
 } -%>
 </div>
+<%if @begin_of_date>=Date.today-%>
 <div style="float:left;width:300px;text-align: right;">
 <%=show_table ({#:headers=>["Header1","Header2","Header_3"],
                 :objs=>@lst,
@@ -26,6 +27,7 @@ lambda{|x,c|
                 :crud=>true,
                 :but_sub=>{:text=>t(:Butt_Delete)}})-%>
 </div>
+<%end-%>
 <%- else -%>
   report_error("Unauthorized access; password required")
 <%- end -%>

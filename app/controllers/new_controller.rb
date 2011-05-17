@@ -3,7 +3,7 @@ class NewController < ApplicationController
   layout 'mnow' 
   
   verify :method=>:post,:only=>[:create,:destroy], :redirect_to => {:controller=>'main',:action=>'view'}
-  verify :method=>:put,:only=>[:update,:updact], :redirect_to => {:controller=>'main',:action=>'view'}
+  verify :method=>:put,:only=>[:update], :redirect_to => {:controller=>'main',:action=>'view'}
 
   def index
    redirect_to :controller=>"menu",:action=>"show"
@@ -38,6 +38,7 @@ class NewController < ApplicationController
   end
 
   def update
+   # Переходы в зависимости от значений в форме.
    unless params[:sel_prog].nil?
      redirect_to :controller=>"program",:action=>"towm",:vd=>(DateTime.now).strftime('%d-%m-%Y'),:id=>params[:id],:select=>"yes"
      return
@@ -46,6 +47,7 @@ class NewController < ApplicationController
      redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
      return
    end
+   #
     @vnew = New.find(params[:id])
     unless params[:upload].nil?
      New.cleanup(@vnew.img_url)
@@ -57,6 +59,7 @@ class NewController < ApplicationController
          redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
          }
       else
+        validate_fields
         format.html { render :action => "edit" }
       end
     end
@@ -82,12 +85,10 @@ class NewController < ApplicationController
     @vnew = New.new(params[:new])
     respond_to do |format|
      if @vnew.save 
-        flash[:notice] = 'Programs was successfully created.'
         format.html { 
          redirect_to_back_or_default({:controller=>"new",:action=>"show"})}
       else
-        flash[:error] = "Ошибка!!! #{@vnew.errors[:title]} заголовок." if @vnew.errors.invalid?(:title)
-        flash[:error] = "Ошибка!!! #{@vnew.errors[:value_date]} дата." if @vnew.errors.invalid?(:value_date)
+        validate_fields
         format.html { render :action => "new" }
       end
     end
@@ -102,8 +103,8 @@ class NewController < ApplicationController
     @vnews = params[:chk_id].map { |t| New.find(t) }
     @vnews.each { |t| 
      t.destroy }
-    redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
    end
+   redirect_to_back_or_default({:controller=>"new",:action=>"show"})
   end
 
   def updact
@@ -125,6 +126,16 @@ class NewController < ApplicationController
     end
      redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
   end
-
+private
+ def validate_fields
+   flash[:error]=nil
+   flash[:notice]=nil
+   [:title,:value_date,:no,:menu_id,:status,:ntype,:img_url].each  do |attr|
+    if @vnew.errors.invalid?(attr)
+       flash[:error] = @vnew.errors[attr]
+       break
+    end
+   end
+ end
 end
 

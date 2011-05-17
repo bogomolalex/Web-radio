@@ -1,12 +1,21 @@
 
 class New < ActiveRecord::Base
-
- validates_presence_of :title,:value_date,:status,:ntype,:message=>'Не заполнен '
-
  cattr_reader :per_page
  @@per_page =5
-
  belongs_to :program
+ #Проверки всякие
+ validates_presence_of :title,:message=>"Заголовок не заполнен."
+ validates_presence_of :value_date,:status,:ntype,:message=>"Дата новости не указана."
+ validates_presence_of :status,:ntype,:message=>"Статус не заполнен."
+ validates_presence_of :ntype,:message=>"Тип ноаости не указан."
+ validates_length_of :title ,:maximum=>80,:message=>"длина должна быть меньше 80 символов."
+ validates_length_of :img_url ,:maximum=>250,:message=>"длина должна быть меньше 250 символов."
+ validates_length_of :status ,:maximum=>3,:message=>"длина должна быть меньше 3 символов."
+ validates_length_of :ntype ,:maximum=>20,:message=>"длина должна быть меньше 20 символов."
+ validates_numericality_of :no,:menu_id, :integer_only => true,:message=>"Значение поля должно быть числовым."
+ #validates_date :value_date,:message=>"Должен быть использован формат даты ДД.ММ.ГГГГ"
+
+ 
 
  def short_descr
     (descr||'xxx').first(80)+"..."

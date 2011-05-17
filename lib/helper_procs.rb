@@ -6,7 +6,11 @@ module HelperProcs
   def get_clndr(xdat)
    #получим начало и конец месяца
    begin_of_date=Date.new(xdat.year,xdat.month,1)
-   end_of_date=Date.new(xdat.year,xdat.month+1,1)-1
+   if xdat.month==12
+    end_of_date=Date.new(xdat.year+1,1,1)-1
+   else 
+    end_of_date=Date.new(xdat.year,xdat.month+1,1)-1
+   end
    # создаем массив
    ar=(begin_of_date..end_of_date).map{|dn| [dn.cwday,dn.day,dn.strftime('%d-%m-%Y')] }
    ar_beg=(1..ar[0][0]-1).map do |xday|
