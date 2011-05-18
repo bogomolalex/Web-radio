@@ -82,6 +82,9 @@ class NewController < ApplicationController
      redirect_to_back_or_default({:controller=>"new",:action=>"show"}) 
      return
    end
+   unless params[:upload].nil?
+     params[:new][:img_url]= New.save_file(params[:upload])
+   end
     @vnew = New.new(params[:new])
     respond_to do |format|
      if @vnew.save 
@@ -126,6 +129,7 @@ class NewController < ApplicationController
     end
      redirect_to_back_or_default({:controller=>"new",:action=>"mkact"}) 
   end
+  
 private
  def validate_fields
    flash[:error]=nil

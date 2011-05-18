@@ -26,7 +26,8 @@ class New < ActiveRecord::Base
        upload['img_url']=nil
        return
     end 
-    name =  "new#{Digest::SHA1.hexdigest Time.now.to_s}"
+    name =  "n#{Time.now.strftime('%d%m%Y%H%m%S')}."+self.sanitize_filename(upload['img_file'].original_filename.last(3))
+
     directory = "public/images/news"
     # create the file path
     path = File.join(directory, name)
@@ -36,7 +37,7 @@ class New < ActiveRecord::Base
  end
 
  def self.cleanup(filename)
-    File.delete("#{RAILS_ROOT}/public/images/news/#{filename}") if File.exist?("#{RAILS_ROOT}/public/images/news/#{filename}")
+    #File.delete("#{RAILS_ROOT}/public/images/news/#{filename}") if File.exist?("#{RAILS_ROOT}/public/images/news/#{filename}")
  end
  
 
