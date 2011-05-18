@@ -3,10 +3,12 @@
 <p> <h4>Сделать новость доступной для общего просмотра (активизировать) </h4> </p>
 <%= will_paginate @vnews,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>
 <%=show_table ({:objs=>@vnews,
-                :headers=>["Дата","Тема" ,"Краткое содержание новости"],
+                :headers=>["Дата","Тема","Меню" ,"Краткое содержание новости"],
                 :fields=>[
-{:id=>"value_date",:proc=>lambda{|item| item.strftime('%d.%m.%Y')}},
-{:id=>"title"},{:id=>"short_descr"}],
+{:id=>"value_date",:style=>"width:20px;" ,:proc=>lambda{|item| item.strftime('%d.%m.%Y')}},
+{:id=>"title",:style=>"width:10px;"},
+{:id=>"menu_title",:style=>"width:60px;"},
+{:id=>"short_descr",:style=>"width:200px;"}],
                 :url=>{:controller=>"new",:action=>"updact"},
                 :select_item=>true,
                 :select_item_name=>lambda{|x| 

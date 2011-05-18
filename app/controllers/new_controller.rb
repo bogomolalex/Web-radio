@@ -16,20 +16,22 @@ class NewController < ApplicationController
   def edlist
     store_location
     @vnews=New.paginate(:all,:per_page=>sysparam('per_page'), :page=>params[:page]||'1',
-                             :conditions=>[" value_date>=? and status!='ACT'",Date.today-10])
+                             :conditions=>[" value_date>=? and status!='ACT'
+                               and menu_id=1 or status!='ACT' and menu_id!=1",Date.today-10],
+    :order=>"menu_id desc,value_date desc,no desc ")
   end
 
   def mkact
     store_location
     @vnews=New.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
-                             :conditions=>[" value_date>=? or status='NEW'",Date.today],
-                             :order=>"value_date desc,no desc ")
+                             :conditions=>[" (value_date>=? and menu_id=1 or menu_id!=1)and status in ('NEW','ACT')",Date.today],
+                             :order=>"menu_id desc,value_date desc,no desc ")
   end
 
   def arcnew
     store_location
     @vnews=New.paginate(:all,:page=>params[:page]||'1',:per_page=>sysparam('per_page'),
-                             :conditions=>[" value_date<? and status='ACT'",Date.today],:order=>"value_date desc")
+                             :conditions=>["(value_date<? and menu_id=1 ) and status in ('ACT','NEW') ",Date.today],:order=>"value_date desc")
     render :layout=>'marc'   
   end
 

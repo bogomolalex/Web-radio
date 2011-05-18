@@ -8,16 +8,14 @@ class MainController < ApplicationController
   end
 
   def about
-    @news = New.find(:all,:conditions=>[" value_date>=? and status='ACT'
-                          and menu_id=3",
-                          Date.today],:order=>"value_date, no desc")
+    @news = New.find(:all,:conditions=>["status='ACT'
+                          and menu_id=3"],:order=>"value_date,no desc")
     render :layout=>'about'
   end
 
   def online
-    @news = New.find(:all,:conditions=>[" value_date>=? and status='ACT'
-                          and menu_id=2",
-                          Date.today],:order=>"value_date, no desc")
+    @news = New.find(:all,:conditions=>[" status='ACT'
+                          and menu_id=2"],:order=>"value_date, no desc")
     render :layout=>'online'
   end
 

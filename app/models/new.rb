@@ -3,6 +3,7 @@ class New < ActiveRecord::Base
  cattr_reader :per_page
  @@per_page =5
  belongs_to :program
+ belongs_to :menu
  #Проверки всякие
  validates_presence_of :title,:message=>"Заголовок не заполнен."
  validates_presence_of :value_date,:status,:ntype,:message=>"Дата новости не указана."
@@ -19,7 +20,13 @@ class New < ActiveRecord::Base
 
  def short_descr
     (descr||'xxx').first(80)+"..."
- end 
+ end
+ def menu_title
+   m=Menu.find_by_id(menu_id)
+   unless m.nil?
+    m.title     
+   end
+ end
 
  def self.save_file(upload)
     if upload['img_file'].nil? 

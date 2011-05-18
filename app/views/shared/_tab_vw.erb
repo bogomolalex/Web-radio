@@ -54,8 +54,8 @@ end -%>
 <% if crud-%>
  <td><%= check_box_tag "chk_id[]","#{h(hs.id)}" -%></td><% end-%>
  <%fields.each do |fl| -%>
-  <td <%unless fl[:field_st].nil?-%>
-       style="<%=fl[:field_st]-%>"
+  <td <%unless fl[:style].nil?-%>
+       style="<%=fl[:style]-%>"
       <%end-%>>
 <%=
 ptmp=hs.read_attribute(h("#{fl[:id]}"))||hs.instance_eval("#{fl[:id]}")
