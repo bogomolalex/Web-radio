@@ -1,3 +1,4 @@
 log/*.log
 public/images/news/*.*
 public/images/news/*
+/config/initializers/site_keys.rb
