@@ -1,5 +1,7 @@
 class XparamController < ApplicationController
 
+  before_filter :login_required
+
   layout 'msys' 
 
   def edit

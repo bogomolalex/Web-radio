@@ -1,5 +1,7 @@
 class ArcmnuController < MenuController
 
+  before_filter :login_required
+
   layout 'marc'   
 
   def show

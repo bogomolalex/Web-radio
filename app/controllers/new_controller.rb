@@ -1,5 +1,7 @@
 class NewController < ApplicationController
 
+  before_filter :login_required
+
   layout 'mnow' 
   
   verify :method=>:post,:only=>[:create,:destroy], :redirect_to => {:controller=>'main',:action=>'view'}

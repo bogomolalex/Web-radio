@@ -1,5 +1,7 @@
 class ProgramController < ApplicationController
 
+  before_filter :login_required
+
  layout 'mnow' 
 
   

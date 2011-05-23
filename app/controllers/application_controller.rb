@@ -38,5 +38,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
-
+    def access_denied
+      respond_to do |format|
+        format.html do
+          store_location
+          redirect_to root_path 
+        end
+      end
+    end
 end
