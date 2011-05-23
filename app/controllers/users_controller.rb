@@ -5,10 +5,13 @@ class UsersController < ApplicationController
 
   # render new.rhtml
   def new
-    @user = User.new
+   redirect_back_or_default('/')
+#   @user = User.new
   end
  
   def create
+   redirect_back_or_default('/')
+   return;
     logout_keeping_session!
     @user = User.new(params[:user])
     success = @user && @user.save

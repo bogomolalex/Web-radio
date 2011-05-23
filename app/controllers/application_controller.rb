@@ -5,6 +5,8 @@ class ApplicationController < ActionController::Base
 
   include VarGet
 
+  include AuthenticatedSystem
+
   layout "base"
 
   before_filter :set_customer

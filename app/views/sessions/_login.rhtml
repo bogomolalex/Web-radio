@@ -1,0 +1,25 @@
+<div style="float:left;width:700px;height:30px;">
+<%= content_tag 'div', h(flash[:notice]),
+:class => 'notice', :id => 'notice' if flash[:notice] %>
+<%= content_tag 'div', h(flash[:error]),
+:class => 'notice_error', :id => 'error' if flash[:error] %>
+</div>
+<div style="width:750px" %>
+<%form_for  session_path,:url=>{:methods=>"post",:action=>"create"} do |f|-%>
+<table align="center" width="300">
+<tr style="height:50px">
+<td>&nbsp;</td><td>&nbsp;
+</td></tr>
+<tr>
+<td style="width:100px;" align="left">
+Пользователь:</td><td> <%= f.text_field "login", :size=>15,:value=>login,:maxlength=>15  -%>
+</td></tr>
+<tr><td style="width:100px;" align="left">
+Пароль : </td><td><%= f.password_field "password", :size=>16, :maxlength=>15 -%>
+</td></tr>
+<tr><td colspan="2">
+<input type="Submit" value="Войти"/>
+</td></tr>
+</table>
+<%end-%>
+</div>

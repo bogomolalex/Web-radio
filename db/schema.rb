@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110504132422) do
+ActiveRecord::Schema.define(:version => 20110523094741) do
 
   create_table "logs", :force => true do |t|
     t.string "descr"
@@ -53,13 +53,19 @@ ActiveRecord::Schema.define(:version => 20110504132422) do
 
   add_index "programs", ["value_date"], :name => "index_programs_on_value_date"
 
-  create_table "userprofs", :force => true do |t|
-    t.string "username", :limit => 20
-    t.string "password", :limit => 20
-    t.string "role",     :limit => 20
-    t.text   "name"
-    t.string "status",   :limit => 20
+  create_table "users", :force => true do |t|
+    t.string   "login",                     :limit => 40
+    t.string   "name",                      :limit => 100, :default => ""
+    t.string   "email",                     :limit => 100
+    t.string   "crypted_password",          :limit => 40
+    t.string   "salt",                      :limit => 40
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "remember_token",            :limit => 40
+    t.datetime "remember_token_expires_at"
   end
+
+  add_index "users", ["login"], :name => "index_users_on_login", :unique => true
 
   create_table "xparams", :force => true do |t|
     t.string   "name",        :limit => 20,  :null => false

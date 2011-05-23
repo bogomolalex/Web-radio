@@ -1,4 +1,4 @@
-<% if @c %>
+<% if logged_in? -%>
 <p> Программы на <%="#{h(params[:vd])}"%></p>
 <div style="width:500px;" >
 <%=show_table ({:objs=>@program,

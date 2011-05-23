@@ -5,39 +5,43 @@ class SessionsController < ApplicationController
 
   # render new.erb.html
   def new
+   flash[:error] =nil
   end
 
   def create
     logout_keeping_session!
-    user = User.authenticate(params[:login], params[:password])
+    p=params["/session"]
+    p[:password]||=nil
+    p[:login]||=nil
+    user = User.authenticate(p[:login], p[:password])
     if user
       # Protects against session fixation attacks, causes request forgery
       # protection if user resubmits an earlier form using back
       # button. Uncomment if you understand the tradeoffs.
       # reset_session
       self.current_user = user
-      new_cookie_flag = (params[:remember_me] == "1")
+      new_cookie_flag = (p[:remember_me] == "1")
       handle_remember_cookie! new_cookie_flag
       redirect_back_or_default('/')
-      flash[:notice] = "Logged in successfully"
+      flash[:notice] = "Вы вошли в систему."
     else
       note_failed_signin
-      @login       = params[:login]
-      @remember_me = params[:remember_me]
+      @login       = p[:login]
+      @remember_me = p[:remember_me]
       render :action => 'new'
     end
   end
 
   def destroy
     logout_killing_session!
-    flash[:notice] = "You have been logged out."
+    flash[:notice] = "Вы вышли из системы."
     redirect_back_or_default('/')
   end
 
 protected
   # Track failed login attempts
   def note_failed_signin
-    flash[:error] = "Couldn't log you in as '#{params[:login]}'"
-    logger.warn "Failed login for '#{params[:login]}' from #{request.remote_ip} at #{Time.now.utc}"
+    flash[:error] = "Не возможно войти как '#{params['/session'][:login]}'"
+    logger.warn "Ошибка входа в систему пользователем '#{params['/session'][:login]}' IP: #{request.remote_ip} время: #{Time.now.utc}"
   end
 end

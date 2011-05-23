@@ -1,4 +1,4 @@
-<% if @c %>
+<% if logged_in? %>
 <div style="width:600px;" >
 <p> <h4>Архивный список новостей </h4> </p>
 <%= will_paginate @vnews,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>

@@ -1,0 +1,7 @@
+<div id="login">
+ <% if logged_in? %>
+  <%= link_to "Выйти", :controller => 'sessions',:action => 'destroy' -%>
+ <% else %>
+  <%= link_to "Войти", :controller => 'sessions',:action => 'new' -%>
+ <% end %>
+</div>
