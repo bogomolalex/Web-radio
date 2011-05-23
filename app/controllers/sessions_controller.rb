@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
   # render new.erb.html
   def new
    flash[:error] =nil
+   flash[:notice] =nil
   end
 
   def create
