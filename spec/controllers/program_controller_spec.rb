@@ -1,9 +1,12 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
 include VarGet
-
+include AuthenticatedTestHelper
+include AuthenticatedSystem
 describe ProgramController do
-   #Delete this example and add some real ones
+  #before_filter :login_required
+  fixtures :users
+  #Delete this example and add some real ones
   describe 'controller' do
   it "should use ProgramController" do
     controller.should be_an_instance_of(ProgramController)
@@ -35,9 +38,12 @@ describe ProgramController do
   end
 
   describe 'New controller' do
+   before do
+     login_as :quentin
+   end
 
     it "should be successful rending" do
-     get :new
+      get :new
      response.should(render_template('new'))
     end
 
@@ -53,6 +59,7 @@ describe ProgramController do
   describe 'Edit current list edit2 ' do
     before do
       p= 3.times.inject([]){|res,i| res<<Factory(:item)}
+      login_as :quentin
     end
 
     it "should be successful rending" do
@@ -72,6 +79,7 @@ describe ProgramController do
 
     before do
       @p= Factory(:item)
+      login_as :quentin
     end
 
     it "should create a new record " do
@@ -86,12 +94,12 @@ describe ProgramController do
     end
 
     it "should not be redirected, and rendered template 'edit'" do
-     # Создаем фиктивный объект
+     # РЎРѕР·РґР°РµРј С„РёРєС‚РёРІРЅС‹Р№ РѕР±СЉРµРєС‚
      @tmpm=mock_model(Program,:value_date=>Date.today)
-     # Перегружаем его метод 'update_attributes' c возратом
-     # 'false'. (см. program_controller.update)
+     # РџРµСЂРµРіСЂСѓР¶Р°РµРј РµРіРѕ РјРµС‚РѕРґ 'update_attributes' c РІРѕР·СЂР°С‚РѕРј
+     # 'false'. (СЃРј. program_controller.update)
      @tmpm.should_receive(:update_attributes).and_return(false)
-     # Перегружаем метод 'find' класса Program и возвращаем наш фиктивный объект
+     # РџРµСЂРµРіСЂСѓР¶Р°РµРј РјРµС‚РѕРґ 'find' РєР»Р°СЃСЃР° Program Рё РІРѕР·РІСЂР°С‰Р°РµРј РЅР°С€ С„РёРєС‚РёРІРЅС‹Р№ РѕР±СЉРµРєС‚
      Program.should_receive(:find).and_return(@tmpm)
      get :update,:id=>@p.id,:program=>{:title=>"Changed"}
      response.should_not be_redirect
@@ -104,6 +112,7 @@ describe ProgramController do
       @prog_params={:program=>{:title=>"ssss",:description=>"wwerwer",
                     :image_url=>"ddd",:value_date=>DateTime.now
                   }}
+    login_as :quentin
     end
 
     context "when succesful" do
@@ -123,6 +132,7 @@ describe ProgramController do
     context "when failure" do
       before do
         @prog_params[:program][:title]=''
+        login_as :quentin
       end
 
       it "re-renders 'new'" do

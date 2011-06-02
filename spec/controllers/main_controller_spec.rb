@@ -20,10 +20,6 @@ describe MainController do
     response.should(render_template('view'))
   end
 
-  it "should have a variable - list of programs" do
-    assigns[:program].should_not be_nil
-  end
-
  end
 
 end
