@@ -1,6 +1,14 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
+include VarGet
+include AuthenticatedTestHelper
+include AuthenticatedSystem
+
 describe ProgramController do
+ fixtures :users
+  before do
+     login_as :quentin
+  end
 
   it "should route program/edit2" do
     {:get =>'program/edit2/31.03.2011'}.should route_to(:controller=>'program',
@@ -9,16 +17,16 @@ describe ProgramController do
 
   it "should route program/show" do
     {:get =>'program/show'}.should route_to(:controller=>'program',
-      :action=>'show',:id=>'show')
+      :action=>'show')
   end
 
   it "should route update " do
-    {:put =>'program/1'}.should route_to(:controller=>'program',
+    {:put =>'programs/1'}.should route_to(:controller=>'program',
       :action=>'update',:id=>'1')
   end
 
   it "should route edit for current item" do
-    {:get =>'program/1/edit'}.should route_to(:controller=>'program',
+    {:get =>'programs/1/edit'}.should route_to(:controller=>'program',
       :action=>'edit',:id=>'1')
   end
 

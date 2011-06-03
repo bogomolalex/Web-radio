@@ -12,30 +12,6 @@ describe ProgramController do
     controller.should be_an_instance_of(ProgramController)
   end
   end
- describe 'Show controller' do
-
-  it "should be successful" do
-     get :show ,:vd=>Date.today.strftime('%d.%m.%Y')
-     response.should  be_success
-  end
-
-  it "should be successful rending" do
-    get :show 
-    response.should(render_template('show'))
-    #p=Factory(:current_user)
-    #session.should_receive(:[]).with('userprof').twice.and_return([1])
-    #controller.should_receive(:render).with(:partial => 'program/grplst')
-    #controller.should render_template('show')
-  end
-
-  it "should be fetch list of dates" do
-    p= 3.times.inject([]){|res,i| res<<Factory(:item)}
-    get :show 
-    assigns[:program_dat].count.should == 1
-  end
-
-
-  end
 
   describe 'New controller' do
    before do
@@ -63,12 +39,12 @@ describe ProgramController do
     end
 
     it "should be successful rending" do
-     get :edit2,:vd=>Date.today.strftime('%d.%m.%Y')
+     get :edit2,:vd=>Date.today.strftime('%d-%m-%Y')
      response.should(render_template('edit2'))
     end
 
     it "should create a new record " do
-     get :edit2,:vd=>Date.today.strftime('%d.%m.%Y')
+     get :edit2,:vd=>Date.today.strftime('%d-%m-%Y')
      assigns[:program].should_not be_nil
      assigns[:program].size.should == 3
     end
@@ -95,10 +71,11 @@ describe ProgramController do
 
     it "should not be redirected, and rendered template 'edit'" do
      # РЎРѕР·РґР°РµРј С„РёРєС‚РёРІРЅС‹Р№ РѕР±СЉРµРєС‚
-     @tmpm=mock_model(Program,:value_date=>Date.today)
+     @tmpm=mock_model(Program,:value_date=>Date.today,:title=>"Title")
      # РџРµСЂРµРіСЂСѓР¶Р°РµРј РµРіРѕ РјРµС‚РѕРґ 'update_attributes' c РІРѕР·СЂР°С‚РѕРј
      # 'false'. (СЃРј. program_controller.update)
      @tmpm.should_receive(:update_attributes).and_return(false)
+     @tmpm.errors.should_receive(:invalid?).at_least(5).times.and_return(false)
      # РџРµСЂРµРіСЂСѓР¶Р°РµРј РјРµС‚РѕРґ 'find' РєР»Р°СЃСЃР° Program Рё РІРѕР·РІСЂР°С‰Р°РµРј РЅР°С€ С„РёРєС‚РёРІРЅС‹Р№ РѕР±СЉРµРєС‚
      Program.should_receive(:find).and_return(@tmpm)
      get :update,:id=>@p.id,:program=>{:title=>"Changed"}

@@ -2,15 +2,14 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 # Be sure to include AuthenticatedTestHelper in spec/spec_helper.rb instead
 # Then, you can remove it from this and the units test.
-
+include AuthenticatedTestHelper
 
 describe SessionsController do
-  include AuthenticatedTestHelper
   fixtures        :users
   before do 
     @user  = mock_user
-    @login_params = { :login => 'quentin', :password => 'test' }
-    User.stub!(:authenticate).with(@login_params[:login], @login_params[:password]).and_return(@user)
+    @login_params = { '/session'=>{:login => 'quentin', :password => 'test' }}
+    User.stub!(:authenticate).with(@login_params['/session'][:login], @login_params['/session'][:password]).and_return(@user)
   end
   def do_create
     post :create, @login_params
@@ -37,15 +36,15 @@ describe SessionsController do
               @user.stub!(:remember_token_expires_at).and_return(token_expiry)
               @user.stub!(:remember_token?).and_return(has_request_token == :valid)
               if want_remember_me
-                @login_params[:remember_me] = '1'
+                @login_params['/session'][:remember_me] = '1'
               else 
-                @login_params[:remember_me] = '0'
+                @login_params['/session'][:remember_me] = '0'
               end
             end
             it "kills existing login"        do controller.should_receive(:logout_keeping_session!); do_create; end    
             it "authorizes me"               do do_create; controller.send(:authorized?).should be_true;   end    
             it "logs me in"                  do do_create; controller.send(:logged_in?).should  be_true  end    
-            it "greets me nicely"            do do_create; response.flash[:notice].should =~ /success/i   end
+            it "greets me nicely"            do do_create; response.flash[:notice].should =~ /Вы вошли в систему./i   end
             it "sets/resets/expires cookie"  do controller.should_receive(:handle_remember_cookie!).with(want_remember_me); do_create end
             it "sends a cookie"              do controller.should_receive(:send_remember_cookie!);  do_create end
             it 'redirects to the home page'  do do_create; response.should redirect_to('/')   end
@@ -77,7 +76,7 @@ describe SessionsController do
       login_as :quentin
     end
     it 'logs out keeping session'   do controller.should_receive(:logout_keeping_session!); do_create end
-    it 'flashes an error'           do do_create; flash[:error].should =~ /Couldn't log you in as 'quentin'/ end
+    it 'flashes an error'           do do_create; flash[:error].should =~ /'quentin'/ end
     it 'renders the log in page'    do do_create; response.should render_template('new')  end
     it "doesn't log me in"          do do_create; controller.send(:logged_in?).should == false end
     it "doesn't send password back" do 
