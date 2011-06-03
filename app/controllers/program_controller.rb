@@ -7,15 +7,6 @@ class ProgramController < ApplicationController
   
   verify :method=>:post,:only=>'create'
 
-  def show
-    @program_dat = Program.find_by_sql("
-     SELECT DATE_FORMAT(value_date,'%d.%m.%Y') value_date
-       FROM programs
-      group by DATE_FORMAT(value_date,'%d.%m.%Y')
-      order by 1 desc")
-    
-  end
-
   def clndr
     @begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today
     if @begin_of_date.month==Date.today.month && @begin_of_date>Date.today-1
@@ -112,14 +103,22 @@ class ProgramController < ApplicationController
   end
 
   def new
-    begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")||Date.today+1
+    if params[:vd].nil?
+     begin_of_date=Date.today+1
+    else
+     begin_of_date=Date.strptime("#{params[:vd]}", "%d-%m-%Y")
+    end 
     p=Program.find(:first,:select=>" max(value_date) as vd",
                    :conditions=>["value_date>= ? and value_date<?",
                     begin_of_date,begin_of_date+1])
     @program = Program.new
     @program.news.build
     if p[:vd].nil?
-     @program.value_date=DateTime.strptime("#{params[:vd]} 08:00", "%d-%m-%Y %H:%M")||DateTime.now
+     if params[:vd].nil?
+      @program.value_date=DateTime.now
+     else
+      @program.value_date=DateTime.strptime("#{params[:vd]} 08:00", "%d-%m-%Y %H:%M")
+     end
     else
      @program.value_date=p.vd
     end

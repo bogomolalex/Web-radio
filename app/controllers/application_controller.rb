@@ -9,6 +9,10 @@ class ApplicationController < ActionController::Base
 
   layout "base"
 
+  protect_from_forgery 
+
+  rescue_from ActionController::RoutingError, :with => :access_denied2
+
   before_filter :set_customer
   
   def set_customer
@@ -45,5 +49,10 @@ class ApplicationController < ActionController::Base
           redirect_to root_path 
         end
       end
+    end
+
+    def access_denied2
+      render :nothing=>true ,:status=>'406',
+             :text=>"<h4>HTTP Basic: Access denied.\n</h4>"
     end
 end
