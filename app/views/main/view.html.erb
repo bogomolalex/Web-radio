@@ -1,12 +1,14 @@
+<div style="width: 800px;text-align:center;margin: 0,auto;">
 <%if logged_in? %>
  <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
 <%end-%>
-<div style="width: 800px;text-align:center;margin: 0,auto;">
- <div style="padding:20;float: right;">
+  <div style="padding:20;float: right;">
   <table align="center" style="width: 290px;height: 205px;" background="images/radio.jpg">
   <tr>
-   <td style="height:100px;">
-    <div style="padding:80;"><b>String of radio</b></div></td>
+   <td style="padding:55px;height:100px;" valign="top">
+    <div style="padding:80;">
+      <%=render :partial => 'shared/radio' -%>
+        </div></td>
   </tr>
  </table>
  <div style="padding:15;"></div>
@@ -20,7 +22,7 @@
   </tr>
   <tr><td valign="top" align="right">
      <div style="width:200px;height:30px;">
-       <i><%=link_to "Подробнее ..." %></i>&nbsp;&nbsp;&nbsp;&nbsp;
+       <i><%=link_to "Подробнее ..." ,{},:class=>"img_lnk" %></i>&nbsp;&nbsp;&nbsp;&nbsp;
     </div></td>
   </tr>
  </table>

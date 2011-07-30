@@ -9,12 +9,13 @@
  <%= yield :stylesheets %>
 </style>
 </head>
-<body BACKGROUND="images/bgr.jpg">
+<body BACKGROUND="/images/bgr.jpg">
 <table width="100%" border="0">
-<tr><td align="center">
+<tr><td align="left">
 <div style="width: 600px;text-align:center;margin: 0,auto;">
  <%=image_tag("header.jpg",:alt=>"")%>
-</div>
+</div></td></tr>
+<tr><td align="center">
 <div id="mainf"><%= @content_for_layout %></div>
 <div id="footer">
  <p>Copyright &copy; 2011, церковь "Живого Бога" г.Гусев</p>
