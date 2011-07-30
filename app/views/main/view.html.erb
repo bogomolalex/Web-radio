@@ -1,49 +1,48 @@
-<%= render :partial=>"sessions/logio" -%>
 <%if logged_in? %>
-<%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
+ <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
 <%end-%>
-<div>
-<div id="nav">
-<%=render :partial => 'hmenu'-%>
-</div>
-<div id="lsider"><%= periodically_call_remote :update => 'list_div',
-:url => {:action => "list"},
-:frequency => 10.0 -%>
-<div id='list_div' >
- <%=render :partial => 'program/list' -%>
-</div>
-</div>
-<div style="float:left;width:50px;">&nbsp;</div>
-<div id="main">
- <div style="float:left;width:30px;">&nbsp;</div>
- <div style="border: 0px solid #CCCCCC;float:left;width:400px;">
- <%@news.each do |n| -%>
- <div style="border: 0px solid #CCCCCC;float:left;">  
-  <p>
-   <h4>
-    <div style="float:left;width:450px;height:40px;">
-     <%=h(n.title)-%>
-     <div style="font-size:10px;float:left;">
-      <%=n.value_date.strftime('%d.%m.%Y')%>
-     </div>
+<div style="width: 800px;text-align:center;margin: 0,auto;">
+ <div style="padding:20;float: right;">
+  <table align="center" style="width: 290px;height: 205px;" background="images/radio.jpg">
+  <tr>
+   <td style="height:100px;">
+    <div style="padding:80;"><b>String of radio</b></div></td>
+  </tr>
+ </table>
+ <div style="padding:15;"></div>
+ <table style="width:450px;height:170px;" background="images/descr.jpg">
+  <tr>
+   <td style="width:400px;height:120px;" valign="center" align="center">
+    <div>
+        <%=@news-%>
     </div>
-   </h4>
-  </p>
-  <%unless n.img_url.blank?-%>
-   <table border=0 width="250" cellspacing=0 cellpadding=0 align=left style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #CCCCCC;">
-    <tr>
-     <td> 
-      <%= image_tag "news/#{h(n.img_url)}"  -%>
-     </td>
-    </tr> 
-   </table>
-  <%end-%>
-   <%=h(n.descr)-%>
-  <p>&nbsp;</p>
-  <p>&nbsp;</p>
+   </td>
+  </tr>
+  <tr><td valign="top" align="right">
+     <div style="width:200px;height:30px;">
+       <i><%=link_to "Подробнее ..." %></i>&nbsp;&nbsp;&nbsp;&nbsp;
+    </div></td>
+  </tr>
+ </table>
+ <div style="padding:0;float:right;width:400px;">
+  <div style="padding:20;"></div>
+  <div style="float:right;">
+    <%= render :partial=>"sessions/logio" -%>
   </div>
- <%end-%>
+  <div style="float:left;"><%=image_tag("babout.jpg",:alt=>"")%> </div>
  </div>
 </div>
+ <div style="float:left;width:350px;">
+ <%= javascript_tag(
+  "new PeriodicalExecuter(function() { new Ajax.Updater('list_div', '/main/list',
+     { method: 'get', asynchronous: true, evalScripts: true,
+     parameters: { vd: document.getElementById('cdat').value } }) }, 60)") %>
+ <div>
+  <table  style="width:240px; height:490px;" background="images/prglst.jpg">
+    <tr><td>
+    <div id="list_div">
+    <%=render :partial => 'program/list' -%>
+    </td></tr>
+   </div>
+ </table>
 </div>
-

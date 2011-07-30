@@ -9,11 +9,17 @@
  <%= yield :stylesheets %>
 </style>
 </head>
-<body>
-<div id="header">Radio-test</div>
+<body BACKGROUND="images/bgr.jpg">
+<table width="100%" border="0">
+<tr><td align="center">
+<div style="width: 600px;text-align:center;margin: 0,auto;">
+ <%=image_tag("header.jpg",:alt=>"")%>
+</div>
 <div id="mainf"><%= @content_for_layout %></div>
 <div id="footer">
- <p>Copyright &copy; 2011, Radio</p>
+ <p>Copyright &copy; 2011, церковь "Живого Бога" г.Гусев</p>
 </div>
+</td></tr>
+</table>
 </body>
 </html>

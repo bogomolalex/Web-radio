@@ -1,0 +1,49 @@
+<%= render :partial=>"sessions/logio" -%>
+<%if logged_in? %>
+<%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
+<%end-%>
+<div>
+<div id="nav">
+<%=render :partial => 'hmenu'-%>
+</div>
+<div id="lsider"><%= periodically_call_remote :update => 'list_div',
+:url => {:action => "list"},
+:frequency => 10.0 -%>
+<div id='list_div' >
+ <%=render :partial => 'program/list' -%>
+</div>
+</div>
+<div style="float:left;width:50px;">&nbsp;</div>
+<div id="main">
+ <div style="float:left;width:30px;">&nbsp;</div>
+ <div style="border: 0px solid #CCCCCC;float:left;width:400px;">
+ <%@news.each do |n| -%>
+ <div style="border: 0px solid #CCCCCC;float:left;">  
+  <p>
+   <h4>
+    <div style="float:left;width:450px;height:40px;">
+     <%=h(n.title)-%>
+     <div style="font-size:10px;float:left;">
+      <%=n.value_date.strftime('%d.%m.%Y')%>
+     </div>
+    </div>
+   </h4>
+  </p>
+  <%unless n.img_url.blank?-%>
+   <table border=0 width="250" cellspacing=0 cellpadding=0 align=left style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #CCCCCC;">
+    <tr>
+     <td> 
+      <%= image_tag "news/#{h(n.img_url)}"  -%>
+     </td>
+    </tr> 
+   </table>
+  <%end-%>
+   <%=h(n.descr)-%>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  </div>
+ <%end-%>
+ </div>
+</div>
+</div>
+
