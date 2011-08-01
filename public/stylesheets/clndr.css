@@ -1,0 +1,71 @@
+
+.clndr {
+  font-size: 13px;
+  width: 189px;
+  background: #f0f0f0;
+  height: 162px;
+  text-align:center;
+  margin:0;
+  padding:0;
+  BORDER: black solid 1px;}
+
+.clndre {
+  font-size: 13px;
+  width: 189px;
+  height: 189px;
+  padding:0;
+  BORDER: black solid 1px; 
+}
+.clndrd {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndrd7 {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  background-color: #f0f0f0;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndr_n {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  background-color: #f0f0f0;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndrcr {
+  color: #666;
+  width: 23px;
+  height: 23px;
+  background-color: #9c9;
+  BORDER: buttonface solid 1px; 
+  text-align: center;
+}
+.clndrh {
+  width: 25px;
+  height: 25px;
+  padding: 0px;
+  color : #666;
+  BORDER: #f0f0f0 solid 1px; 
+  text-align: center;
+  background-color:#f0f0f0;
+}
+
+a.clndr_a:visited  {color: red;}
+
+a.clndr_a:link  {color: red;}
+
+a.clndr_a:hover { background-color:#E3DDCF;color: red;  }
+
+a.clndr7_a:visited  {background-color:#f0f0f0;}
+
+a.clndr7_a:link  {background-color:#f0f0f0;}
+
+a.clndr7_a:hover { background-color:#f0f0f0; }
+
