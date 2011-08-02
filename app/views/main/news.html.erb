@@ -1,0 +1,38 @@
+<% if logged_in? %>
+<%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
+<%end-%>
+<div>
+<div style="float:left;width:50px;">&nbsp;</div>
+ <div style="padding:0;float: left;">
+   <%=link_to image_tag("bleft.jpg",:border=>"0"),{:controller=>"main",:action => "view"},:title=>"Главная страница",:class=>"img_lnk"%>
+ </div>
+<div id="main">
+<%unless @news.nil? -%>
+ <div style="border: 0px solid #CCCCCC;float:left;width:350px;">
+ <div style="float:left;width:800px;">&nbsp;&nbsp;</div>
+ <div style="border: 0px solid #CCCCCC;float:left;width:650px;">
+  <p>
+   <h4>
+    <div style="float:left;width:550px;height:40px;">
+     <%=h(@news.title)-%>
+    </div>
+   </h4>
+  </p>
+  <%unless @news.img_url.blank?-%>
+   <table border=0 width="250" cellspacing=0 cellpadding=0 align=left style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #CCCCCC;">
+    <tr>
+     <td>
+      <%= image_tag "news/#{h(@news.img_url)}"  -%>
+     </td>
+    </tr>
+   </table>
+  <%end-%>
+   <%=h(@news.descr)-%>
+  </div>
+ </div>
+ <%end%>
+</div>
+
+</div>
+
+</div>

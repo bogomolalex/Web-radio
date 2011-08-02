@@ -53,7 +53,7 @@ end -%>
       end-%>" id="r<%="#{hs.id}"-%>">
  <%@fl=0%>
 <%end-%>
-
+<%unless tooltip.nil?%>
 <div id="tooltip<%="#{hs.id}"-%>" 
  style="display:none; margin: 5px; padding:5px 5px 5px 5px;
 border: #E3DDCF solid 1px; background-color: white; width:200px;">
@@ -61,6 +61,7 @@ border: #E3DDCF solid 1px; background-color: white; width:200px;">
 </div>
 <% javascript_tag do -%>
  var my_tooltip_2 = new Tooltip("r<%="#{hs.id}"-%>", "tooltip<%="#{hs.id}"-%>")
+<%end-%>
 <%end-%>
 
 <% if crud-%>
@@ -93,6 +94,7 @@ end
 <%end-%>
  </form>
 <%end-%>
+<%unless tooltip.nil?%>
 <% javascript_tag do -%>
 Event.observe(window,"load",function() {
        $$("*").findAll(function(node){
@@ -102,4 +104,5 @@ Event.observe(window,"load",function() {
          node.removeAttribute("title");
        });
      });
+<%end-%>
 <%end-%>

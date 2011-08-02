@@ -1,21 +1,20 @@
-<%= render :partial=>"sessions/logio" -%>
 <% if logged_in? %>
 <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
 <%end-%>
 <div>
-<div id="nav">
-<%=render :partial => 'hmenu'-%>
-</div>
 <div style="float:left;width:50px;">&nbsp;</div>
+ <div style="padding:0;float: left;">
+   <%=link_to image_tag("bleft.jpg",:border=>"0"),{:controller=>"main",:action => "view"},:title=>"Главная страница",:class=>"img_lnk"%>
+ </div>
 <div id="main">
- <div style="float:left;width:30px;">&nbsp;</div>
- <div style="border: 0px solid #CCCCCC;float:left;width:450px;">
+ <div style="border: 0px solid #CCCCCC;float:left;width:350px;">
+ <div style="float:left;width:800px;">&nbsp;&nbsp;</div>
  <%unless @news.nil? -%>
  <%@news.each do |n| -%>
- <div style="border: 0px solid #CCCCCC;float:left;width:450px;">  
+ <div style="border: 0px solid #CCCCCC;float:left;width:650px;">
   <p>
    <h4>
-    <div style="float:left;width:350px;height:40px;">
+    <div style="float:left;width:550px;height:40px;">
      <%=h(n.title)-%>
     </div>
    </h4>
