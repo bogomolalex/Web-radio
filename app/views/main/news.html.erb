@@ -7,32 +7,30 @@
    <%=link_to image_tag("bleft.jpg",:border=>"0"),{:controller=>"main",:action => "view"},:title=>"Главная страница",:class=>"img_lnk"%>
  </div>
 <div id="main">
+<%unless @news.nil? -%>
  <div style="border: 0px solid #CCCCCC;float:left;width:350px;">
  <div style="float:left;width:800px;">&nbsp;&nbsp;</div>
- <%unless @news.nil? -%>
- <%@news.each do |n| -%>
  <div style="border: 0px solid #CCCCCC;float:left;width:650px;">
   <p>
    <h4>
     <div style="float:left;width:550px;height:40px;">
-     <%=h(n.title)-%>
+     <%=h(@news.title)-%>
     </div>
    </h4>
   </p>
-  <%unless n.img_url.blank?-%>
+  <%unless @news.img_url.blank?-%>
    <table border=0 width="250" cellspacing=0 cellpadding=0 align=left style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #CCCCCC;">
     <tr>
-     <td> 
-      <%= image_tag "news/#{h(n.img_url)}"  -%>
+     <td>
+      <%= image_tag "news/#{h(@news.img_url)}"  -%>
      </td>
-    </tr> 
+    </tr>
    </table>
   <%end-%>
-   <%=h(n.descr)-%>
+   <%=h(@news.descr)-%>
   </div>
- <%end-%>
-<%end-%>
  </div>
+ <%end%>
 </div>
 
 </div>

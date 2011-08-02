@@ -16,13 +16,13 @@
   <tr>
    <td style="width:400px;height:120px;" valign="center" align="center">
     <div>
-        <%=@news-%>
+        <%=@news.short_descr-%>
     </div>
    </td>
   </tr>
   <tr><td valign="top" align="right">
      <div style="width:200px;height:30px;">
-       <i><%=link_to "Подробнее ..." ,{},:class=>"img_lnk" %></i>&nbsp;&nbsp;&nbsp;&nbsp;
+       <i><%=link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_lnk" %></i>&nbsp;&nbsp;&nbsp;&nbsp;
     </div></td>
   </tr>
  </table>
@@ -31,7 +31,9 @@
   <div style="float:right;">
     <%= render :partial=>"sessions/logio" -%>
   </div>
-  <div style="float:left;"><%=image_tag("babout.jpg",:alt=>"")%> </div>
+  <div style="float:left;">
+  <%= link_to image_tag("babout.jpg",:border=>"0"),{:controller => 'main',:action => 'about'},:class=>"img_bg" -%>
+  </div>
  </div>
 </div>
  <div style="float:left;width:350px;">
