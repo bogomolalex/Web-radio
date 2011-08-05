@@ -87,10 +87,9 @@ application.
       <h3 class="section-bar">Methods</h3>
 
       <div class="name-list">
-      <a href="#M000029">get_clndr</a>&nbsp;&nbsp;
-      <a href="#M000030">show_calendar</a>&nbsp;&nbsp;
-      <a href="#M000032">show_menu</a>&nbsp;&nbsp;
-      <a href="#M000031">show_table</a>&nbsp;&nbsp;
+      <a href="#M000085">show_calendar</a>&nbsp;&nbsp;
+      <a href="#M000086">show_menu</a>&nbsp;&nbsp;
+      <a href="#M000084">show_table</a>&nbsp;&nbsp;
       </div>
     </div>
 
@@ -98,6 +97,13 @@ application.
 
 
     <!-- if includes -->
+    <div id="includes">
+      <h3 class="section-bar">Included Modules</h3>
+
+      <div id="includes-list">
+        <span class="include-name"><a href="HelperProcs.html">HelperProcs</a></span>
+      </div>
+    </div>
 
     <div id="section">
 
@@ -112,127 +118,87 @@ application.
     <div id="methods">
       <h3 class="section-bar">Public Instance methods</h3>
 
-      <div id="method-M000029" class="method-detail">
-        <a name="M000029"></a>
+      <div id="method-M000085" class="method-detail">
+        <a name="M000085"></a>
 
         <div class="method-heading">
-          <a href="#M000029" class="method-signature">
-          <span class="method-name">get_clndr</span><span class="method-args">(xdat)</span>
-          </a>
-        </div>
-      
-        <div class="method-description">
-          <p>
-Массив календаря
-</p>
-          <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000029-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000029-source">
-<pre>
-    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 7</span>
- 7:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_clndr</span>(<span class="ruby-identifier">xdat</span>)
- 8:    <span class="ruby-identifier">begin_of_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xdat</span>.<span class="ruby-identifier">year</span>,<span class="ruby-identifier">xdat</span>.<span class="ruby-identifier">month</span>,<span class="ruby-value">1</span>)
- 9:    <span class="ruby-identifier">end_of_date</span>=<span class="ruby-constant">Date</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">xdat</span>.<span class="ruby-identifier">year</span>,<span class="ruby-identifier">xdat</span>.<span class="ruby-identifier">month</span><span class="ruby-operator">+</span><span class="ruby-value">1</span>,<span class="ruby-value">1</span>)<span class="ruby-operator">-</span><span class="ruby-value">1</span>
-10:    <span class="ruby-comment cmt"># </span>
-11:    <span class="ruby-identifier">ar</span>=(<span class="ruby-identifier">begin_of_date</span><span class="ruby-operator">..</span><span class="ruby-identifier">end_of_date</span>).<span class="ruby-identifier">map</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">dn</span><span class="ruby-operator">|</span> [<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">cwday</span>,<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">day</span>,<span class="ruby-identifier">dn</span>.<span class="ruby-identifier">strftime</span>(<span class="ruby-value str">'%d-%m-%Y'</span>)] }
-12:    <span class="ruby-identifier">ar_beg</span>=(<span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-identifier">ar</span>[<span class="ruby-value">0</span>][<span class="ruby-value">0</span>]<span class="ruby-operator">-</span><span class="ruby-value">1</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">xday</span><span class="ruby-operator">|</span> 
-13:      [<span class="ruby-identifier">xday</span>,<span class="ruby-value">0</span>]
-14:    <span class="ruby-keyword kw">end</span>
-15:    <span class="ruby-identifier">ar_end</span>=(<span class="ruby-identifier">ar</span>[<span class="ruby-identifier">ar</span>.<span class="ruby-identifier">size</span><span class="ruby-operator">-</span><span class="ruby-value">1</span>][<span class="ruby-value">0</span>]<span class="ruby-operator">+</span><span class="ruby-value">1</span><span class="ruby-operator">..</span><span class="ruby-value">7</span>).<span class="ruby-identifier">map</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">xday</span><span class="ruby-operator">|</span> 
-16:      [<span class="ruby-identifier">xday</span>,<span class="ruby-value">0</span>]
-17:    <span class="ruby-keyword kw">end</span>
-18:    <span class="ruby-comment cmt">#</span>
-19:    <span class="ruby-identifier">ar_beg</span><span class="ruby-operator">+</span><span class="ruby-identifier">ar</span><span class="ruby-operator">+</span><span class="ruby-identifier">ar_end</span>
-20:   <span class="ruby-keyword kw">end</span>
-</pre>
-          </div>
-        </div>
-      </div>
-
-      <div id="method-M000030" class="method-detail">
-        <a name="M000030"></a>
-
-        <div class="method-heading">
-          <a href="#M000030" class="method-signature">
-          <span class="method-name">show_calendar</span><span class="method-args">(xdate,key={})</span>
+          <a href="#M000085" class="method-signature">
+          <span class="method-name">show_calendar</span><span class="method-args">(xdate,key={},day_check=lambda{|x,a| x!=a}</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000030-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000030-source">
+            onclick="toggleCode('M000085-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000085-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 22</span>
-22:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_calendar</span>(<span class="ruby-identifier">xdate</span>,<span class="ruby-identifier">key</span>={})
-23:    <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'shared/clndr'</span>,<span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:arr_cl=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">get_clndr</span>(<span class="ruby-identifier">xdate</span>),
-24:                                                <span class="ruby-identifier">:a_hash=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">:xdate=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xdate</span>}
-25:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 19</span>
+19:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_calendar</span>(<span class="ruby-identifier">xdate</span>,<span class="ruby-identifier">key</span>={},<span class="ruby-identifier">day_check</span>=<span class="ruby-identifier">lambda</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x!</span>=<span class="ruby-identifier">a</span>},<span class="ruby-identifier">day_mark</span>=<span class="ruby-identifier">lambda</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">x</span>,<span class="ruby-identifier">a</span><span class="ruby-operator">|</span> <span class="ruby-identifier">x</span>})
+20:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'shared/clndr'</span>,<span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:arr_cl=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">get_clndr</span>(<span class="ruby-identifier">xdate</span>),
+21:                                                <span class="ruby-identifier">:a_hash=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">key</span>,<span class="ruby-identifier">:xdate=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xdate</span>,
+22:                                                <span class="ruby-identifier">:day_check=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">day_check</span>,
+23:                                                <span class="ruby-identifier">:day_mark=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">day_mark</span>
+24:                                                },
+25:          <span class="ruby-identifier">:layout=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">key</span>[<span class="ruby-identifier">:layout</span>]
+26:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000032" class="method-detail">
-        <a name="M000032"></a>
+      <div id="method-M000086" class="method-detail">
+        <a name="M000086"></a>
 
         <div class="method-heading">
-          <a href="#M000032" class="method-signature">
-          <span class="method-name">show_menu</span><span class="method-args">(xtype)</span>
+          <a href="#M000086" class="method-signature">
+          <span class="method-name">show_menu</span><span class="method-args">(xtype,url=[{}],xtempl=nil)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000032-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000032-source">
+            onclick="toggleCode('M000086-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000086-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 49</span>
-49:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_menu</span>(<span class="ruby-identifier">xtype</span>)
-50:     <span class="ruby-identifier">menu</span> = <span class="ruby-constant">Menu</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">:all</span>,<span class="ruby-identifier">:conditions=</span><span class="ruby-operator">&gt;</span>[<span class="ruby-value str">&quot;mtype=?&quot;</span>,<span class="ruby-node">&quot;#{xtype}&quot;</span>],<span class="ruby-identifier">:order=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;no&quot;</span>)
-51:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;shared/menu&quot;</span>,<span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:menu=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">menu</span>,<span class="ruby-identifier">:mtype=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xtype</span>}
-52:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 28</span>
+28:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_menu</span>(<span class="ruby-identifier">xtype</span>,<span class="ruby-identifier">url</span>=[{}],<span class="ruby-identifier">xtempl</span>=<span class="ruby-keyword kw">nil</span>)
+29:     <span class="ruby-identifier">menu</span>=<span class="ruby-identifier">show_menu_params</span>(<span class="ruby-identifier">xtype</span>)
+30:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xtempl</span><span class="ruby-operator">||</span><span class="ruby-value str">&quot;shared/menu&quot;</span>,
+31:       <span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:menu=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">menu</span>,<span class="ruby-identifier">:mtype=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xtype</span>,<span class="ruby-identifier">:url=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">url</span>
+32:                 }
+33:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
       </div>
 
-      <div id="method-M000031" class="method-detail">
-        <a name="M000031"></a>
+      <div id="method-M000084" class="method-detail">
+        <a name="M000084"></a>
 
         <div class="method-heading">
-          <a href="#M000031" class="method-signature">
+          <a href="#M000084" class="method-signature">
           <span class="method-name">show_table</span><span class="method-args">(xpar)</span>
           </a>
         </div>
       
         <div class="method-description">
           <p><a class="source-toggle" href="#"
-            onclick="toggleCode('M000031-source');return false;">[Source]</a></p>
-          <div class="method-source-code" id="M000031-source">
+            onclick="toggleCode('M000084-source');return false;">[Source]</a></p>
+          <div class="method-source-code" id="M000084-source">
 <pre>
-    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 27</span>
-27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_table</span>(<span class="ruby-identifier">xpar</span>)
-28:    <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:fields</span>]<span class="ruby-operator">||=</span>[{<span class="ruby-identifier">:id=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;id&quot;</span>,<span class="ruby-identifier">:proc=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">lambda</span>{<span class="ruby-operator">|</span><span class="ruby-identifier">item</span><span class="ruby-operator">|</span> <span class="ruby-value str">&quot;Id:&quot;</span><span class="ruby-operator">+</span><span class="ruby-identifier">item</span>}}]
-29:    <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:crud</span>]<span class="ruby-operator">||=</span><span class="ruby-keyword kw">false</span>
-30:     <span class="ruby-comment cmt"># кнопка по умолчанию submit</span>
-31:    <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:url</span>].<span class="ruby-identifier">nil?</span>
-32:      <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:but_sub</span>]<span class="ruby-operator">||=</span>{<span class="ruby-identifier">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">t</span>(<span class="ruby-identifier">:Butt_Send</span>)}
-33:    <span class="ruby-keyword kw">end</span>
-34:     <span class="ruby-comment cmt"># кнопки по умолчанию для CRUD</span>
-35:    <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:crud</span>]
-36:     <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:url</span>]<span class="ruby-operator">||=</span>{<span class="ruby-identifier">:controller=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;&quot;</span>,<span class="ruby-identifier">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;&quot;</span>,<span class="ruby-identifier">:id=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;&quot;</span>}
-37:     <span class="ruby-comment cmt"># кнопки по умолчанию для CRUD</span>
-38:     <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:btns</span>].<span class="ruby-identifier">nil?</span>
-39:      <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:btns</span>]<span class="ruby-operator">||=</span><span class="ruby-constant">Array</span>.<span class="ruby-identifier">new</span>
-40:      <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:btns</span>]<span class="ruby-operator">&lt;&lt;</span>{<span class="ruby-identifier">:name=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;delete&quot;</span>,<span class="ruby-identifier">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">t</span>(<span class="ruby-identifier">:Butt_Delete</span>),<span class="ruby-identifier">:controller=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;&quot;</span>,<span class="ruby-identifier">:action=</span><span class="ruby-operator">&gt;</span><span class="ruby-value str">&quot;delete&quot;</span>,<span class="ruby-identifier">:id=</span><span class="ruby-operator">&gt;</span><span class="ruby-node">&quot;#{params[:id]}&quot;</span> }
-41:      <span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:but_sub</span>]={<span class="ruby-identifier">:text=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">t</span>(<span class="ruby-identifier">:Butt_Create</span>)}
-42:     <span class="ruby-keyword kw">end</span>
-43:    <span class="ruby-keyword kw">end</span>
-44:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'shared/tab_vw'</span>,<span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:headers=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:headers</span>],
-45:                 <span class="ruby-identifier">:objs=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:objs</span>],<span class="ruby-identifier">:fields=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:fields</span>],<span class="ruby-identifier">:crud=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:crud</span>],
-46:                 <span class="ruby-identifier">:url=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:url</span>],<span class="ruby-identifier">:btns=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:btns</span>],<span class="ruby-identifier">:but_sub=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:but_sub</span>]}
-47:   <span class="ruby-keyword kw">end</span>
+    <span class="ruby-comment cmt"># File app/helpers/application_helper.rb, line 6</span>
+ 6:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show_table</span>(<span class="ruby-identifier">xpar</span>)
+ 7:     <span class="ruby-identifier">xpar</span>=<span class="ruby-identifier">show_table_params</span>(<span class="ruby-identifier">xpar</span>)
+ 8:     <span class="ruby-identifier">render</span> <span class="ruby-identifier">:partial</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-value str">'shared/tab_vw'</span>,<span class="ruby-identifier">:locals=</span><span class="ruby-operator">&gt;</span>{<span class="ruby-identifier">:headers=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:headers</span>],
+ 9:                 <span class="ruby-identifier">:objs=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:objs</span>],<span class="ruby-identifier">:fields=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:fields</span>],<span class="ruby-identifier">:crud=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:crud</span>],
+10:                 <span class="ruby-identifier">:url=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:url</span>],<span class="ruby-identifier">:btns=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:btns</span>],<span class="ruby-identifier">:but_sub=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:but_sub</span>],
+11:                 <span class="ruby-identifier">:select_item=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:select_item</span>],
+12:                 <span class="ruby-identifier">:select_item_name=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:select_item_name</span>],
+13:                 <span class="ruby-identifier">:rowact=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:rowact</span>],
+14:                 <span class="ruby-identifier">:tbstyle=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:tbstyle</span>],
+15:                 <span class="ruby-identifier">:tooltip=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:tooltip</span>]},
+16:            <span class="ruby-identifier">:layout=</span><span class="ruby-operator">&gt;</span><span class="ruby-identifier">xpar</span>[<span class="ruby-identifier">:layout</span>]
+17:   <span class="ruby-keyword kw">end</span>
 </pre>
           </div>
         </div>
