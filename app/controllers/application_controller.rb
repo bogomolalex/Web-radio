@@ -13,14 +13,6 @@ class ApplicationController < ActionController::Base
 
   rescue_from ActionController::RoutingError, :with => :access_denied2
 
-  before_filter :set_customer
-  
-  def set_customer
-   if session['userprof']
-     @c = Userprof.find(session['userprof'])
-   end
-  end
-
   private
    def report_error(message)
     @message = message
