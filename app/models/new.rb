@@ -2,8 +2,10 @@
 class New < ActiveRecord::Base
  cattr_reader :per_page
  @@per_page =5
+
  belongs_to :program
  belongs_to :menu
+
  #Проверки всякие
  validates_presence_of :title,:message=>"Заголовок не заполнен."
  validates_presence_of :value_date,:status,:ntype,:message=>"Дата новости не указана."

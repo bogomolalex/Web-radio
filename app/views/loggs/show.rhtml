@@ -1,0 +1,16 @@
+<% if logged_in? -%>
+<!-- Пример -->
+<p><h4>Список входов в систему</h4></p>
+<div style="float:left;width:700px;text-align: center;">
+<%= will_paginate @logs,:prev_label=>"Предыдущая",:next_label=>"Следующая" %>
+</div>
+<div style="float:left;width:700px;text-align: right;">
+<%=show_table ({:headers=>["Дата и время","Имя пользователя" ,"Сообщение "],
+    :objs=>@logs,
+                :fields=>[{:id=>"created_at",:proc=>lambda{|item| item.strftime('%d.%m.%Y %H:%M')}},
+                          {:id=>"username"},
+                          {:id=>"message"}]}) -%>
+</div>
+<%- else -%>
+  report_error("Unauthorized access; password required")
+<%- end -%>

@@ -25,6 +25,13 @@ class SessionsController < ApplicationController
       handle_remember_cookie! new_cookie_flag
       redirect_back_or_default('/')
       flash[:notice] = "Вы вошли в систему."
+    l=Loggs.new
+    l.username="#{params['/session'][:login]}"
+    l.message="Вы вошли в систему. IP: #{request.remote_ip}"
+    l.event='LOGIN'
+    l.created_at=Time.now
+    l.logg_date=Date.today
+    l.save
     else
       note_failed_signin
       @login       = p[:login]
@@ -44,5 +51,12 @@ protected
   def note_failed_signin
     flash[:error] = "Не возможно войти как '#{params['/session'][:login]}'"
     logger.warn "Ошибка входа в систему пользователем '#{params['/session'][:login]}' IP: #{request.remote_ip} время: #{Time.now.utc}"
+    l=Loggs.new
+    l.username="#{params['/session'][:login]}"
+    l.message="Ошибка входа в систему  IP: #{request.remote_ip}"
+    l.event='LOGERR'
+    l.created_at=Time.now
+    l.logg_date=Date.today
+    l.save
   end
 end
