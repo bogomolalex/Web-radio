@@ -23,7 +23,7 @@ class UsersController < ApplicationController
       # reset session
       self.current_user = @user # !! now logged in
       l=Loggs.new
-      l.username=self.current_user
+      l.username=@user.login
       l.message="Создан новый пользователь. IP: #{request.remote_ip}"
       l.event='CREATED'
       l.created_at=Time.now

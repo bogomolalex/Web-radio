@@ -213,7 +213,7 @@ a.buts:hover { color: #FFF; background-color:#FFF; }
   .pagination span.disabled {
     padding: 2px 5px 2px 5px;
     margin: 2px;
-    border: 1px solid #eee;
-    color: white;
+    border: 1px solid #aaaadd;
+    color: White;
   }
 
