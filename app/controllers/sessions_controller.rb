@@ -27,7 +27,8 @@ class SessionsController < ApplicationController
       flash[:notice] = "Вы вошли в систему."
     l=Loggs.new
     l.username="#{params['/session'][:login]}"
-    l.message="Вы вошли в систему. IP: #{request.remote_ip}"
+    remote_ip = client_ip
+    l.message="Вы вошли в систему. IP: #{remote_ip}"
     l.event='LOGIN'
     l.created_at=Time.now
     l.logg_date=Date.today
@@ -53,7 +54,8 @@ protected
     logger.warn "Ошибка входа в систему пользователем '#{params['/session'][:login]}' IP: #{request.remote_ip} время: #{Time.now.utc}"
     l=Loggs.new
     l.username="#{params['/session'][:login]}"
-    l.message="Ошибка входа в систему  IP: #{request.remote_ip}"
+    remote_ip = client_ip
+    l.message="Ошибка входа в систему  IP: #{remote_ip}"
     l.event='LOGERR'
     l.created_at=Time.now
     l.logg_date=Date.today
