@@ -12,10 +12,10 @@
 ActiveRecord::Schema.define(:version => 20110922120049) do
 
   create_table "loggs", :force => true do |t|
-    t.string   "username",   :limit => 80,  :default => "", :null => false
-    t.string   "event",      :limit => 80,  :default => "", :null => false
+    t.string   "username",   :limit => 80,  :null => false
+    t.string   "event",      :limit => 80,  :null => false
     t.string   "message",    :limit => 250
-    t.date     "logg_date",                                 :null => false
+    t.date     "logg_date",                 :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
