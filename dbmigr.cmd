@@ -6,4 +6,4 @@ rem gem install will_paginate
 gem install mongrel_service 
 gem install mongrel_service --platform x86-mswin32 
 gem install cgi_multipart_eof_fix
-mongrel_rails service::install --name MyApp -e production -p 3001 -a 0.0.0.0 
+mongrel_rails service::install --name RadioRubyTest -p 4000 -e production -a 78.36.196.106

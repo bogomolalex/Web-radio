@@ -23,5 +23,5 @@ production:
   database: radio_production
   host: localhost
   username: root
-  password: alexandr
+  password: lebeda123456
   encoding: utf8
