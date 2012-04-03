@@ -13,7 +13,7 @@
  <div style="border: 0px solid #CCCCCC;float:left;width:650px;">
   <p>
    <h4>
-    <div style="float:left;width:550px;height:40px;">
+    <div style="float:left;width:650px;height:40px;">
      <%=h(@news.title)-%>
     </div>
    </h4>
@@ -27,12 +27,10 @@
     </tr>
    </table>
   <%end-%>
-   <%=h(@news.descr)-%>
+   <%=simple_format h(@news.descr)-%>
   </div>
  </div>
  <%end%>
-</div>
-
 </div>
 
 </div>
