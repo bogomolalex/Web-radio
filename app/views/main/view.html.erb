@@ -37,7 +37,7 @@
  <div style="padding:10px;float:right;width:400px;height:10px">
   <div style="padding:20px;"></div>
   <div style="float:right;width:50px">
-    <%if @ip=="127.0.0.1" %>
+    <%if check_admin_ip?%>
     <%= render :partial=>"sessions/logio" -%>
     <%end%>
   </div>

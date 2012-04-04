@@ -6,7 +6,6 @@ class MainController < ApplicationController
                           Date.today],:order=>"value_date, no desc")
     @pact=sysparam('prog_act')
     @cdat=params[:vd]||Date.today
-    @ip=client_ip;
   end
 
   def about

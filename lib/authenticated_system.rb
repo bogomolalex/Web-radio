@@ -96,7 +96,7 @@ module AuthenticatedSystem
     # Inclusion hook to make #current_user and #logged_in?
     # available as ActionView helper methods.
     def self.included(base)
-      base.send :helper_method, :current_user, :logged_in?, :authorized? if base.respond_to? :helper_method
+      base.send :helper_method, :current_user, :logged_in?, :authorized?,:check_admin_ip?,:client_ip if base.respond_to? :helper_method
     end
 
     #
@@ -184,6 +184,18 @@ module AuthenticatedSystem
       cookies[:auth_token] = {
         :value   => @current_user.remember_token,
         :expires => @current_user.remember_token_expires_at }
+    end
+
+    def client_ip
+      request.env["HTTP_X_FORWARDED_FOR"]||request.remote_ip
+    end
+
+    def check_admin_ip?
+      v_ip=client_ip
+      if v_ip=='127.0.0.1' ||v_ip=='78.36.196.106' then
+       return true
+      end
+      return false
     end
 
 end

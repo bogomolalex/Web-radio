@@ -14228,3 +14228,1559 @@ Rendered sessions/_logio (0.0ms)
 Rendered shared/_tab_vw (0.0ms)
 Rendered program/_list (62.5ms)
 Completed in 266ms (View: 188, DB: 47) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:16:30) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (15.6ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined local variable or method `check_admin_ip' for #<ActionView::Base:0x483d590>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip %>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Wed Apr 04 11:17:26 +0300 2012
+  Status: 500 Internal Server Error
+  C:/Developing/Ruby/radio/lib/authenticated_system.rb:197: invalid regular expression; there's no previous pattern, to which '*' would define cardinality at 1: /*    if client_ip=='127.0.0.1' then
+       return true
+      end
+      return false*/
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:437:in `load_missing_constant'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:96:in `const_missing'
+    C:/Developing/Ruby/radio/app/controllers/application_controller.rb:8
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Developing/Ruby/radio/config/initializers/mongrel.rb:63:in `dispatch_cgi'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:27:in `dispatch'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
+    C:/Ruby187/bin/mongrel_rails:19:in `load'
+    C:/Ruby187/bin/mongrel_rails:19
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+/!\ FAILSAFE /!\  Wed Apr 04 11:17:38 +0300 2012
+  Status: 500 Internal Server Error
+  C:/Developing/Ruby/radio/lib/authenticated_system.rb:199: invalid regular expression; there's no previous pattern, to which '*' would define cardinality at 1: /*    if client_ip=='127.0.0.1' then
+       return true
+      end
+      return false*/
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:437:in `load_missing_constant'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:96:in `const_missing'
+    C:/Developing/Ruby/radio/app/controllers/application_controller.rb:8
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_without_new_constant_marking'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:380:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:379:in `load_file'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:259:in `require_or_load'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:425:in `load_missing_constant'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:80:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:92:in `const_missing'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:89:in `dispatch'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/head.rb:9:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/methodoverride.rb:24:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `synchronize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/rack-1.1.2/lib/rack/lock.rb:11:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+    C:/Developing/Ruby/radio/config/initializers/mongrel.rb:63:in `dispatch_cgi'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:101:in `dispatch_cgi'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:27:in `dispatch'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:76:in `process'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/rails.rb:74:in `process'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:159:in `process_client'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `each'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:158:in `process_client'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `initialize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `new'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:285:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `initialize'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `new'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel.rb:268:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:282:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `each'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/configurator.rb:281:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:128:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/../lib/mongrel/command.rb:212:in `run'
+    C:/Ruby187/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mingw32/bin/mongrel_rails:281
+    C:/Ruby187/bin/mongrel_rails:19:in `load'
+    C:/Ruby187/bin/mongrel_rails:19
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:17:52) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined local variable or method `check_admin_ip' for #<ActionView::Base:0x4432b90>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip %>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:19:20) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined local variable or method `check_admin_ip' for #<ActionView::Base:0x454b288>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip %>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (296.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:21:16) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined local variable or method `check_admin_ip' for #<ActionView::Base:0x46b6e88>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip==true%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:22:05) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip?' for #<ActionView::Base:0x4434738>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip?%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:23:04) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip?' for #<ActionView::Base:0x453bd48>) on line #2 of app/views/main/view.html.erb:
+1: <div style="width: 800px;text-align:center;margin: 0px, auto;">
+2: <%=check_admin_ip?%>
+3: <%if logged_in? %>
+4:  <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
+5: <%end-%>
+
+    app/views/main/view.html.erb:2
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:24:27) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined local variable or method `check_admin_ip' for #<ActionView::Base:0x46a5fb0>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:24:46) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip' for #<ActionView::Base:0x441e3b8>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip()%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (125.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:25:08) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip' for #<ActionView::Base:0x4532400>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip()%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:27:37) [GET]
+  [4;35;1mNew Load (15.6ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (15.6ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip' for #<ActionView::Base:0x483d428>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip()%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:27:40) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip' for #<ActionView::Base:0x44ef308>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip()%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (109.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:34:38) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+
+ActionView::TemplateError (undefined method `check_admin_ip' for #<ActionView::Base:0x45c8b68>) on line #40 of app/views/main/view.html.erb:
+37:  <div style="padding:10px;float:right;width:400px;height:10px">
+38:   <div style="padding:20px;"></div>
+39:   <div style="float:right;width:50px">
+40:     <%if check_admin_ip()%>
+41:     <%= render :partial=>"sessions/logio" -%>
+42:     <%end%>
+43:   </div>
+
+    app/views/main/view.html.erb:40
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (296.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:36:53) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:36:54') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (640.6ms)
+Completed in 828ms (View: 781, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:37:04) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (31.2ms)
+Completed in 328ms (View: 313, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-04-04 11:37:12) [POST]
+  Parameters: {"methods"=>"post", "/session"=>{"password"=>"lebeda", "login"=>"bogomol"}, "authenticity_token"=>"RqkaU03E2pZyDQlcj5nmAjlME6fpWiWT8DwOFOVbSEs="}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'bogomol') LIMIT 1[0m
+Ошибка входа в систему пользователем 'bogomol' IP: 127.0.0.1 время: Wed Apr 04 08:37:12 UTC 2012
+  [4;35;1mLoggs Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loggs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLoggs Create (0.0ms)[0m   [0mINSERT INTO `loggs` (`logg_date`, `created_at`, `updated_at`, `username`, `event`, `message`) VALUES('2012-04-04', '2012-04-04 08:37:12', '2012-04-04 08:37:12', 'bogomol', 'LOGERR', 'Ошибка входа в систему IP: 127.0.0.1')[0m
+  [4;36;1mSQL (31.2ms)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 547ms (View: 31, DB: 47) | 200 OK [http://localhost/session?methods=post]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-04-04 11:37:22) [POST]
+  Parameters: {"methods"=>"post", "/session"=>{"password"=>"123456", "login"=>"admin"}, "authenticity_token"=>"RqkaU03E2pZyDQlcj5nmAjlME6fpWiWT8DwOFOVbSEs="}
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`login` = 'admin') LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCOMMIT[0m
+Redirected to http://localhost:4000/
+  [4;36;1mLoggs Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `loggs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mLoggs Create (0.0ms)[0m   [0;1mINSERT INTO `loggs` (`logg_date`, `created_at`, `updated_at`, `username`, `event`, `message`) VALUES('2012-04-04', '2012-04-04 08:37:22', '2012-04-04 08:37:22', 'admin', 'LOGIN', 'Вы вошли в систему. IP: 127.0.0.1')[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mCOMMIT[0m
+Completed in 141ms (DB: 47) | 302 Found [http://localhost/session?methods=post]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:37:23) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:37:23') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 219ms (View: 188, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MenuController') LIMIT 1[0m
+
+
+Processing MenuController#show (for 127.0.0.1 at 2012-04-04 11:37:25) [GET]
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mMenu Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `menus`[0m
+  [4;36;1mMenu Load (15.6ms)[0m   [0;1mSELECT * FROM `menus` WHERE (`menus`.`mtype` = 'ADMNOW') ORDER BY no LIMIT 1[0m
+  [4;35;1mMenu Load (0.0ms)[0m   [0mSELECT * FROM `menus` WHERE (`menus`.menu_id = 4 AND (mtype!='PRGACT' && 'N'='N' || 'Y'='N')) ORDER BY no[0m
+Rendering template within layouts/mnow
+Rendering menu/show
+Rendered sessions/_logio (0.0ms)
+Completed in 391ms (View: 266, DB: 31) | 200 OK [http://localhost/menu/show]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SysmnuController') LIMIT 1[0m
+
+
+Processing SysmnuController#show (for 127.0.0.1 at 2012-04-04 11:37:28) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mMenu Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `menus`[0m
+  [4;36;1mMenu Load (0.0ms)[0m   [0;1mSELECT * FROM `menus` WHERE (`menus`.`mtype` = 'ADMSYS') ORDER BY no LIMIT 1[0m
+Rendering template within layouts/msys
+Rendering sysmnu/show
+  [4;35;1mMenu Load (0.0ms)[0m   [0mSELECT * FROM `menus` WHERE (`menus`.menu_id = 6) ORDER BY no[0m
+Rendered sessions/_logio (0.0ms)
+Completed in 172ms (View: 62, DB: 31) | 200 OK [http://localhost/sysmnu/show]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='LoggsController') LIMIT 1[0m
+
+
+Processing LoggsController#show (for 127.0.0.1 at 2012-04-04 11:37:30) [GET]
+  Parameters: {"id"=>"show"}
+  [4;35;1mUser Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='per_page' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mLoggs Load (0.0ms)[0m   [0;1mSELECT * FROM `loggs` ORDER BY created_at desc LIMIT 0, 5[0m
+  [4;35;1mLoggs Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `loggs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM `loggs` [0m
+Rendering template within layouts/msys
+Rendering loggs/show
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_rhtml_app47views47loggs47show46rhtml at C:/Developing/Ruby/radio/app/views/loggs/show.rhtml:5)
+Rendered shared/_tab_vw (0.0ms)
+Rendered sessions/_logio (0.0ms)
+Completed in 156ms (View: 47, DB: 31) | 200 OK [http://localhost/loggs/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:37:59) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:38:00') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (171.9ms)
+Completed in 328ms (View: 297, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2012-04-04 11:38:03) [GET]
+Redirected to http://localhost:4000/
+Completed in 266ms (DB: 0) | 302 Found [http://localhost/logout]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:38:03) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:38:03') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:38:20) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:38:20') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (78.1ms)
+Completed in 172ms (View: 125, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-04 11:39:20) [GET]
+  Parameters: {"vd"=>"04.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:39:20') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=04.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:39:43) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:39:43') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (343.8ms)
+Completed in 422ms (View: 391, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:39:57) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:39:57') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (78.1ms)
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:40:41) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:40:41') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-04 11:41:41) [GET]
+  Parameters: {"vd"=>"04.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:41:41') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 62ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=04.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-04 11:42:41) [GET]
+  Parameters: {"vd"=>"04.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:42:42') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=04.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-04 11:43:42) [GET]
+  Parameters: {"vd"=>"04.04.2012"}
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:43:42') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=04.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:43:43) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:43:44') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:43:46) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (15.6ms)
+Completed in 47ms (View: 47, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:43:49) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:43:49') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 47) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:44:02) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (15.6ms)
+Completed in 297ms (View: 281, DB: 31) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:44:21) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:44:21') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 125ms (View: 62, DB: 63) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:44:24) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+
+ActionView::TemplateError (undefined method `report_error' for #<ActionView::Base:0x45fd5d8>) on line #2 of app/views/sessions/_login.rhtml:
+1: <%if check_admin_ip?
+2:   report_error("Unauthorized access;")
+3:  end %>
+4: <div style="width:750px;height:30px;">
+5: <%= content_tag 'div', h(flash[:notice]),
+
+    app/views/sessions/_login.rhtml:2:in `_run_rhtml_app47views47sessions47_login46rhtml_locals_login_object'
+    app/views/sessions/new.html.erb:1
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (281.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:46:05) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:46:18) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:47:15) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 31ms (View: 31, DB: 16) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:47:17) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 31ms (View: 31, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:47:52) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 31ms (View: 31, DB: 16) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:48:05) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 266ms (View: 234, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:48:33) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 31ms (View: 31, DB: 0) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:50:46) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:50:46') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:50:49) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `redirect_to_back_or_default' for #<ActionView::Base:0x4576a88>) on line #2 of app/views/sessions/_login.rhtml:
+1: <%if check_admin_ip?
+2:   redirect_to_back_or_default;
+3:  end %>
+4: <div style="width:750px;height:30px;">
+5: <%= content_tag 'div', h(flash[:notice]),
+
+    app/views/sessions/_login.rhtml:2:in `_run_rhtml_app47views47sessions47_login46rhtml_locals_login_object'
+    app/views/sessions/new.html.erb:1
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (281.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:51:07) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:51:07') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:51:11) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+
+ActionView::TemplateError (undefined local variable or method `redirect_to_back_or_default' for #<ActionView::Base:0x45590b8>) on line #2 of app/views/sessions/_login.rhtml:
+1: <%if check_admin_ip?
+2:   redirect_to_back_or_default;
+3:  end %>
+4: <div style="width:750px;height:30px;">
+5: <%= content_tag 'div', h(flash[:notice]),
+
+    app/views/sessions/_login.rhtml:2:in `_run_rhtml_app47views47sessions47_login46rhtml_locals_login_object'
+    app/views/sessions/new.html.erb:1
+    config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (281.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:55:42) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:55:42') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 78, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:55:45) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (15.6ms)
+Completed in 47ms (View: 31, DB: 16) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:55:49) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:55:49') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:56:04) [GET]
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/sessions_controller.rb:9:in `redirect_to_back_or_default'
+  app/controllers/sessions_controller.rb:9:in `new'
+  config/initializers/mongrel.rb:63:in `dispatch_cgi'
+
+Rendered rescues/_trace (234.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:56:23) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:56:23') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 78, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:56:25) [GET]
+Redirected to http://localhost:4000/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:56:25) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:56:25') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:56:28) [GET]
+Redirected to http://localhost:4000/
+Completed in 16ms (DB: 16) | 302 Found [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:56:28) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:56:29') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 281ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:57:09) [GET]
+Redirected to http://localhost:4000/
+Completed in 0ms (DB: 0) | 302 Found [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:57:09) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:57:10') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:57:39) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:57:40') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-04 11:57:42) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (15.6ms)
+Completed in 156ms (View: 16, DB: 16) | 200 OK [http://localhost/login]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2012-04-04 11:57:48) [POST]
+  Parameters: {"methods"=>"post", "/session"=>{"password"=>"123456", "login"=>"admin"}, "authenticity_token"=>"6O1jrgZuJDL559hH1KhqNzB6TbAkrI/Aar3zdDxruSs="}
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`login` = 'admin') LIMIT 1[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCOMMIT[0m
+Redirected to http://localhost:4000/
+  [4;35;1mLoggs Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `loggs`[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mLoggs Create (0.0ms)[0m   [0mINSERT INTO `loggs` (`logg_date`, `created_at`, `updated_at`, `username`, `event`, `message`) VALUES('2012-04-04', '2012-04-04 08:57:48', '2012-04-04 08:57:48', 'admin', 'LOGIN', 'Вы вошли в систему. IP: 127.0.0.1')[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mCOMMIT[0m
+Completed in 141ms (DB: 31) | 302 Found [http://localhost/session?methods=post]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-04 11:57:49) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-04' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-04' and value_date<='2012-04-04 11:57:49') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-04' and value_date<'2012-04-05') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 219ms (View: 188, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MenuController') LIMIT 1[0m
+
+
+Processing MenuController#show (for 127.0.0.1 at 2012-04-04 11:57:51) [GET]
+  [4;35;1mUser Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mMenu Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `menus`[0m
+  [4;35;1mMenu Load (0.0ms)[0m   [0mSELECT * FROM `menus` WHERE (`menus`.`mtype` = 'ADMNOW') ORDER BY no LIMIT 1[0m
+  [4;36;1mMenu Load (0.0ms)[0m   [0;1mSELECT * FROM `menus` WHERE (`menus`.menu_id = 4 AND (mtype!='PRGACT' && 'N'='N' || 'Y'='N')) ORDER BY no[0m
+Rendering template within layouts/mnow
+Rendering menu/show
+Rendered sessions/_logio (15.6ms)
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://localhost/menu/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ArcmnuController') LIMIT 1[0m
+
+
+Processing ArcmnuController#show (for 127.0.0.1 at 2012-04-04 11:57:53) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMenu Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `menus`[0m
+  [4;35;1mMenu Load (0.0ms)[0m   [0mSELECT * FROM `menus` WHERE (`menus`.`mtype` = 'ADMARC') ORDER BY no LIMIT 1[0m
+Rendering template within layouts/marc
+Rendering arcmnu/show
+  [4;36;1mMenu Load (0.0ms)[0m   [0;1mSELECT * FROM `menus` WHERE (`menus`.menu_id = 5) ORDER BY no[0m
+Rendered sessions/_logio (15.6ms)
+Completed in 469ms (View: 359, DB: 16) | 200 OK [http://localhost/arcmnu/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SysmnuController') LIMIT 1[0m
+
+
+Processing SysmnuController#show (for 127.0.0.1 at 2012-04-04 11:57:55) [GET]
+  [4;36;1mUser Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mMenu Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `menus`[0m
+  [4;35;1mMenu Load (0.0ms)[0m   [0mSELECT * FROM `menus` WHERE (`menus`.`mtype` = 'ADMSYS') ORDER BY no LIMIT 1[0m
+Rendering template within layouts/msys
+Rendering sysmnu/show
+  [4;36;1mMenu Load (0.0ms)[0m   [0;1mSELECT * FROM `menus` WHERE (`menus`.menu_id = 6) ORDER BY no[0m
+Rendered sessions/_logio (0.0ms)
+Completed in 141ms (View: 31, DB: 16) | 200 OK [http://localhost/sysmnu/show]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='LoggsController') LIMIT 1[0m
+
+
+Processing LoggsController#show (for 127.0.0.1 at 2012-04-04 11:57:57) [GET]
+  Parameters: {"id"=>"show"}
+  [4;36;1mUser Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='per_page' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mLoggs Load (0.0ms)[0m   [0mSELECT * FROM `loggs` ORDER BY created_at desc LIMIT 0, 5[0m
+  [4;36;1mLoggs Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `loggs`[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM `loggs` [0m
+Rendering template within layouts/msys
+Rendering loggs/show
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_rhtml_app47views47loggs47show46rhtml at C:/Developing/Ruby/radio/app/views/loggs/show.rhtml:5)
+Rendered shared/_tab_vw (15.6ms)
+Rendered sessions/_logio (0.0ms)
+Completed in 156ms (View: 31, DB: 16) | 200 OK [http://localhost/loggs/show]
