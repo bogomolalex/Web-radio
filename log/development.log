@@ -15784,3 +15784,1563 @@ DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_l
 Rendered shared/_tab_vw (15.6ms)
 Rendered sessions/_logio (0.0ms)
 Completed in 156ms (View: 31, DB: 16) | 200 OK [http://localhost/loggs/show]
+  [4;36;1mSQL (62.5ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (203.1ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (62.5ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-24 10:44:23) [GET]
+  [4;35;1mNew Load (109.4ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-24' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (31.2ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (109.4ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-24' and value_date<='2012-04-24 10:44:24') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (31.2ms)
+Rendered program/_list (468.8ms)
+Completed in 1516ms (View: 1156, DB: 578) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:44:31) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:45:45) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 219ms (View: 172, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:47:55) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:48:24) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (31.3ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:49:27) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 63, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:50:48) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 250ms (View: 109, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:51:52) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:53:49) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:54:05) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-24 10:55:31) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-24' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-24' and value_date<='2012-04-24 10:55:31') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 10:55:36) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 281ms (View: 16, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:04:13) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 78, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:04:16) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:04:32) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:04:53) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 188ms (View: 141, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:07:09) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:07:25) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:09:29) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:09:38) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:09:52) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:10:16) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 313ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:12:58) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:13:09) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 31, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:13:37) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:13:41) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:15:06) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 219ms (View: 188, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:15:36) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 47ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:16:18) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 78, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:16:47) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:17:25) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:18:13) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 250ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:21:09) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:22:21) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 109ms (View: 47, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:22:44) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:23:25) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 234ms (View: 188, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:24:10) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 125ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:24:33) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:25:35) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:26:00) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:30:41) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 203ms (View: 172, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:31:18) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:32:17) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:36:09) [GET]
+  [4;36;1mNew Load (15.6ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 109ms (View: 47, DB: 47) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:37:20) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-24 11:38:11) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-24' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (15.6ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-24' and value_date<='2012-04-24 11:38:11') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (296.9ms)
+Completed in 453ms (View: 375, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:38:18) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:38:39) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-24 11:38:49) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-24' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-24' and value_date<='2012-04-24 11:38:50') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 125ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:38:57) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 188ms (View: 141, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 11:41:45) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 109ms (View: 62, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 13:28:58) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 281ms (View: 172, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 13:29:46) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-24 13:29:52) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-24' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-24' and value_date<='2012-04-24 13:29:53') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (109.4ms)
+Completed in 500ms (View: 375, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 13:29:56) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 13:42:39) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:00:08) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 156ms (View: 78, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:23:22) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:46:17) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 172ms (View: 125, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-24 16:47:06) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-24' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-24' and value_date<='2012-04-24 16:47:07') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (109.4ms)
+Completed in 1438ms (View: 1391, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:47:33) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:50:06) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:50:16) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:51:17) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:52:18) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:54:43) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 16:58:23) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 156ms (View: 94, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:00:04) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 203ms (View: 172, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:01:22) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:01:43) [GET]
+  [4;35;1mNew Load (15.6ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:02:09) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 109ms (View: 78, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:02:36) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 281ms (View: 141, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:04:00) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 63, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:05:04) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:05:53) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:06:39) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 94ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:07:00) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 266ms (View: 172, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:07:40) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:07:42) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:08:54) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:09:14) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 63, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:09:35) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 344ms (View: 234, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-24 17:10:45) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (31.2ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-25 10:24:14) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-25' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-25' and value_date<='2012-04-25 10:24:14') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-25' and value_date<'2012-04-26') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (109.4ms)
+Completed in 344ms (View: 250, DB: 47) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 10:24:21) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-25 10:24:31) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-25' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-25' and value_date<='2012-04-25 10:24:31') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-25' and value_date<'2012-04-26') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (156.3ms)
+Completed in 281ms (View: 250, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-25 10:24:36) [POST]
+  Parameters: {"vd"=>"24.04.2012", "authenticity_token"=>"emVaiQ+jGZ380jilvbdPswTjwL43wl6454qRdX9qERc="}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-25' and value_date<='2012-04-25 10:24:36') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-24' and value_date<'2012-04-25') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list/24.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 10:24:40) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-25 10:25:02) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-25' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-25' and value_date<='2012-04-25 10:25:02') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-25' and value_date<'2012-04-26') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 10:25:10) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:33:01) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 219ms (View: 188, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:33:33) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:33:47) [GET]
+  [4;36;1mNew Load (15.6ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:34:44) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:34:57) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 234ms (View: 188, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:35:31) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 375ms (View: 313, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:35:58) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:36:12) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:38:50) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:39:10) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:39:47) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 250ms (View: 47, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:39:56) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 31, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-25 11:40:42) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-25 11:40:51) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-25' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-25' and value_date<='2012-04-25 11:40:51') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-25' and value_date<'2012-04-26') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]

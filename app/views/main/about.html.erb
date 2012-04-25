@@ -2,32 +2,34 @@
 <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
 <%end-%>
 <div>
-<div style="float:left;width:50px;">&nbsp;</div>
- <div style="padding:0;float: left;">
+ <div style="padding:0;float: left;width:1280px;">
+  <div style="padding:0;float: left;width:112px;height:122;">
    <%=link_to image_tag("bleft.jpg",:border=>"0"),{:controller=>"main",:action => "view"},:title=>"Главная страница",:class=>"img_lnk"%>
- </div>
+  </div>
+</div>
 <div id="main">
  <div style="border: 0px solid #CCCCCC;float:left;width:350px;">
- <div style="float:left;width:800px;">&nbsp;&nbsp;</div>
  <%unless @news.nil? -%>
  <%@news.each do |n| -%>
  <div style="border: 0px solid #CCCCCC;float:left;width:650px;">
-  <p>
-   <h4>
-    <div style="float:left;width:650px;height:40px;">
-     <%=h(n.title)-%>
-    </div>
-   </h4>
-  </p>
+  <div style="border: 0px solid #FFFFFF;float:left;width:26px;">&nbsp
+  </div>
   <%unless n.img_url.blank?-%>
-   <table border=0 width="250" cellspacing=0 cellpadding=0 align=left style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #CCCCCC;">
-    <tr>
-     <td> 
+   <table border=0 width="320" cellspacing=0 cellpadding=0 align=left>
+    <tr>                     
+      <td height="227" bgcolor="#D5D5D5" style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #A4A4A4;"> 
       <%= image_tag "news/#{h(n.img_url)}"  -%>
      </td>
     </tr> 
    </table>
   <%end-%>
+  <p>
+   <h4>
+    <div style="float:left;height:25px;width:300px;">
+     <%=h(n.title)-%>
+    </div>
+   </h4>
+  </p>
    <%=simple_format h(n.descr)-%>
   </div>
  <%end-%>

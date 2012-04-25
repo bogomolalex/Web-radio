@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <%=stylesheet_link_tag "scaffold"%>
@@ -10,11 +10,11 @@
  <%= yield :stylesheets %>
 </style>
 </head>
-<body BACKGROUND="/images/bgr.jpg">
-<table width="100%" border="0">
-<tr><td align="center">
+<body>
+<table  width="100%" border="0" cellspacing="0" cellpadding="0" valign="top">
+<tr><td align="left" style="padding:0px">
 <div id="mainf">
-<div style="width: 600px;text-align:center;margin: 0,auto;">
+<div style="width: 1280px;height: 142px;text-align:center;margin: 0,auto;">
  <%=image_tag("header.jpg",:alt=>"")%>
 </div>
 <%= @content_for_layout %></div>
