@@ -10,23 +10,17 @@
  <%= yield :stylesheets %>
 </style>
 </head>
-<body>
+<body style="background-color: #000000;">
 <table  width="100%" border="0" cellspacing="0" cellpadding="0" valign="top">
 <tr><td align="left" style="padding:0px">
 <div id="mainf">
 <div style="width: 1280px;height: 142px;text-align:center;margin: 0,auto;">
   <div style="width:1280px;height:144px;background-image:url(/images/bckgrn.jpg);">
-   <div style="float:left;">
-    <%=image_tag("headerv.jpg",:alt=>"")%>
-   </div>
-   <div style="float:right;width:85px;border: 0px solid #CCCCCC;">
-    &nbsp
-   </div>
+   <div style="float:left;height:142px;"><%=image_tag("headerv.jpg",:alt=>"")%></div>
+   <div style="float:right;width:85px;height:144px;border: 0px solid #CCCCCC;">&nbsp</div>
    <div style="float:right;width:145px;border: 0px solid #CCCCCC;">
     <p>&nbsp</p>   
-    <%=image_tag("home.png",:alt=>"",:border=>"0")%>
-    <%=image_tag("tool.png",:alt=>"",:border=>"0")%>
-   </div>
+    <%=image_tag("home.png",:alt=>"",:border=>"0")%><%=image_tag("tool.png",:alt=>"",:border=>"0")%></div>
   </div>
 <%= @content_for_layout %></div>
 <div id="footer">

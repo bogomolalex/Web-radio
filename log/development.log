@@ -20913,3 +20913,2189 @@ Rendered sessions/_logio (0.0ms)
 Rendered shared/_tab_vw (0.0ms)
 Rendered program/_list (62.5ms)
 Completed in 156ms (View: 125, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (46.9ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:15:44) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:15:44') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 78ms (View: 47, DB: 47) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (31.2ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SessionsController') LIMIT 1[0m
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2012-04-26 10:16:06) [GET]
+Rendering template within layouts/base
+Rendering sessions/new
+Rendered sessions/_login (0.0ms)
+Completed in 31ms (View: 31, DB: 31) | 200 OK [http://localhost/login]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-26 10:16:13) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/about]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:16:15) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:16:15') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:17:15) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:17:16') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:18:15) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:18:15') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:19:15) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:19:15') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:20:16) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:20:16') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:21:15) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:21:16') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 109ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:22:15) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:22:16') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 94ms (View: 63, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:23:11) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:23:11') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 47) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:24:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:24:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:24:31) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:24:31') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (187.5ms)
+Completed in 266ms (View: 219, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#about (for 127.0.0.1 at 2012-04-26 10:24:41) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE (status='ACT'
+ and menu_id=3 ) ORDER BY value_date,no desc[0m
+Rendering template within layouts/about
+Rendering main/about
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/about]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:24:46) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:24:46') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 125ms (View: 63, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#news (for 127.0.0.1 at 2012-04-26 10:24:49) [GET]
+  Parameters: {"id"=>"9"}
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mNew Load (15.6ms)[0m   [0;1mSELECT * FROM `news` WHERE (`news`.`id` = '9') LIMIT 1[0m
+Rendering template within layouts/main
+Rendering main/news
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/main/news/9]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:24:57) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:24:57') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 250ms (View: 203, DB: 47) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:25:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:25:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:25:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:25:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:26:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:26:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:26:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:26:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:27:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:27:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:27:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:27:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 203ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:28:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:28:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:28:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:28:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:29:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:29:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (15.6ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:29:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:29:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (31.2ms)
+Completed in 78ms (View: 47, DB: 31) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:30:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:30:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:30:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:30:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:31:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:31:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:31:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:31:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:32:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:32:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:32:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:32:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:33:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:33:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:33:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:33:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:34:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:34:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:34:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:34:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:35:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:35:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:35:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:35:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:36:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:36:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:36:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:36:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 31) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:37:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:37:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (31.2ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:37:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:37:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 188ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:38:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:38:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:38:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:38:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:39:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:39:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:39:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:39:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:40:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:40:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:40:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:40:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:41:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:41:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (31.2ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:41:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:41:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:42:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:42:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:42:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:42:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 16, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:43:11) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:43:11') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 16, DB: 31) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:43:30) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:43:30') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 156ms (View: 125, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-04-26 10:43:31) [GET]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:43:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:43:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:44:17) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:44:17') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:44:58) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:44:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:45:17) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:45:17') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:45:44) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:45:45') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 281ms (View: 125, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:46:15) [GET]
+  [4;35;1mNew Load (15.6ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:46:16') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 94, DB: 31) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:47:09) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:47:09') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 172ms (View: 125, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:47:49) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:47:49') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:48:08) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:48:08') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 156ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:49:09) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:49:09') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:49:41) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:49:42') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (250.0ms)
+Completed in 375ms (View: 328, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:50:14) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:50:14') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 172ms (View: 141, DB: 0) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:50:44) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:50:44') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 172ms (View: 125, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:51:03) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:51:03') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (187.5ms)
+Completed in 297ms (View: 266, DB: 31) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:51:17) [GET]
+  [4;36;1mNew Load (15.6ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:51:17') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 125ms (View: 78, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:51:39) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:51:39') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 172ms (View: 141, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:52:40) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:52:40') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:53:19) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:53:19') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:53:35) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:53:35') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:54:14) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:54:14') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:54:46) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:54:46') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 125ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:54:50) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:54:50') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 109ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:54:54) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:54:54') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:55:55) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:55:55') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:56:23) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:56:23') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 156ms (View: 109, DB: 16) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:56:43) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:56:43') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 125ms (View: 94, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:57:04) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:57:04') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (109.4ms)
+Completed in 313ms (View: 266, DB: 31) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (15.6ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:57:45) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:57:45') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:57:59) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:57:59') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:58:14) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:58:14') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (125.0ms)
+Rendered program/_list (234.4ms)
+Completed in 313ms (View: 281, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:58:39) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:58:39') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 94, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 10:59:02) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:59:02') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 10:59:40) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 10:59:40') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:00:03) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:00:03') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (171.9ms)
+Completed in 203ms (View: 172, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:00:24) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:00:24') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (46.9ms)
+Completed in 141ms (View: 78, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:00:34) [GET]
+  [4;36;1mNew Load (15.6ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:00:35') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 78, DB: 47) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:01:25) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:01:25') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 47, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:01:35) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:01:35') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.2ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:02:25) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:02:25') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:02:35) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:02:35') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:03:19) [GET]
+  [4;35;1mNew Load (15.6ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:03:20') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 156ms (View: 125, DB: 16) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:03:32) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:03:32') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 141ms (View: 94, DB: 31) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:03:44) [GET]
+  [4;35;1mNew Load (15.6ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:03:45') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 281ms (View: 234, DB: 47) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:04:32) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (15.6ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:04:32') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 31, DB: 31) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:04:41) [GET]
+  [4;35;1mNew Load (15.6ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (15.6ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:04:41') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 156ms (View: 125, DB: 31) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:04:58) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:04:58') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 156ms (View: 125, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:05:42) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:05:42') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:05:59) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:05:59') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 78ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:06:42) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:06:42') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (15.6ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:06:59) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:06:59') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:07:41) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:07:42') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (15.6ms)
+Completed in 63ms (View: 31, DB: 16) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#list (for 127.0.0.1 at 2012-04-26 11:07:59) [GET]
+  Parameters: {"vd"=>"26.04.2012"}
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:07:59') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (31.3ms)
+Completed in 63ms (View: 47, DB: 0) | 200 OK [http://localhost/main/list?vd=26.04.2012]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mXparam Load (15.6ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Columns (0.0ms)[0m   [0mSHOW FIELDS FROM `xparams`[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:08:20) [GET]
+  [4;35;1mNew Load (0.0ms)[0m   [0mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;35;1mNew Columns (15.6ms)[0m   [0mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;35;1mProgram Load (15.6ms)[0m   [0mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:08:21') ORDER BY value_date desc[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (15.6ms)
+Rendered program/_list (62.5ms)
+Completed in 313ms (View: 250, DB: 47) | 200 OK [http://localhost/]
+  [4;35;1mSQL (0.0ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `xparams`[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='MainController') LIMIT 1[0m
+
+
+Processing MainController#view (for 127.0.0.1 at 2012-04-26 11:08:32) [GET]
+  [4;36;1mNew Load (0.0ms)[0m   [0;1mSELECT * FROM `news` WHERE ( value_date>='2012-04-26' and status='ACT'
+ and menu_id=1 ) ORDER BY value_date, no desc LIMIT 1[0m
+  [4;35;1mXparam Load (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+Rendering template within layouts/mbase
+Rendering main/view
+Rendered shared/_radio (0.0ms)
+  [4;36;1mNew Columns (0.0ms)[0m   [0;1mSHOW FIELDS FROM `news`[0m
+Rendered sessions/_logio (0.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='title' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mXparam Load (0.0ms)[0m   [0;1mSELECT * FROM `xparams` WHERE (name='title' and ptype='ApplicationController') LIMIT 1[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM `xparams` WHERE (name='prog_act' and ptype='SYS') LIMIT 1[0m
+  [4;36;1mProgram Load (0.0ms)[0m   [0;1mSELECT * FROM `programs` WHERE (value_date>='2012-04-26' and value_date<='2012-04-26 11:08:32') ORDER BY value_date desc[0m
+  [4;35;1mProgram Load (0.0ms)[0m   [0mSELECT * FROM `programs` WHERE ( value_date>='2012-04-26' and value_date<'2012-04-27') ORDER BY value_date [0m
+Rendered shared/_tab_vw (0.0ms)
+Rendered program/_list (62.5ms)
+Completed in 172ms (View: 125, DB: 0) | 200 OK [http://localhost/]
