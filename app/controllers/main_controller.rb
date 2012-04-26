@@ -6,6 +6,7 @@ class MainController < ApplicationController
                           Date.today],:order=>"value_date, no desc")
     @pact=sysparam('prog_act')
     @cdat=params[:vd]||Date.today
+    render :layout=>'mbase'
   end
 
   def about
