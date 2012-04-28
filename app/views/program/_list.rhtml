@@ -6,26 +6,23 @@
   pid=1
  end
 -%>
-<table  style="width:240px; height:490px;" >
-  <input type="hidden" value=<%="#{@cdat.strftime('%d.%m.%Y')}"%> id="cdat" >
-<tr><td style="height:10px;">&nbsp</td></tr>
-  <tr>
-   <td style="height:25px;width:250px" valign="top" align="center" >
-    <div style="width:200px;">
-     <div style="padding:0;float: right;">
-<%=link_to_remote image_tag("bright.jpg",:border=>"0"),{:update => 'list_div',
+<input type="hidden" value=<%="#{@cdat.strftime('%d.%m.%Y')}"%> id="cdat" >
+<table border="0" cellspacing="0" cellpadding="0" style="width:237px; height:490px;" >
+    <tr>
+   <td valign="top" align="center" style="width:237px;height:63px;background-image:url(/images/mcenter.png);">
+    <div style="padding:0;width:237px;height:63px;">
+     <div style="padding:0;float:right;height:63px;width:50px;">
+    <%=link_to_remote image_tag("brightm.png",:border=>"0"),{:update => 'list_div',
     :url=>{:controller=>"main",:action => "list",
-           :vd=>"#{(@cdat+1).strftime('%d.%m.%Y')}"}},:class=>"img_lnk"
-  -%>
-</div>
-     <div style="padding:0;float: left;">
-<%=link_to_remote image_tag("bleft.jpg",:border=>"0"),{:update => 'list_div',
+           :vd=>"#{(@cdat+1).strftime('%d.%m.%Y')}"}},:class=>"img_lnk"-%></div>
+     <div style="padding:0;float: left;height:63px;width:48px;">
+<%=link_to_remote image_tag("bleftm.png",:border=>"none",:height=>"63px"),{:update => 'list_div',
     :url=>{:controller=>"main",:action => "list",
-           :vd=>"#{(@cdat-1).strftime('%d.%m.%Y')}"}},:class=>"img_lnk"%>
-     </div>
-     <div style="padding:0;float: left;width:50px;">
-       <div style="height:25px;width:110px;align:center;">
-        <b><i><%=@cdat.strftime('%d.%m.%Y')-%></i></b>
+           :vd=>"#{(@cdat-1).strftime('%d.%m.%Y')}"}},:class=>"img_lnk",:border=>"none"-%></div>
+     <div style="padding:0;float: left;width:139px;height:63px;background-image:url(/images/mcenter.png);">
+       <div style="height:25px;">&nbsp;</div>
+       <div style="height:63px;width:139px;">
+       <b><i><%=@cdat.strftime('%d.%m.%Y')-%></i></b>
        </div>
      </div>
     </div>
@@ -33,7 +30,7 @@
   </tr>
   <tr>
   <td valign="top" align="center" >
-<div style="width:180px">
+<div style="width:237px;height:406px;background-image:url(/images/prglst.png);">
 <%=show_table ({:objs=>
     @program = Program.find(:all,
 :conditions=>[" value_date>=? and value_date<?",@cdat||Date.today,(@cdat||Date.today)+1],
@@ -56,9 +53,6 @@ pact=='N'?
  end
  },:tooltip=>"description"
  })-%>
-</div>
-</div>
-
 </div>
   </td>
   </tr>

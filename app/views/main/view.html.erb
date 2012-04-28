@@ -34,33 +34,22 @@
     </div></td>
   </tr>
  </table>
- <div style="padding:10px;float:right;width:400px;height:10px">
-  <div style="padding:20px;"></div>
-  <div style="float:right;width:50px">
-    <%if check_admin_ip?%>
-    <%= render :partial=>"sessions/logio" -%>
-    <%end%>
-  </div>
-  <div style="float:left;width:50px">
-  <%= link_to image_tag("babout.jpg",:border=>"0"),{:controller => 'main',:action => 'about'},:class=>"img_bg" -%>
-  </div>
  </div>
-</div>
 <div style="float:left;width:85px;height:739px;background-image:url(/images/leftbrd.png);margin: 0px, auto;padding:0px;">
  &nbsp;
 </div>
- <div style="float:left;width:350px;">
+ <div style="float:left;">
  <%= javascript_tag(
   "new PeriodicalExecuter(function() { new Ajax.Updater('list_div', '/main/list',
      { method: 'get', asynchronous: true, evalScripts: true,
      parameters: { vd: document.getElementById('cdat').value } }) }, 60)") %>
 
-  <table  style="width:240px; height:490px;" background="images/prglst.jpg">
+   <table  style="width:237px; height:490px;" cellspacing="0" cellpadding="0" >
     <tr><td>
     <div id="list_div">
     <%=render :partial => 'program/list' -%>
     </div>
     </td></tr>
- </table>
+   </table>
  </div>
  </div>

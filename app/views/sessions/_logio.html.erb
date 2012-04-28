@@ -1,7 +1,4 @@
-<div id="login">
- <% if logged_in? %>
-  <%= link_to "Выйти", :controller => 'sessions',:action => 'destroy' -%>
- <% else %>
-  <%= link_to image_tag("blogin.jpg",:border=>"0"),{:controller => 'sessions',:action => 'new'},:class=>"img_bg" -%>
- <% end %>
-</div>
+ <% if logged_in? -%><%= link_to "Выйти", :controller => 'sessions',:action => 'destroy' -%>
+ <% else -%>
+  <%= link_to image_tag("tool.png",:border=>"0"),{:controller => 'sessions',:action => 'new'},:class=>"img_bg" -%>
+ <% end -%>

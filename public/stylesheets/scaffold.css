@@ -68,13 +68,6 @@ margin: 0, auto;
  /*-  -background-color: #fff;*/
 }
 
-#login {
-float:right;
-text-align:center;
-width:200px;
-/*height:10px;*/
-}
-
 #radio {
 float:right;
 width:550px;
@@ -132,12 +125,13 @@ pre {
   font-size: 11px;
 }
 
-a.img_lnk:hover { background-color:#FFF;color: #333;  }
-a.img_lnk:link { background-color:#FFF;color: #333;  }
-a.img_lnk:visited  {background-color:#FFF; color: #333;}
+a.img_lnk:hover { background-color:#B7C2B3;color: #333;  }
+a.img_lnk:link { background-color:#B7C2B3;color: #333;  }
+a.img_lnk:visited  {background-color:#B7C2B3; color: #333;}
 
-a.img_bg:hover { background-color:#E3DDCF;color: red;  }
-a.img_bg:link { background-color:#E3DDCF;color: red;  }
+a.img_bg:hover {background-color:#000000;color: red;  }
+a.img_bg:link { background-color:#000000;color: red;  }
+a.img_bg:visited  {background-color:#000000; color: #333;}
 
 a.lnk:hover { color: #FFF; background-color:#000; }
 
