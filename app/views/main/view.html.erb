@@ -1,12 +1,18 @@
-<div style="width: 1280px;text-align:center;margin: 0px, auto;padding:0px;">
+<div style="float:left;width:1280px;text-align:center;margin: 0px, auto;padding:0px;">
 <%if logged_in? %>
  <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
 <%end-%>
-<div style="float: right;width:450px;">
-  <div>
-  <table align="center" style="width: 290px;height: 205px;" background="images/radio.jpg" >
+ <div style="float: right;width:89px;height:100px;">&nbsp;
+ </div>
+  <div style="float: right;width:222px;">
+    <div style="float: right;width:13px;">
+       <%=image_tag("brdrht.jpg",:border=>"0");-%>
+    </div>
+    <div>
+  <table align="center" width="222" border="0" cellspacing="0" cellpadding="0">
+    <tr><td ><%=image_tag("brdtop.jpg",:border=>"0");-%></td></tr>
   <tr>
-   <td style="padding:55px;height:100px;" valign="top">
+   <td valign="top">
     <div >
       <%=render :partial => 'shared/radio' -%>
     </div></td>
@@ -14,9 +20,9 @@
  </table>
 </div>
  <div style="padding:15px;"></div>
- <table style="width:450px;height:170px;" background="images/descr.jpg">
+ <table style="width:150px;height:170px;" background="images/descr.jpg">
   <tr>
-   <td style="width:400px;height:120px;" valign="center" align="center">
+   <td style="width:200px;height:120px;" valign="center" align="center">
     <div>
         <%= unless @news.nil? 
              simple_format h(@news.short_descr)
@@ -51,5 +57,8 @@
     </div>
     </td></tr>
    </table>
+ </div>
+ <div style="float:left;width:647px;height:469px;">
+    <%=image_tag("imgcnt.png",:border=>"none")-%>
  </div>
  </div>

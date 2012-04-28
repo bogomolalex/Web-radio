@@ -1,14 +1,14 @@
 @import url("clndr.css "); 
 
-body{margin:0;background: none repeat scroll 0 0 #FFFFFF;}
+body{margin:0;background: none repeat scroll 0 0 #FFFFFF;width:1280px;}
 
 #header {
-width: 800px;
+width: 1280px;
 text-align:center;
 margin: 0,auto;
 }
 #after_header {
-width: 800px;
+width: 1280px;
 height:50px;
 text-align:center;
 margin: 0,auto;
@@ -48,21 +48,21 @@ color:red;
 }
 
 #wrap {
-min-height: 800px;
+min-height: 1280px;
 height: auto ;
-height: 800px;
-width:800px;
+height: 1280px;
+width:1280px;
 margin: 0, auto;
 }
 
 
 #nav {
- width:800px;
+ width:1280px;
  float:left;
 }
 
 .anav {
- width:800px;
+ width:1280px;
  heigth: 20px;
  float:right;
  /*-  -background-color: #fff;*/
@@ -118,6 +118,7 @@ body, p, ol, ul, td,div {
   font-size:   14px;
   line-height: 18px;
 }
+
 
 pre {
   background-color: #eee;
