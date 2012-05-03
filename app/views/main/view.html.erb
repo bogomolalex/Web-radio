@@ -14,7 +14,7 @@
        </div>
        <i><%=
        unless @news.nil?
-          link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_lnk"
+          link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_pd"
        end -%>
        </i>&nbsp;&nbsp;&nbsp;&nbsp;
       </td>
@@ -40,23 +40,36 @@
      { method: 'get', asynchronous: true, evalScripts: true,
      parameters: { vd: document.getElementById('cdat').value } }) }, 60)") %>
 
-   <table  style="width:237px; height:450px;" cellspacing="0" cellpadding="0" >
+   <table  cellspacing="0" cellpadding="0"
+           style="width:237px;height:406px;">
     <tr><td>
     <div id="list_div">
     <%=render :partial => 'program/list' -%>
     </div>
-    </td></tr>
+     </td></tr>
    </table>
  </div>
  <div style="float:left;width:632px;height:469px;">
     <%=image_tag("imgcnt.jpg",:border=>"none")-%>
  </div>
 <div style="width:1106px;height:270px;float:left;background-image:url(/images/btnbgr.jpg);margin: 0px, auto;padding:0px;">
-  <div style="height:100px;text-align:center;min-width:1000px;">
-    <h1><p style="color:#FFFFFF">Copyright &copy; 2011, "Доброе Радио Маяк" г.Гусев</p></h1>
-</div>
-<%if logged_in? %>
- <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
-<%end-%>
+  
+  <div style="float:right;width:410px;height:270px;text-align:center;">
+    <div style="width:410px;height:200px;">
+    </div>
+    <h1>
+      <p style="color:#FFFFFF">Copyright &copy; 2011, "Доброе Радио Маяк" г.Гусев</p></h1>
+  </div>
+  <div style="float:left;">
+    <div style="width:210px;height:20px;">
+    </div>
+    <%if logged_in? %>
+      <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
+     <% if logged_in? -%>
+      <%= link_to "ВЫХОД", :controller => 'sessions',:action => 'destroy' -%>
+     <% end -%>
+
+     <%end-%>
+  </div>
 </div>
 </div>

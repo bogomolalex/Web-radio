@@ -126,9 +126,18 @@ pre {
   font-size: 11px;
 }
 
-a.img_lnk:hover { background-color:#B7C2B3;color: #333;  }
-a.img_lnk:link { background-color:#B7C2B3;color: #333;  }
-a.img_lnk:visited  {background-color:#B7C2B3; color: #333;}
+a.img_lnk:hover { background-color:#FFFFFF;color: #333;  }
+a.img_lnk:link { background-color:#FFFFFF;color: #333;  }
+a.img_lnk:visited  {background-color:#FFFFFF; color: #333;}
+
+a.img_lnkh:hover { background-image:url(/images/mcenter.png);}
+a.img_lnkh:link { background-image:url(/images/mcenter.png);}
+a.img_lnkh:visited  {background-image:url(/images/mcenter.png);}
+
+a.img_pd:hover {background-color:#96a890;color: #333;  }
+a.img_pd:link { background-color:#96a890;color: #333;  }
+a.img_pd:visited  {background-color:#96a890; color: #333;}
+
 
 a.img_bg:hover {background-color:#000000;color: red;  }
 a.img_bg:link { background-color:#000000;color: red;  }

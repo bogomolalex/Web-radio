@@ -7,18 +7,12 @@
  end
 -%>
 <input type="hidden" value=<%="#{@cdat.strftime('%d.%m.%Y')}"%> id="cdat" >
-<table border="0" cellspacing="0" cellpadding="0" style="width:237px; height:450px;" >
+<table border="0" cellspacing="0" cellpadding="0" style="width:237px; height:468px;" >
     <tr>
    <td valign="top" align="center" style="width:237px;height:63px;background-image:url(/images/mcenter.png);">
     <div style="padding:0;width:237px;height:63px;">
-     <div style="padding:0;float:right;height:63px;width:50px;">
-    <%=link_to_remote image_tag("brightm.png",:border=>"0"),{:update => 'list_div',
-    :url=>{:controller=>"main",:action => "list",
-           :vd=>"#{(@cdat+1).strftime('%d.%m.%Y')}"}},:class=>"img_lnk"-%></div>
-     <div style="padding:0;float: left;height:63px;width:48px;">
-<%=link_to_remote image_tag("bleftm.png",:border=>"none",:height=>"63px"),{:update => 'list_div',
-    :url=>{:controller=>"main",:action => "list",
-           :vd=>"#{(@cdat-1).strftime('%d.%m.%Y')}"}},:class=>"img_lnk",:border=>"none"-%></div>
+     <div style="padding:0;float:right;height:63px;width:50px;"><%=link_to_remote image_tag("brightm.png",:border=>"0",:width=>"100%"),{:update => 'list_div',:url=>{:controller=>"main",:action => "list",:vd=>"#{(@cdat+1).strftime('%d.%m.%Y')}"}},:class=>"img_lnkh"-%></div>
+     <div style="padding:0;float: left;height:63px;width:48px;"><%=link_to_remote image_tag("bleftm.png",:border=>"none",:width=>"100%",:height=>"63px"),{:update => 'list_div',:url=>{:controller=>"main",:action => "list",:vd=>"#{(@cdat-1).strftime('%d.%m.%Y')}"}},:class=>"img_lnkh",:border=>"none"-%></div>
      <div style="padding:0;float: left;width:139px;height:63px;background-image:url(/images/mcenter.png);">
        <div style="height:25px;">&nbsp;</div>
        <div style="height:63px;width:139px;">
@@ -30,7 +24,7 @@
   </tr>
   <tr>
   <td valign="top" align="center" >
-<div style="width:237px;height:406px;background-image:url(/images/prglst.png);">
+<div style="width:237px;height:318px;background-image:url(/images/prglst.png);">
 <%=show_table ({:objs=>
     @program = Program.find(:all,
 :conditions=>[" value_date>=? and value_date<?",@cdat||Date.today,(@cdat||Date.today)+1],
@@ -43,18 +37,25 @@ pact=='N'?
  {:id=>"title",:field_st=>"width:50px;"}]:
 [{:id=>"value_date",
   :proc=>lambda{|item| item.strftime('%H:%M')},
-  :field_st=>"width:50px;"},{:id=>"title",:field_st=>"width:50px;"}],
-:tbstyle=>"BORDER: buttonface solid 1px;",
+  :field_st=>"width:80px;"},{:id=>"title",:field_st=>"width:80px;"}],
+:tbstyle=>"",
 
 :rowact=>lambda{|item|
  if item[:status_id]=='ACT' && pact=='Y' && item[:value_date]>=Date.today ||
     pact=='N' && item[:id]==pid
-  "color:black;background-color:#c0c0c0"
+  "color:black;font-weight: bold;"
  end
  },:tooltip=>"description"
  })-%>
 </div>
-  </td>
-  </tr>
-  </table>
+</td>
+</tr>
+<tr>
+  <td style="background-color: #C6D4BD;padding:0px;height:70px;">
+    <font style="color:#0E6D0F;"> <h3> Время Московское</h3>
+        <h2><%=Time.now.strftime("%H:%M");-%></h2>
+        </font>
+</td>
+</tr>
+</table>
 
