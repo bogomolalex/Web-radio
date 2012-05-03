@@ -1,12 +1,14 @@
 @import url("clndr.css "); 
 
+body{margin:0;background: none repeat scroll 0 0 #FFFFFF;width:1280px;}
+
 #header {
-width: 800px;
+width: 1280px;
 text-align:center;
 margin: 0,auto;
 }
 #after_header {
-width: 800px;
+width: 1280px;
 height:50px;
 text-align:center;
 margin: 0,auto;
@@ -46,33 +48,24 @@ color:red;
 }
 
 #wrap {
-min-height: 800px;
+min-height: 1280px;
 height: auto ;
-height: 800px;
-width:800px;
+height: 1280px;
+width:1280px;
 margin: 0, auto;
 }
 
 
-body { color: #333;min-width:800px; }
-
 #nav {
- width:800px;
+ width:1280px;
  float:left;
 }
 
 .anav {
- width:800px;
+ width:1280px;
  heigth: 20px;
  float:right;
  /*-  -background-color: #fff;*/
-}
-
-#login {
-float:right;
-text-align:center;
-width:200px;
-/*height:10px;*/
 }
 
 #radio {
@@ -83,7 +76,8 @@ height:80px;
 
 #footer {
 height:20px;
-min-width:800px;
+text-align:center;
+min-width:1000px;
 clear:both}
 
 #footer p {
@@ -107,8 +101,9 @@ valign:top;}
 }
 
 #mainf {
+ margin: 0,auto;
  text-align:center;
- width:800px;
+ width:1280px;
 }
 
 .but {
@@ -120,9 +115,10 @@ valign:top;}
 
 body, p, ol, ul, td,div {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size:   13px;
+  font-size:   14px;
   line-height: 18px;
 }
+
 
 pre {
   background-color: #eee;
@@ -130,12 +126,22 @@ pre {
   font-size: 11px;
 }
 
-a.img_lnk:hover { background-color:#FFF;color: #333;  }
-a.img_lnk:link { background-color:#FFF;color: #333;  }
-a.img_lnk:visited  {background-color:#FFF; color: #333;}
+a.img_lnk:hover { background-color:#FFFFFF;color: #333;  }
+a.img_lnk:link { background-color:#FFFFFF;color: #333;  }
+a.img_lnk:visited  {background-color:#FFFFFF; color: #333;}
 
-a.img_bg:hover { background-color:#E3DDCF;color: red;  }
-a.img_bg:link { background-color:#E3DDCF;color: red;  }
+a.img_lnkh:hover { background-image:url(/images/mcenter.png);}
+a.img_lnkh:link { background-image:url(/images/mcenter.png);}
+a.img_lnkh:visited  {background-image:url(/images/mcenter.png);}
+
+a.img_pd:hover {background-color:#96a890;color: #333;  }
+a.img_pd:link { background-color:#96a890;color: #333;  }
+a.img_pd:visited  {background-color:#96a890; color: #333;}
+
+
+a.img_bg:hover {background-color:#000000;color: red;  }
+a.img_bg:link { background-color:#000000;color: red;  }
+a.img_bg:visited  {background-color:#000000; color: #333;}
 
 a.lnk:hover { color: #FFF; background-color:#000; }
 

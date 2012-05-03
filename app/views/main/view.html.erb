@@ -1,63 +1,75 @@
-<div style="width: 800px;text-align:center;margin: 0px, auto;">
-<%if logged_in? %>
- <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
-<%end-%>
-<div style="float: right;width:450px;">
-  <div>
-  <table align="center" style="width: 290px;height: 205px;" background="images/radio.jpg" >
-  <tr>
-   <td style="padding:55px;height:100px;" valign="top">
-    <div >
-      <%=render :partial => 'shared/radio' -%>
-    </div></td>
-  </tr>
- </table>
-</div>
- <div style="padding:15px;"></div>
- <table style="width:450px;height:170px;" background="images/descr.jpg">
-  <tr>
-   <td style="width:400px;height:120px;" valign="center" align="center">
-    <div>
-        <%= unless @news.nil? 
+<div style="float:left;width:1280px;text-align:center;margin: 0px, auto;padding:0px;">
+ <div style="float: right;width:89px;height:100px;">&nbsp;
+ </div>
+  <div style="float: right;width:237px;height:469px;background-image:url(/images/bgnew.jpg);">
+  <table align="center" width="209" border="0" cellspacing="0" cellpadding="0">
+    <tr><td height="15"></td></tr>
+    <tr>
+      <td width="209" height="318" bgcolor="#96a890">
+       <div>
+        <%= unless @news.nil?
              simple_format h(@news.short_descr)
             end
          -%>
-    </div>
-   </td>
-  </tr>
-  <tr><td valign="top" align="right">
-     <div style="width:200px;height:30px;">
+       </div>
        <i><%=
-     unless @news.nil?
-        link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_lnk"
-     end -%></i>&nbsp;&nbsp;&nbsp;&nbsp;
-    </div></td>
-  </tr>
- </table>
- <div style="padding:10px;float:right;width:400px;height:10px">
-  <div style="padding:20px;"></div>
-  <div style="float:right;width:50px">
-    <%if @ip=="127.0.0.1" %>
-    <%= render :partial=>"sessions/logio" -%>
-    <%end%>
-  </div>
-  <div style="float:left;width:50px">
-  <%= link_to image_tag("babout.jpg",:border=>"0"),{:controller => 'main',:action => 'about'},:class=>"img_bg" -%>
-  </div>
- </div>
+       unless @news.nil?
+          link_to "Подробнее ..." ,{:controller=>"main",:action=>"news",:id=>"#{@news.id}"},:class=>"img_pd"
+       end -%>
+       </i>&nbsp;&nbsp;&nbsp;&nbsp;
+      </td>
+    </tr>
+   <tr>
+   <td width="212" height="45">
+     &nbsp;
+   </td>
+    </tr>
+   <tr>
+   <td width="209" height="70">
+      <%=render :partial => 'shared/radio' -%>
+   </td>
+    </tr>
+  </table>
 </div>
- <div style="float:left;width:350px;">
+ <div style="float:left;width:85px;height:739px;background-image:url(/images/leftbrd.jpg);margin: 0px, auto;padding:0px;">
+ &nbsp;
+</div>
+ <div style="float:left;">
  <%= javascript_tag(
   "new PeriodicalExecuter(function() { new Ajax.Updater('list_div', '/main/list',
      { method: 'get', asynchronous: true, evalScripts: true,
      parameters: { vd: document.getElementById('cdat').value } }) }, 60)") %>
 
-  <table  style="width:240px; height:490px;" background="images/prglst.jpg">
+   <table  cellspacing="0" cellpadding="0"
+           style="width:237px;height:406px;">
     <tr><td>
     <div id="list_div">
     <%=render :partial => 'program/list' -%>
     </div>
-    </td></tr>
- </table>
+     </td></tr>
+   </table>
  </div>
+ <div style="float:left;width:632px;height:469px;">
+    <%=image_tag("imgcnt.jpg",:border=>"none")-%>
  </div>
+<div style="width:1106px;height:270px;float:left;background-image:url(/images/btnbgr.jpg);margin: 0px, auto;padding:0px;">
+  
+  <div style="float:right;width:410px;height:270px;text-align:center;">
+    <div style="width:410px;height:200px;">
+    </div>
+    <h1>
+      <p style="color:#FFFFFF">Copyright &copy; 2011, "Доброе Радио Маяк" г.Гусев</p></h1>
+  </div>
+  <div style="float:left;">
+    <div style="width:210px;height:20px;">
+    </div>
+    <%if logged_in? %>
+      <%= link_to "Администрирование", :controller=>"menu",:action=>"show" -%>
+     <% if logged_in? -%>
+      <%= link_to "ВЫХОД", :controller => 'sessions',:action => 'destroy' -%>
+     <% end -%>
+
+     <%end-%>
+  </div>
+</div>
+</div>

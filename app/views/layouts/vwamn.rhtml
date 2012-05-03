@@ -10,19 +10,19 @@
 </style>
 </head>
 <body BACKGROUND="/images/bgr.jpg">
-<table width="100%" border="0">
+<table width="1280" border="0" cellspacing="0" cellpadding="0" valign="top">
 <tr><td align="center">
-<div style="width: 600px;text-align:center;margin: 0,auto;">
+<div style="width: 1280px;text-align:center;margin: 0,auto;">
  <%=image_tag("header.jpg",:alt=>"")%>
 </div>
 <div id="header">
  <div class="anav"> 
    <%=render :partial=>"sessions/logio" -%>
-   <div style="float:right;">
+   <div style="float:left;height:50px;">
     <%=link_to "Домашняя страница", {:controller => 'main',:action => 'view'},:class=>"lnk"-%>
    </div>
  </div>
- <div style="width:750px;height:50px;border-bottom: 1px solid #f0f0f0;">
+ <div style="width:800px;height:83px;border-bottom: 2px solid #9c9;">
    <div id="smnnow" >
          <%=link_to "Сегодня",{:controller=>"menu",:action=>"show"}, :id=>"lsmnnow" -%>
    </div>

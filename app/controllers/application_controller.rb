@@ -48,7 +48,4 @@ class ApplicationController < ActionController::Base
              :text=>"<h4>HTTP Basic: Access denied.\n</h4>"
     end
    
-    def client_ip
-      request.env["HTTP_X_FORWARDED_FOR"]||request.remote_ip  
-    end
 end

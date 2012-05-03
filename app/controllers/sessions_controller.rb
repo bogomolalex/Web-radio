@@ -5,6 +5,10 @@ class SessionsController < ApplicationController
 
   # render new.erb.html
   def new
+   unless check_admin_ip?
+      flash[:notice] = "Регистрация запрещена."
+      redirect_to_back_or_default("/");
+   end
    flash[:error] =nil
    flash[:notice] =nil
   end

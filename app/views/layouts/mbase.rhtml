@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
+<%=stylesheet_link_tag "scaffold"%>
+<%= javascript_include_tag :defaults %>
+<%= javascript_include_tag "tooltip-v0.2.js"%>
+<head>
+<title><%= @page_title %></title>
+<style type="text/css">
+ <%= yield :stylesheets %>
+</style>
+</head>
+<body style="background-color: #000000;">
+<table  width="1280" border="0" cellspacing="0" cellpadding="0" valign="top">
+<tr><td align="left" style="padding:0px">
+<div style="width: 1280px;text-align:center;margin: 0,auto;">
+  <div style="float:left;width:1280px;height:144px;background-image:url(/images/bckgrn.jpg);">
+   <div style="float:left;height:142px;"><%=image_tag("headerv.jpg",:alt=>"")%></div>
+   <div style="float:right;width:85px;height:144px;border: 0px solid #CCCCCC;">&nbsp</div>
+   <div style="float:right;width:145px;border: 0px solid #FFFFF;background-color:#FFFFF">
+    <p>&nbsp</p>
+    <%=link_to image_tag("home.png",:alt=>"",:border=>"none"),
+      {:controller => 'main',:action => 'about'},
+      :class=>"img_bg"-%>
+    <%if check_admin_ip?-%>
+    <%= render :partial=>"sessions/logio" -%>
+    <%end-%>
+   </div>
+  </div>
+<%= @content_for_layout %></div>
+</td></tr>
+</table>
+</body>
+</html>

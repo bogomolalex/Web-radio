@@ -41,22 +41,22 @@ end -%>
 
 <% if @fl==0-%>
 
- <tr id="r<%="#{hs.id}"-%>" style="<%=if rowact.nil?
-               "background-color:#f0f0f0"
+ <tr id='r<%="#{hs.id}"-%>' style='<%=if rowact.nil?
+               ""
               else
-               rowact.call(hs)||"background-color:#f0f0f0"
-              end-%>">
+               rowact.call(hs)||""
+              end-%>'>
  <%@fl=1%>
 <%else-%>
- <tr "<%=unless rowact.nil?
+ <tr <%=unless rowact.nil?
         "style='#{rowact.call(hs)}'"
-      end-%>" id="r<%="#{hs.id}"-%>">
+      end-%> id='r<%="#{hs.id}"-%>'>
  <%@fl=0%>
 <%end-%>
 <%unless tooltip.nil?%>
 <div id="tooltip<%="#{hs.id}"-%>" 
  style="display:none; margin: 5px; padding:5px 5px 5px 5px;
-border: #E3DDCF solid 1px; background-color: white; width:200px;">
+border: #96a890 solid 1px; background-color: white; width:200px;font-weight: none;">
  <%=hs.read_attribute(h(tooltip))-%>
 </div>
 <% javascript_tag do -%>
