@@ -24,7 +24,7 @@
   </tr>
   <tr>
   <td valign="top" align="center" >
-<div style="width:237px;height:318px;background-image:url(/images/prglst.png);">
+<div style="width:237px;height:322px;background-image:url(/images/prglst.png);">
 <%=show_table ({:objs=>
     @program = Program.find(:all,
 :conditions=>[" value_date>=? and value_date<?",@cdat||Date.today,(@cdat||Date.today)+1],
