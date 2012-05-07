@@ -38,7 +38,7 @@ pact=='N'?
 [{:id=>"value_date",
   :proc=>lambda{|item| item.strftime('%H:%M')},
   :field_st=>"width:80px;"},{:id=>"title",:field_st=>"width:80px;"}],
-:tbstyle=>"",
+:tbstyle=>"text-align: left;",
 
 :rowact=>lambda{|item|
  if item[:status_id]=='ACT' && pact=='Y' && item[:value_date]>=Date.today ||

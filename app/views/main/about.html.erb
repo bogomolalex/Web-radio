@@ -8,35 +8,38 @@
   </div>
 </div>
 <div id="main">
- <div style="border: 0px solid #CCCCCC;float:left;width:350px;">
+ <div style="border: 0px solid #CCCCCC;float:left;width:1280px;">
  <%unless @news.nil? -%>
- <%@news.each do |n| -%>
- <div style="border: 0px solid #CCCCCC;float:left;width:650px;">
-  <div style="border: 0px solid #FFFFFF;float:left;width:26px;">&nbsp
+ <div style="border: 0px solid #CCCCCC;float:left;width:1000px;">
+  <div style="float:left;border: 0px solid #FFFFFF;float:left;width:26px;">&nbsp
   </div>
-  <%unless n.img_url.blank?-%>
-   <table border=0 width="320" cellspacing=0 cellpadding=0 align=left>
+   <div style="float:left;border: 0px solid #FFFFFF;float:left;width:800px;">
+   <table border=0  cellspacing=0 cellpadding=0 align=left>
+  <%@news.each do |n| -%>
     <tr>                     
-      <td height="227" bgcolor="#D5D5D5" style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #A4A4A4;"> 
-      <%= image_tag "news/#{h(n.img_url)}"  -%>
+      <td  bgcolor="#D5D5D5" style="padding: 5px; margin: 0 20px 5px 0; border: 1px solid #A4A4A4;width:320px;height:227px">
+   <%unless n.img_url.blank?-%>
+    <%= image_tag "news/#{h(n.img_url)}"  -%>
+   <%end-%>
      </td>
-    </tr> 
-   </table>
-  <%end-%>
-  <p>
+     <td>&nbsp;</td>
+     <td style="width:500px;vertical-align:top;text-align: left;">
    <h4>
-    <div style="float:left;height:25px;width:300px;">
+    <div style="float:left;height:25px;width:500px;valign:top;text-align: center;">
      <%=h(n.title)-%>
     </div>
    </h4>
-  </p>
    <%=simple_format h(n.descr)-%>
+
+     </td>
+    </tr>
+    <tr><td colspan="3" height="60">&nbsp; </td>
+    </tr>
+  <%end-%>
+   </table>
   </div>
- <%end-%>
+  </div>
 <%end-%>
  </div>
 </div>
-
-</div>
-
-</div>
+  </div>
