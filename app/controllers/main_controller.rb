@@ -6,6 +6,8 @@ class MainController < ApplicationController
                           Date.today],:order=>"value_date, no desc")
     @pact=sysparam('prog_act')
     @cdat=params[:vd]||Date.today
+    @qstr = New.find(:first,:conditions=>[" status='ACT'
+                                        and menu_id=21"]);
     render :layout=>'mbase'
   end
 
@@ -29,6 +31,16 @@ class MainController < ApplicationController
     @program = Program.find(:all)
     @cdat = Date.strptime("#{params[:vd]}", "%d.%m.%Y") unless params[:vd].nil?
     render :partial => 'program/list', :object => @program
+  end
+
+  def qstr
+    @qstr = New.find(:first,:conditions=>[" status='ACT'
+                                        and menu_id=21
+                                and id>? ",params[:id9]]);
+    if @qstr.nil?
+     @qstr = New.find(:first,:conditions=>[" status='ACT' and menu_id=21"]);
+    end
+      render :partial => 'new/qstr'
   end
 
 end

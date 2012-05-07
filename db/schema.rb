@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110922120049) do
+ActiveRecord::Schema.define(:version => 20120507095905) do
 
   create_table "loggs", :force => true do |t|
     t.string   "username",   :limit => 80,  :null => false
@@ -21,6 +21,11 @@ ActiveRecord::Schema.define(:version => 20110922120049) do
   end
 
   add_index "loggs", ["logg_date"], :name => "index_loggs_on_logg_date"
+
+  create_table "logs", :force => true do |t|
+    t.string "descr"
+    t.string "code"
+  end
 
   create_table "menus", :force => true do |t|
     t.string  "mtype",   :limit => 20,  :default => "", :null => false
@@ -34,7 +39,7 @@ ActiveRecord::Schema.define(:version => 20110922120049) do
   add_index "menus", ["mtype"], :name => "index_menus_on_mtype"
 
   create_table "news", :force => true do |t|
-    t.string  "title",      :limit => 80,  :default => "",     :null => false
+    t.string  "title",      :limit => 80,                      :null => false
     t.string  "img_url",    :limit => 250
     t.date    "value_date",                                    :null => false
     t.integer "no"
@@ -74,15 +79,15 @@ ActiveRecord::Schema.define(:version => 20110922120049) do
   add_index "users", ["login"], :name => "index_users_on_login", :unique => true
 
   create_table "xparams", :force => true do |t|
-    t.string   "name",        :limit => 20,  :default => "", :null => false
-    t.string   "ptype",       :limit => 20,  :default => "", :null => false
+    t.string   "name",        :limit => 20,  :null => false
+    t.string   "ptype",       :limit => 20,  :null => false
     t.string   "value_str",   :limit => 250
     t.date     "value_date"
-    t.integer  "value_num"
-    t.datetime "inserted",                                   :null => false
-    t.string   "inserted_by", :limit => 30,  :default => "", :null => false
+    t.datetime "inserted",                   :null => false
+    t.string   "inserted_by", :limit => 30,  :null => false
     t.datetime "updated"
-    t.string   "updated_by",  :limit => 30,  :default => "", :null => false
+    t.string   "updated_by",  :limit => 30,  :null => false
+    t.integer  "value_num"
     t.string   "descr",       :limit => 50
   end
 

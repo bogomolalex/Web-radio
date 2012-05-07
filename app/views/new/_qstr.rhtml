@@ -1,0 +1,10 @@
+<%unless @qstr.nil?-%>
+<input type="hidden" value=<%="#{@qstr.id}"-%> id="qstr" >
+<font color="#E6E49A">
+<div><i><h4><%=simple_format h(@qstr.descr)-%></h4></i>
+</div>
+</font>
+<%else-%>
+ <input type="hidden" value="0" id="qstr" >
+ <div></div>
+<%end-%>
