@@ -1,0 +1,32 @@
+<OBJECT ID="MediaPlayer" WIDTH="180" HEIGHT="66" CLASSID="CLSID:22D6F312-B0F6-11D0-94AB-0080C74C7E95"
+STANDBY="Loading Windows Media Player components..." TYPE="application/x-oleobject">
+            <PARAM NAME="FileName" VALUE="http://78.36.198.48:8000/;stream.nsv">
+            <param name="ShowStatusBar" value="true">
+            <param name="rate" value="1">
+            <param name="border" value="1">
+            <param name="balance" value="0">
+            <param name="currentPosition" value="0">
+            <param name="defaultFrame" value="">
+            <param name="playCount" value="1">
+            <param name="autoStart" value="1">
+            <param name="currentMarker" value="0">
+            <param name="invokeURLs" value="-1">
+            <param name="volume" value="100">
+            <param name="mute" value="0">
+            <param name="uiMode" value="full">
+            <param name="stretchToFit" value="-1">
+            <param name="windowlessVideo" value="0">
+            <param name="enabled" value="-1">
+            <param name="enableContextMenu" value="1">
+            <param name="fullScreen" value="0">
+            <param name="SAMIStyle" value="">
+            <param name="SAMILang" value="">
+            <param name="SAMIFilename" value="">
+            <param name="captioningID" value="">
+            <param name="enableErrorDialogs" value="0">
+            <param name="_cx" value="8890">
+            <param name="_cy" value="9075">
+<EMBED border="1" TYPE="application/x-mplayer2" SRC="http://78.36.198.48:8000/;stream.nsv" NAME="MediaPlayer"
+autostart="1" transparentatstart="1" animationatstart="1" autosize="0" showstatusbar="1" showcontrols="1" displaysize="0" enablecontextmenu="0" uimode="invisible" width="180" align="center" height="66"
+</EMBED>
+</OBJECT>
